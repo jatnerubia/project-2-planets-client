@@ -1,4 +1,5 @@
-import Jason from "./components/Jason"
+import Jason from "./components/Jason";
+import Jomar from "./components/Jomar";
 
 const App = () => {
     return (
@@ -8,6 +9,7 @@ const App = () => {
             {/* DO NOT COMMIT THIS FILE */}
             
             <Jason />
+            <Jomar />
         </div>
     )
 }
