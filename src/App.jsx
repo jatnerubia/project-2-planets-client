@@ -1,15 +1,13 @@
-import Jason from "./components/Jason";
-import Jomar from "./components/Jomar";
 
 const App = () => {
     return (
         <div>
 
-            {/* Add your component here for testing only */}
-            {/* DO NOT COMMIT THIS FILE */}
+            {/*
+                DO NOT COMMIT THIS FILE
+                - Add your component here for testing only
+            */}
             
-            <Jason />
-            <Jomar />
         </div>
     )
 }
