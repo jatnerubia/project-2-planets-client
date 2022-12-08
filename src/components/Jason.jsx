@@ -1,9 +1,11 @@
 
 const Jason = () => {
     return (
-        <h1>
-            Jason
-        </h1>
+        <div className="container">
+            <h1 className="fw-bold">
+                Jason
+            </h1>
+        </div>
     )
 }
 
