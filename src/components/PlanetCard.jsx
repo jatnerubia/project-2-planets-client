@@ -3,7 +3,7 @@ import './PlanetCard.css'
 
 const PlanetCard = () => {
     return (
-        <div className="col-sm-6 col-lg-4">
+        <div className="col-md-6 col-lg-4">
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
