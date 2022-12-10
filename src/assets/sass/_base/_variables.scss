@@ -1,0 +1,12 @@
+// Font
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('http://fonts.googleapis.com/css?family=Merriweather');
+
+$black: #000000;
+
+html body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    // background-color: $black;
+}
