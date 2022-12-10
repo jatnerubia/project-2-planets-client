@@ -1,6 +1,4 @@
 
-import './PlanetCard.css'
-
 const PlanetCard = () => {
     return (
         <div className="col-md-6 col-lg-4">
