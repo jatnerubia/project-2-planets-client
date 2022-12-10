@@ -9,10 +9,10 @@ const PlanetCard = () => {
                     <div className="flip-card-front">
                         <img className="img-fluid" src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
                     </div>
-                    <div className="flip-card-back">
-                        <h1>John Doe</h1>
+                    <div className="flip-card-back d-flex flex-column justify-content-center align-items-center">
+                        <h5>John Doe</h5>
                         <p>Architect & Engineer</p>
-                        <p>We love that guy</p>
+                        <button type="button">View More</button>
                     </div>
                 </div>
             </div>
