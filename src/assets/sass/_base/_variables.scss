@@ -2,11 +2,33 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('http://fonts.googleapis.com/css?family=Merriweather');
 
+// Font Family
+$font-poppins: 'Poppins', sans-serif;
+$font-merriweather: 'Merriweather', sans-serif;
+//Colors
 $black: #000000;
+$white: #FEFEFE;
+$space_gray: #FEFEFE;
 
+*,
+*:before,
+*:after{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html body {
-    font-family: 'Poppins', sans-serif;
+    font-family:$font-poppins;
     font-weight: 400;
     font-size: 18px;
-    // background-color: $black;
+    color: $white;
+}
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
 }
