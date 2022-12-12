@@ -5,11 +5,11 @@ const PlanetCard = ({ planet }) => {
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
-                        <img className="img-fluid" src={planet.imgSrc[0].img} alt={planet.name} />
+                        <img className="img-fluid" src={planet.images[0].url} alt={planet.name} />
                     </div>
                     <div className="flip-card-back d-flex flex-column justify-content-center align-items-center">
                         <h5>{planet.name}</h5>
-                        <p>{planet.imgSrc[0].imgDescription}</p>
+                        <p>{planet.images[0].description}</p>
                         <button type="button">View More</button>
                     </div>
                 </div>
