@@ -9,6 +9,7 @@ const PlanetCard = ({ planet }) => {
                     </div>
                     <div className="flip-card-back d-flex flex-column justify-content-center align-items-center">
                         <h5>{planet.name}</h5>
+                        <p>{planet.imgSrc[0].imgDescription}</p>
                         <button type="button">View More</button>
                     </div>
                 </div>
