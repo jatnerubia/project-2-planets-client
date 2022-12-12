@@ -20,8 +20,9 @@ const PlanetSection = () => {
         };
 
         const result = await fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planet/list', options);
-        const response = await result.json()
-
+        let response = await result.json()
+        response = response.slice(2)
+        response.reverse()
         setPlanets(response)
     }
 
