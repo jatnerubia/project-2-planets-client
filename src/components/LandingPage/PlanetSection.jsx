@@ -12,7 +12,7 @@ const PlanetSection = () => {
     }, [])
 
     const getPlanets = async () => {
-        const result = await fetch('https://project-2-planets-server.onrender.com/planet');
+        const result = await fetch('https://project-2-planets-server.onrender.com/planets');
         let response = await result.json()
         response = response.slice(0, 6)
         setPlanets(response)
