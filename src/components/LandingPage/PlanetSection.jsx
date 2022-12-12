@@ -11,19 +11,10 @@ const PlanetSection = () => {
         getPlanets()
     }, [])
 
-    const getPlanets = async() => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '4dd6b9fd10mshec2b10eff154adap1f7fb2jsn9c8b9815b2ac',
-                'X-RapidAPI-Host': 'planets-info-by-newbapi.p.rapidapi.com'
-            }
-        };
-
-        const result = await fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planet/list', options);
+    const getPlanets = async () => {
+        const result = await fetch('https://project-2-planets-server.onrender.com/planet');
         let response = await result.json()
-        response = response.slice(2)
-        response.reverse()
+        response = response.slice(0, 6)
         setPlanets(response)
     }
 
