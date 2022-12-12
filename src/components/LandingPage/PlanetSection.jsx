@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import PlanetCard from './PlanetCard'
+import SectionHeading from './SectionHeading'
 
 const PlanetSection = () => {
 
@@ -28,6 +29,7 @@ const PlanetSection = () => {
 
     return (
         <div className="container">
+            <SectionHeading name="The Planets" />
             <div className="row">
                 {
                     planets.map((planet, index) => <PlanetCard key={index} planet={planet} />)
