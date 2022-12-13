@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import PlanetSection from "../components/landing/PlanetSection";
+import PlanetSection from "../components/home/PlanetSection";
 
 const HomePage = () => {
     return (
