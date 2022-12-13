@@ -9,9 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import HomePage from './pages/HomePage'
-import PlanetsPage from './pages/PlanetsPage';
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/home'
+import PlanetsPage from './pages/planets';
+import AboutPage from './pages/about';
 
 const router = createBrowserRouter([
   {
