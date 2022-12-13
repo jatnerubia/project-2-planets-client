@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 const PlanetsPage = () => {
     return (
         <div>
-            <h1 className="text-dark">
-                PLANETS PAGE
-            </h1>
-
-            {/* Test router link */}
+            {/* Navbar */}
             <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
@@ -18,6 +14,10 @@ const PlanetsPage = () => {
             <Link to="/about">
                 <button className="btn btn-light">About</button>
             </Link>
+
+            {/* Hero Section */}
+            {/* Planet Details Section */}
+            
         </div>
     )
 }

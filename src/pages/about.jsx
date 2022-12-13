@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 const AboutPage = () => {
     return (
         <div>
-            <h1 className="text-dark">
-                ABOUT PAGE
-            </h1>
-
-            {/* Test router link */}
-            
+            {/* Navbar */}
             <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
@@ -19,6 +14,10 @@ const AboutPage = () => {
             <Link to="/about">
                 <button className="btn btn-light">About</button>
             </Link>
+
+            {/* Teams Section */}
+            {/* Footer */}
+
         </div>
     )
 }

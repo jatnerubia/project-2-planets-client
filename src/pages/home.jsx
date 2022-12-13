@@ -1,14 +1,11 @@
 
 import { Link } from "react-router-dom";
+import PlanetSection from "../components/landing/PlanetSection";
 
 const HomePage = () => {
     return (
         <div>
-            <h1 className="text-dark">
-                HOME PAGE
-            </h1>
-
-            {/* Test router link */}
+            {/* Navbar */}
             <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
@@ -18,6 +15,14 @@ const HomePage = () => {
             <Link to="/about">
                 <button className="btn btn-light">About</button>
             </Link>
+
+            {/* Hero Section */}
+            <PlanetSection />
+
+            {/* News Section */}
+            {/* Feedback Section */}
+            {/* Footer */}
+            
         </div>
     )
 }
