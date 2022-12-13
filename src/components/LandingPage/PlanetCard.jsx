@@ -1,3 +1,4 @@
+import RedirectButton from "../RedirectButton"
 
 const PlanetCard = ({ planet }) => {
     return (
@@ -10,7 +11,7 @@ const PlanetCard = ({ planet }) => {
                     <div className="flip-card-back d-flex flex-column justify-content-center align-items-center p-2">
                         <h5>{planet.name}</h5>
                         <p>{planet.images[0].description}</p>
-                        <button type="button">View More</button>
+                        <RedirectButton name="View More" to="/planets" />
                     </div>
                 </div>
             </div>
