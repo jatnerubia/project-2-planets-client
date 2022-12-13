@@ -2,7 +2,7 @@
 const SectionHeading = ({ name }) => {
     return (
         <div className="row">
-            <h2>{name}</h2>
+            <h2 className="text-dark">{name}</h2>
         </div>
     )
 }
