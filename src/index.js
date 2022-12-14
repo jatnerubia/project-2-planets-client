@@ -13,6 +13,7 @@ import Layout from './components/layout/Layout';
 import HomePage from './pages/home'
 import PlanetsPage from './pages/planets';
 import AboutPage from './pages/about';
+import PageNotFound from './pages/404';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         element: <AboutPage />,
       },
     ]
+  },
+  {
+    path: "*",
+    element: <PageNotFound />
   }
 ]);
 
