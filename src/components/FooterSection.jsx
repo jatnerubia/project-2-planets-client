@@ -5,8 +5,6 @@ const FooterSection = () => {
                 <div className="col-lg-4">
                 <h5 class="text-uppercase">SpaceVerse</h5>
                 <div className="col-lg-3">
-                    
-                </div>
                 <ul class="list-unstyled mb-0">
                   <li>
                     <a class="text-white">About Us</a>
@@ -24,6 +22,8 @@ const FooterSection = () => {
                     <a class="text-white">Vision</a>
                   </li>
                 </ul>
+                </div>
+                
               
 
                 </div>
