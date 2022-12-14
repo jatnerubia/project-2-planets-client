@@ -9,23 +9,29 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Layout from './components/layout/Layout';
 import HomePage from './pages/home'
 import PlanetsPage from './pages/planets';
 import AboutPage from './pages/about';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/planets",
-    element: <PlanetsPage />,
-  },
-  {
-    path: "/about",
-    element: <AboutPage />,
-  },
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/planets",
+        element: <PlanetsPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+    ]
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
