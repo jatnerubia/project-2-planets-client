@@ -4,7 +4,7 @@
 ## 💻 Tech Stack
 > - React
 > - Bootstrap
-> - SASS
+> - Sass
 
 ## 👨‍🏫 Instructor
 > PocketDevs CEO & Co-founder **[Bryl Lim](https://github.com/bryllim)**
