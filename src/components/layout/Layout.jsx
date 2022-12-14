@@ -1,4 +1,4 @@
-
+import FooterSection from "../FooterSection"
 import { Link, Outlet } from "react-router-dom"
 
 const Layout = () => {
@@ -22,7 +22,7 @@ const Layout = () => {
                 <Outlet />
             </main>
 
-            {/* TODO: Add footer component here */}
+            <FooterSection/>
 
         </>
     )
