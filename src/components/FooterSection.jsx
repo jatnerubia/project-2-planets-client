@@ -56,9 +56,9 @@ const FooterSection = () => {
                     <a href ="#" class="text-white fw-bold ">Social</a>
                   </li>
                   <li>
-                  <i className="fa-brands fa-facebook" />
-                  <i className="fa-brands fa-instagram" />
-                  <i className="fa-brands fa-twitter" />
+                  <i className="fa-brands fa-facebook m-2"  />
+                  <i className="fa-brands fa-instagram m-2" />
+                  <i className="fa-brands fa-twitter m-2" />
                   </li>
                 
                 </ul>
