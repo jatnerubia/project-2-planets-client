@@ -2,8 +2,8 @@ const FooterSection = () => {
     return (
         <div className="container mt-5">
             <div className="row">
-                <div className="col-3">
-                  <img src="https://i.ibb.co/chfYwwj/Blue-White-Minimalist-Mini-Rocket-Logo-Design-2.png"/>
+                <div className="col-3 text-center">
+                  <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="60%"/>
                 
                 </div>
                 <div className="col-3">
