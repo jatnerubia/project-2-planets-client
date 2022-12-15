@@ -1,4 +1,4 @@
-
+import FooterSection from "../FooterSection"
 import { Link, Outlet } from "react-router-dom"
 import AnimatedStar from "../home/AnimatedStar_bg"
 
@@ -24,7 +24,7 @@ const Layout = () => {
                 <Outlet />
             </main>
 
-            {/* TODO: Add footer component here */}
+            <FooterSection/>
 
         </>
     )
