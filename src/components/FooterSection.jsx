@@ -3,7 +3,7 @@ const FooterSection = () => {
         <div className="container mt-5">
             <div className="row">
                 <div className="col-3 text-center">
-                  <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="60%"/>
+                  <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="50%"/>
                   <h5>SpaceVerse</h5>
                 
                 </div>
