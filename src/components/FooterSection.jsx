@@ -1,8 +1,8 @@
 const FooterSection = () => {
     return (
-        <div className="container style ">
+        <div className="container mt-5">
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-3">
                 <h5 class="text-uppercase">SpaceVerse</h5>
                 </div>
                 <div className="col-3">
