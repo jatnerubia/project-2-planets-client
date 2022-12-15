@@ -1,3 +1,4 @@
+import PlanetDetailsSection from "../components/planets/PlanetDetailsSection"
 
 const PlanetsPage = () => {
     return (
@@ -8,7 +9,8 @@ const PlanetsPage = () => {
             </h1>
 
             {/* Hero Section */}
-            {/* Planet Details Section */}
+            
+            <PlanetDetailsSection />
             
         </>
     )
