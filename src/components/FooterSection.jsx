@@ -4,6 +4,7 @@ const FooterSection = () => {
             <div className="row">
                 <div className="col-3 text-center">
                   <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="60%"/>
+                  <h5>SpaceVerse</h5>
                 
                 </div>
                 <div className="col-3">
