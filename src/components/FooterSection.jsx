@@ -1,3 +1,4 @@
+
 const FooterSection = () => {
     return (
         <div className="container mt-5">
@@ -47,24 +48,19 @@ const FooterSection = () => {
                   </li>
                 </ul>
                 </div>
-                <div className="col-3">
+
+                <div className="col-3 text-center">
 
                 <ul class="list-unstyled mb-0">
                   <li>
                     <a href ="#" class="text-white fw-bold ">Social</a>
                   </li>
                   <li>
-                    <a href ="#" class="text-white">Contact Us</a>
+                  <i className="fa-brands fa-facebook" />
+                  <i className="fa-brands fa-instagram" />
+                  <i className="fa-brands fa-twitter" />
                   </li>
-                  <li>
-                    <a href ="#" class="text-white">FAQS</a>
-                  </li>
-                  <li>
-                    <a href ="#" class="text-white">Mission</a>
-                  </li>
-                  <li>
-                    <a href ="#" class="text-white">Vision</a>
-                  </li>
+                
                 </ul>
                 </div>
               
