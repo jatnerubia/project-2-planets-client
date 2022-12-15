@@ -10,10 +10,11 @@ const FooterSection = () => {
                 </div>
                 <div className="col-3">
 
-                <ul class="list-unstyled mb-0">
+                <ul class="list-unstyled mb-0 text-center">
                   <li>
-                    <a href ="#" class="text-white fw-bold">About Us</a>
+                    <a href ="#" class="text-white fw-bold display-7">About Us</a>
                   </li>
+                
                   <li>
                     <a href ="#" class="text-white">Contact Us</a>
                   </li>
@@ -28,23 +29,21 @@ const FooterSection = () => {
                   </li>
                 </ul>
                 </div>
-                 <div className="col-3">
+                 <div className="col-3 text-center">
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href ="#" class="text-white fw-bold">Company</a>
+                    <a href ="#" class="text-white fw-bold display-7">Company</a>
+                  </li>
+              
+                  <li>
+                    <a href ="#" class="text-white ">Careers</a>
                   </li>
                   <li>
-                    <a href ="#" class="text-white">Contact Us</a>
+                    <a href ="#" class="text-white">Press</a>
                   </li>
                   <li>
-                    <a href ="#" class="text-white">FAQS</a>
-                  </li>
-                  <li>
-                    <a href ="#"class="text-white">Mission</a>
-                  </li>
-                  <li>
-                    <a href ="#" class="text-white">Vision</a>
+                    <a href ="#"class="text-white">Legal Policy</a>
                   </li>
                 </ul>
                 </div>
@@ -53,7 +52,7 @@ const FooterSection = () => {
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href ="#" class="text-white fw-bold ">Social</a>
+                    <a href ="#" class="text-white fw-bold display-7">Social</a>
                   </li>
                   <li>
                   <i className="fa-brands fa-facebook m-2"  />
