@@ -1,8 +1,8 @@
 
-const PlanetDetails = () => {
+const PlanetDetails = ({ planet }) => {
     return (
         <div>
-            Planet Details
+            {planet.name}
         </div>
     )
 }
