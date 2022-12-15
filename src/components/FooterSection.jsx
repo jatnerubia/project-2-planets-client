@@ -11,7 +11,7 @@ const FooterSection = () => {
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href ="#" class="text-white">About Us</a>
+                    <a href ="#" class="text-white fw-bold">About Us</a>
                   </li>
                   <li>
                     <a href ="#" class="text-white">Contact Us</a>
@@ -31,7 +31,7 @@ const FooterSection = () => {
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href ="#" class="text-white">About Us</a>
+                    <a href ="#" class="text-white fw-bold">Company</a>
                   </li>
                   <li>
                     <a href ="#" class="text-white">Contact Us</a>
@@ -51,7 +51,7 @@ const FooterSection = () => {
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href ="#" class="text-white">About Us</a>
+                    <a href ="#" class="text-white fw-bold ">Social</a>
                   </li>
                   <li>
                     <a href ="#" class="text-white">Contact Us</a>
