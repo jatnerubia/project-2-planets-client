@@ -1,5 +1,6 @@
 
 import { Link, Outlet } from "react-router-dom"
+import AnimatedStar from "../home/AnimatedStar_bg"
 
 const Layout = () => {
     return (
@@ -8,6 +9,7 @@ const Layout = () => {
             {/* TODO: Add navbar component here */}
 
             {/* This link is for route testing only */}
+            <AnimatedStar/>
             <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
