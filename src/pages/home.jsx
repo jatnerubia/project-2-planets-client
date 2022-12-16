@@ -1,12 +1,13 @@
 
 
+import HeroSection from "../components/home/HeroSection";
 import PlanetSection from "../components/home/PlanetSection";
 
 const HomePage = () => {
     return (
         <>
 
-            {/* Hero Section */}
+            <HeroSection/>
             <PlanetSection />
 
             {/* News Section */}

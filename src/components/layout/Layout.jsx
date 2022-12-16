@@ -10,7 +10,7 @@ const Layout = () => {
 
             {/* This link is for route testing only */}
             <AnimatedStar/>
-            <Link to="/">
+            {/* <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
             <Link to="/planets">
@@ -18,7 +18,7 @@ const Layout = () => {
             </Link>
             <Link to="/about">
                 <button className="btn btn-light">About</button>
-            </Link>
+            </Link> */}
             
             <main>
                 <Outlet />

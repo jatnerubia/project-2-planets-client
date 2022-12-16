@@ -1,0 +1,16 @@
+.heroSection__header {
+    img {
+        position: absolute;
+        // width: 734px;
+        height: 100%;
+        right: 0;
+        // top: -28px;
+    }
+    
+    .hero-content {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+}
