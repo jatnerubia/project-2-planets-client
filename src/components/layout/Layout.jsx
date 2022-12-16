@@ -1,6 +1,7 @@
 import FooterSection from "../FooterSection"
-import { Link, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import AnimatedStar from "../home/AnimatedStar_bg"
+import Navbar from "../Navbar"
 
 const Layout = () => {
     return (
@@ -10,6 +11,7 @@ const Layout = () => {
 
             {/* This link is for route testing only */}
             <AnimatedStar/>
+            <Navbar/>
             {/* <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>
