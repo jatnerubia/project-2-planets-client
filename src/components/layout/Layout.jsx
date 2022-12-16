@@ -1,24 +1,22 @@
-import FooterSection from "../FooterSection"
-import { Outlet } from "react-router-dom"
-import AnimatedStar from "../home/AnimatedStar_bg"
-import Navbar from "../Navbar"
+import FooterSection from "../FooterSection";
+import { Outlet } from "react-router-dom";
+import AnimatedStar from "../home/AnimatedStar_bg";
+import Navbar from "../Navbar";
 
 const Layout = () => {
-    return (
-        <>
+  return (
+    <>
+      {/* TODO: Add navbar component here */}
+      <AnimatedStar />
+      <Navbar />
 
-            {/* TODO: Add navbar component here */}
-            <AnimatedStar/>
-            <Navbar/>
-            
-            <main>
-                <Outlet />
-            </main>
+      <main>
+        <Outlet />
+      </main>
 
-            <FooterSection/>
+      <FooterSection />
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default Layout
+export default Layout;

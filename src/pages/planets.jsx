@@ -1,19 +1,15 @@
-import PlanetDetailsSection from "../components/planets/PlanetDetailsSection"
+import PlanetDetailsSection from "../components/planets/PlanetDetailsSection";
 
 const PlanetsPage = () => {
-    return (
-        <>
+  return (
+    <>
+      <h1 className="text-dark">PLANETS</h1>
 
-            <h1 className="text-dark">
-                PLANETS
-            </h1>
+      {/* Hero Section */}
 
-            {/* Hero Section */}
-            
-            <PlanetDetailsSection />
-            
-        </>
-    )
-}
+      <PlanetDetailsSection />
+    </>
+  );
+};
 
-export default PlanetsPage
+export default PlanetsPage;

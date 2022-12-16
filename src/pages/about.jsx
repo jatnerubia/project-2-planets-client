@@ -1,17 +1,11 @@
-
 const AboutPage = () => {
-    return (
-        <>
+  return (
+    <>
+      <h1 className="text-dark">ABOUT</h1>
 
-            <h1 className="text-dark">
-                ABOUT
-            </h1>
+      {/* Teams Section */}
+    </>
+  );
+};
 
-            {/* Teams Section */}
-            
-
-        </>
-    )
-}
-
-export default AboutPage
+export default AboutPage;

@@ -1,20 +1,16 @@
-
-
 import HeroSection from "../components/home/HeroSection";
 import PlanetSection from "../components/home/PlanetSection";
 
 const HomePage = () => {
-    return (
-        <>
+  return (
+    <>
+      <HeroSection />
+      <PlanetSection />
 
-            <HeroSection/>
-            <PlanetSection />
+      {/* News Section */}
+      {/* Feedback Section */}
+    </>
+  );
+};
 
-            {/* News Section */}
-            {/* Feedback Section */}
-
-        </>
-    )
-}
-
-export default HomePage
+export default HomePage;

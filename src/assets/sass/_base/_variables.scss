@@ -1,18 +1,18 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-@import url('http://fonts.googleapis.com/css?family=Merriweather');
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("http://fonts.googleapis.com/css?family=Merriweather");
 
 // Font Family
-$font-poppins: 'Poppins', sans-serif;
-$font-merriweather: 'Merriweather', sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-merriweather: "Merriweather", sans-serif;
 //Colors
 $black: #000000;
-$white: #FEFEFE;
-$space_gray: #FEFEFE;
+$white: #fefefe;
+$space_gray: #fefefe;
 
 *,
 *:before,
-*:after{
+*:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -23,57 +23,55 @@ html {
 }
 
 body {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 html body {
-    font-family:$font-poppins;
-    font-weight: 400;
-    font-size: 18px;
-    color: $white;
-    background-color: $black;
+  font-family: $font-poppins;
+  font-weight: 400;
+  font-size: 18px;
+  color: $white;
+  background-color: $black;
 }
 .ff-merriweather {
-    font-family: $font-merriweather;
+  font-family: $font-merriweather;
 }
-a, a:hover{
-    text-decoration: none;
-    color: inherit;
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 ul {
-    padding: 0;
+  padding: 0;
 }
 ul li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #stars {
-    > i {
-        position: fixed;
-        background: #fff;
-        border-radius: 50%;
-        box-shadow: 0 0 5px #fff, 
-                    0 0 15px #fff, 
-                    0 0 25px #fff;
-        animation: animate linear infinite;
-        z-index: -1;
-    }
-     
+  > i {
+    position: fixed;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 25px #fff;
+    animation: animate linear infinite;
+    z-index: -1;
+  }
 }
 @keyframes animate {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
