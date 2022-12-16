@@ -8,19 +8,8 @@ const Layout = () => {
         <>
 
             {/* TODO: Add navbar component here */}
-
-            {/* This link is for route testing only */}
             <AnimatedStar/>
-            {/* <Navbar/> */}
-            {/* <Link to="/">
-                <button className="btn btn-light">Home</button>
-            </Link>
-            <Link to="/planets">
-                <button className="btn btn-light">Planets</button>
-            </Link>
-            <Link to="/about">
-                <button className="btn btn-light">About</button>
-            </Link> */}
+            <Navbar/>
             
             <main>
                 <Outlet />

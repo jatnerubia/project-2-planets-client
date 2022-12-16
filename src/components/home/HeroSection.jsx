@@ -1,12 +1,10 @@
-import Navbar from "../Navbar"
 
 const HeroSection = ({ planet }) => {
     return (
         <header className="heroSection__header vh-100">
-                {/* Navbar */}
                 {/* <img src={require("../../assets/img/heroSectionSideImg.png")} alt="" /> */}
                 <div className="heroSection__wrapper"></div>
-                <Navbar/>
+                {/* <Navbar/> */}
                     <div className="hero-content container text-center">
                         <div className="row">
                             <div className="col-lg-5 text-start">

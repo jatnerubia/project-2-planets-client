@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 const Navbar = () => {
     return (
-        <nav>
+        <nav className="position-absolute w-100">
             <NavLink to="/">
                 <button className="btn btn-light">Home</button>
             </NavLink>
