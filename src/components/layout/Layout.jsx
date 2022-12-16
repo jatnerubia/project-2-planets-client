@@ -11,7 +11,7 @@ const Layout = () => {
 
             {/* This link is for route testing only */}
             <AnimatedStar/>
-            <Navbar/>
+            {/* <Navbar/> */}
             {/* <Link to="/">
                 <button className="btn btn-light">Home</button>
             </Link>

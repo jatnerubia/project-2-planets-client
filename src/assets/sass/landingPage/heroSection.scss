@@ -1,16 +1,34 @@
 .heroSection__header {
-    img {
+    .heroSection__wrapper {
+        background-image: url("../../img/heroSectionSideImg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: absolute;
-        // width: 734px;
-        height: 100%;
+        width: 500px;
         right: 0;
-        // top: -28px;
+        height: 100vh;
+        z-index: -1;
     }
+    // img {
+    //     position: absolute;
+    //     // width: 734px;
+    //     height: 100%;
+    //     right: 0;
+    //     // top: -28px;
+    // }
     
     .hero-content {
         left: 50%;
         top: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
+        // height: 4px; 
+        h1 {
+            font-size: 150px;
+        }
+        h4{
+            font-size: 25px;
+        }
       }
 }
