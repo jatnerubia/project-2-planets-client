@@ -1,18 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
 const Navbar = () => {
-  return (
-    <nav className="position-absolute w-100">
-      <NavLink to="/">
-        <button className="btn btn-light">Home</button>
-      </NavLink>
-      <NavLink to="/planets">
-        <button className="btn btn-light">Planets</button>
-      </NavLink>
-      <NavLink to="/about">
-        <button className="btn btn-light">About</button>
-      </NavLink>
-    </nav>
-  );
-};
+    return (
+        <nav className="navbar navabar-expand-lg d-flex ">
+            <div className="col-3 text-center ">
+                <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="20%" />
+                <h6>SpaceVerse</h6>
+            </div>
+            <div className="col-md-3 navbar navabar-expand-lg d-flex justify-content-between">
+                <NavLink to="/">
+                    <button className="btn btn-light">Home</button>
+                </NavLink>
+                <NavLink to="/planets">
+                    <button className="btn btn-light">Planets</button>
+                </NavLink>
+                <NavLink to="/about">
+                    <button className="btn btn-light">About</button>
+                </NavLink>
+            </div>
 
-export default Navbar;
+        </nav>
+    )
+}
+
+export default Navbar
