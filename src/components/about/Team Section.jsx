@@ -1,6 +1,8 @@
 const TeamSection = () => {
     return (
+        
         <div className="container">
+            <h1 className="text-center">Meet Our Team</h1>
             <div className="row">
                 <div className="col-3 rounded-image float-start">
                     <img src="https://i.insider.com/569d1bd8e6183e9d408b9e95?width=1000&format=jpeg&auto=webp" alt="astro" width="100%" />
