@@ -1,6 +1,6 @@
 import LoginForm from "../../components/quiz/login/LoginForm"
 
-const Login = () => {
+const LoginPage = () => {
     return (
         <div className="container">
             <div className="row">
@@ -15,4 +15,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginPage

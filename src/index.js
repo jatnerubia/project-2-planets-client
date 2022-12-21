@@ -15,7 +15,7 @@ import PlanetsPage from './pages/planets';
 import AboutPage from './pages/about';
 
 import QuizLayout from './components/layout/QuizLayout';
-import Login from './pages/quiz/login';
+import LoginPage from './pages/quiz/login';
 
 import UserLayout from './components/layout/UserLayout';
 import DashboardPage from './pages/user/dashboard';
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <Login />
+        element: <LoginPage />
       }
     ]
   },
