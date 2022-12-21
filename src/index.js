@@ -18,7 +18,7 @@ import QuizLayout from './components/layout/QuizLayout';
 import Login from './pages/quiz/login';
 
 import UserLayout from './components/layout/UserLayout';
-import Dashboard from './pages/user/dashboard';
+import DashboardPage from './pages/user/dashboard';
 
 import VerifyPage from './pages/verify/verify';
 
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <Dashboard />
+        element: <DashboardPage />
       }
     ]
   },
