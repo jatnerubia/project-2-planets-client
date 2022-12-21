@@ -17,6 +17,9 @@ import AboutPage from './pages/about';
 import QuizLayout from './components/layout/QuizLayout';
 import Login from './pages/quiz/login';
 
+import UserLayout from './components/layout/UserLayout';
+import Dashboard from './pages/user/dashboard';
+
 import PageNotFound from './pages/404';
 
 const router = createBrowserRouter([
@@ -44,6 +47,16 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />
+      }
+    ]
+  },
+  {
+    path: "user",
+    element: <UserLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: <Dashboard />
       }
     ]
   },
