@@ -1,4 +1,4 @@
-# Planets (Project 2) ([Live Demo]())
+# Planets (Project 2) ([Live Demo](https://space-verse.vercel.app/))
 > Some description
 
 ## 💻 Tech Stack
