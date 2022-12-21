@@ -20,6 +20,8 @@ import Login from './pages/quiz/login';
 import UserLayout from './components/layout/UserLayout';
 import Dashboard from './pages/user/dashboard';
 
+import VerifyPage from './pages/verify/verify';
+
 import PageNotFound from './pages/404';
 
 const router = createBrowserRouter([
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
         element: <Dashboard />
       }
     ]
+  },
+  {
+    path: "verify",
+    element: <VerifyPage />
   },
   {
     path: "*",
