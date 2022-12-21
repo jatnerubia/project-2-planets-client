@@ -14,7 +14,19 @@ const VerifyPage = () => {
         try {
             const id = new URLSearchParams(location.search).get('id')
             const token = new URLSearchParams(location.search).get('token')
-            const result = await fetch(`https://project-2-planets-server.onrender.com/verify/account/${id}/${token}`);
+            const result = await fetch(
+                `https://project-2-planets-server.onrender.com/verify/account`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: id,
+                        token: token
+                    })
+                }
+            );
             let response = await result.json();
             setTimeout(async () => {
                 if (result.status === 400) {
