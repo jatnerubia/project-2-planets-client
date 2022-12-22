@@ -75,15 +75,13 @@ const LoginForm = () => {
                 <label htmlFor="email" className="form-label">
                     Email
                 </label>
-                <div className="input-group">
-                    <input
-                        id="email"
-                        type="text"
-                        className="form-control"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    />
-                </div>
+                <input
+                    id="email"
+                    type="text"
+                    className="form-control"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
                 {
                     error !== undefined && error.type === 'email' && (
                         <span className="text-danger">
@@ -96,15 +94,13 @@ const LoginForm = () => {
                 <label htmlFor="password" className="form-label">
                     Password
                 </label>
-                <div className="input-group">
-                    <input
-                        id="password"
-                        type="password"
-                        className="form-control"
-                        value={formData.password}
-                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    />
-                </div>
+                <input
+                    id="password"
+                    type="password"
+                    className="form-control"
+                    value={formData.password}
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                />
                 {
                     error !== undefined && error.type === 'password' && (
                         <span className="text-danger">
