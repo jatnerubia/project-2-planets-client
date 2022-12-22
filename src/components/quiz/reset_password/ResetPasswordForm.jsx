@@ -34,6 +34,13 @@ const ResetPasswordForm = () => {
     const resetPassword = async () => {
         setLoading(true)
         setError(undefined)
+        setMessage(undefined)
+
+        if (formData.password === "" || formData.confirmPassword === "") {
+            setError({ message: 'Please enter a new password' })
+            setLoading(false)
+            return
+        }
 
         if (formData.password !== formData.confirmPassword) {
             setError({ message: 'Password does not match' })
@@ -57,9 +64,12 @@ const ResetPasswordForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                setFormData({
-                    password: '',
-                    confirmPassword: ''
+                setFormData((prevData) => {
+                    return {
+                        ...prevData,
+                        password: '',
+                        confirmPassword: ''
+                    }
                 })
                 setMessage(response)
             }
