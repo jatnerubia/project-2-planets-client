@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 const LoginForm = () => {
+
     return (
         <div className="bg-light text-dark p-5">
             <div>
@@ -9,19 +10,19 @@ const LoginForm = () => {
                 </h3>
             </div>
             <div className="mb-3">
-                <label for="email" class="form-label">
+                <label htmlFor="email" className="form-label">
                     Email
                 </label>
-                <div class="input-group">
-                    <input id="email" type="text" class="form-control" />
+                <div className="input-group">
+                    <input id="email" type="text" className="form-control" />
                 </div>
             </div>
             <div className="mb-3">
-                <label for="password" class="form-label">
+                <label htmlFor="password" className="form-label">
                     Password
                 </label>
-                <div class="input-group">
-                    <input id="password" type="password" class="form-control" />
+                <div className="input-group">
+                    <input id="password" type="password" className="form-control" />
                 </div>
             </div>
             <div className="mb-3">
