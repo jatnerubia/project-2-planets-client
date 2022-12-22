@@ -14,7 +14,6 @@ const PlanetDetailsSection = () => {
         "https://project-2-planets-server.onrender.com/planets"
       );
       let response = await result.json();
-      response = response.slice(0, 6);
       setPlanets(response);
     } catch (error) {}
   };
