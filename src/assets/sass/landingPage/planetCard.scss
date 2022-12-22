@@ -10,8 +10,9 @@
     box-shadow: 5px 5px 14px rgb(255 255 255 / 54%);
     transition: 0.5s;
     border-radius: 20px;
+    background: rgba(0, 0, 0, 0.80);
     &:hover {
-      height: 450px;
+      height: 490px;
       transition: 0.5s;
       .card__planet {
         &::before {
@@ -69,7 +70,7 @@
       bottom: 0;
       overflow: hidden;
       .planet_details {
-        transform: translateY(160px);
+        transform: translateY(200px);
         transition: 0.5s;
       }
       .dashed-line {

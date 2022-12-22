@@ -15,7 +15,7 @@ const PlanetCard = ({ planet }) => {
   return (
     <>
     <div className="planet_card col-lg-4 col-md-6 py-4 my-5">
-      <div className="card position-relative bg-transparent mb-4 mx-2">
+      <div className="card position-relative mb-4 mx-2">
         <div className="card__planet">
           <div className="planet__atmosphere" style={planetStyles.atmosphere}>
             <div className="planet__surface" style={planetStyles.surface}></div>
