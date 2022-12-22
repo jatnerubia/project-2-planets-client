@@ -31,10 +31,10 @@ const LoginForm = () => {
                 }
             )
             let response = await result.json()
-            if (result.status == 400) {
+            if (result.status === 400) {
                 setError(response)
             }
-            if (result.status == 200) {
+            if (result.status === 200) {
                 /* TODO: Save token and redirect to user page */
                 console.log(response)
             }
@@ -65,7 +65,7 @@ const LoginForm = () => {
                     />
                 </div>
                 {
-                    error != undefined && error.type == 'email' && (
+                    error !== undefined && error.type === 'email' && (
                         <span className="text-danger">
                             {error.message}
                         </span>
@@ -86,7 +86,7 @@ const LoginForm = () => {
                     />
                 </div>
                 {
-                    error != undefined && error.type == 'password' && (
+                    error !== undefined && error.type === 'password' && (
                         <span className="text-danger">
                             {error.message}
                         </span>
@@ -97,7 +97,7 @@ const LoginForm = () => {
                 <Link to="/quiz/forgot-password">Forgot Password?</Link>
             </div>
             {
-                error != undefined && error.type === undefined && (
+                error !== undefined && error.type === undefined && (
                     <div class="alert alert-danger" role="alert">
                         {error.message}
                     </div>
