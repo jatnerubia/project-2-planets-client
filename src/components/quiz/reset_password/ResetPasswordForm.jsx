@@ -96,6 +96,13 @@ const ResetPasswordForm = () => {
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                {
+                    error !== undefined && error.type === 'password' && (
+                        <span className="text-danger">
+                            {error.message}
+                        </span>
+                    )
+                }
             </div>
             <div className="mb-3">
                 <label htmlFor="confirm_password" className="form-label">
