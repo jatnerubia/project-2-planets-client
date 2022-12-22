@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 
 const LoginForm = () => {
 
@@ -42,6 +43,10 @@ const LoginForm = () => {
 
         // set loading false
         setLoading(false)
+    }
+
+    const loginWithGoogle = async (credentialResponse) => {
+        console.log(credentialResponse)
     }
 
     return (
@@ -113,8 +118,10 @@ const LoginForm = () => {
             <div className="mb-3 text-center">
                 OR
             </div>
-            <div className="mb-3 text-center">
-                Login with google btn
+            <div className="mb-3 d-flex justify-content-center">
+                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
+                    <GoogleLogin onSuccess={loginWithGoogle} />
+                </GoogleOAuthProvider>
             </div>
             <hr />
             <div className="text-center">
