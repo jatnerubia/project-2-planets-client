@@ -7,10 +7,11 @@
 .planet_card {
   .card {
     height: 200px;
-    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 14px rgb(255 255 255 / 54%);
     transition: 0.5s;
+    border-radius: 20px;
     &:hover {
-      height: 500px;
+      height: 450px;
       transition: 0.5s;
       .card__planet {
         &::before {
@@ -25,8 +26,8 @@
       }
       .card-body {
         .planet_details {
-          transition: 0.5s;
           transform: translateY(0px);
+          transition: 0.5s;
         }
       }
     }
@@ -68,13 +69,13 @@
       bottom: 0;
       overflow: hidden;
       .planet_details {
-        transition: 0.5s;
         transform: translateY(160px);
+        transition: 0.5s;
       }
       .dashed-line {
         flex: 1;
         margin: 0 5px;
-        border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
       }
     }
   }

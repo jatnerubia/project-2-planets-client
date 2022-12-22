@@ -15,13 +15,13 @@ const PlanetCard = ({ planet }) => {
   return (
     <>
     <div className="planet_card col-lg-4 col-md-6 py-4 my-5">
-      <div className="card position-relative bg-white mb-4 mx-4">
+      <div className="card position-relative bg-transparent mb-4 mx-2">
         <div className="card__planet">
           <div className="planet__atmosphere" style={planetStyles.atmosphere}>
             <div className="planet__surface" style={planetStyles.surface}></div>
           </div>
         </div>
-        <div className="card-body text-center text-dark position-absolute w-100">
+        <div className="card-body text-center text-white position-absolute w-100">
           <div className="planet_details">
             <h2 className="pt-2 pb-4 mb-0">{planet.name}</h2>
             <div className="d-flex flex-column justify-content-between">
