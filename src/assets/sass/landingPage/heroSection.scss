@@ -16,4 +16,35 @@
     position: absolute;
     transform: translate(-50%, -50%);
   }
+  button {
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+      content: "\f103";
+      font-family: FontAwesome;
+      color: #fff;
+      top: 20%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: animateDown 1s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
 }
