@@ -26,10 +26,6 @@ const VerifyForm = () => {
                 );
                 let response = await result.json();
                 setTimeout(async () => {
-                    if (result.status === 400) {
-                        setMessage(response.message)
-                        return
-                    }
                     setMessage(response)
                 }, 3000)
             } catch (error) {}
@@ -42,7 +38,7 @@ const VerifyForm = () => {
             {
                 message === undefined
                     ? 'Validating... Please wait.'
-                    : message
+                    : message.message
             }
         </div>
     )
