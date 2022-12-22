@@ -5,10 +5,10 @@ const LoginPage = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <LoginForm />
+                    Image Here
                 </div>
                 <div className="col-md-6">
-                    Image Here
+                    <LoginForm />
                 </div>
             </div>
         </div>
