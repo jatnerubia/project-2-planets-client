@@ -25,6 +25,7 @@ import VerifyPage from './pages/verify/verify';
 import PageNotFound from './pages/404';
 import RegisterPage from './pages/quiz/register';
 import QuizPage from './pages/quiz/quiz';
+import ForgotPasswordPage from './pages/quiz/forgot_password';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />
+      },
+      {
+        path: "forgot-password",
+        element: <ForgotPasswordPage />
       }
     ]
   },
