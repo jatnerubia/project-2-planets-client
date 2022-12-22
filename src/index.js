@@ -26,6 +26,7 @@ import PageNotFound from './pages/404';
 import RegisterPage from './pages/quiz/register';
 import QuizPage from './pages/quiz/quiz';
 import ForgotPasswordPage from './pages/quiz/forgot_password';
+import ResetPasswordPage from './pages/quiz/reset_password';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "forgot-password",
         element: <ForgotPasswordPage />
+      },
+      {
+        path: "reset-password",
+        element: <ResetPasswordPage />
       }
     ]
   },
