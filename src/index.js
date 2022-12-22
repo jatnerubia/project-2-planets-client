@@ -23,6 +23,7 @@ import DashboardPage from './pages/user/dashboard';
 import VerifyPage from './pages/verify/verify';
 
 import PageNotFound from './pages/404';
+import RegisterPage from './pages/quiz/register';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     path: "quiz",
     element: <QuizLayout />,
     children: [
+      {
+        path: "register",
+        element: <RegisterPage />
+      },
       {
         path: "login",
         element: <LoginPage />
