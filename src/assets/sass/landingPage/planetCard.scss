@@ -20,8 +20,10 @@
         }
       }
       .card-body {
+        height: 290px;
+        transition: 0.5s;
         .planet_details {
-          transform: translateY(0px);
+          transform: translateY(20px);
           transition: 0.5s;
         }
       }
@@ -58,9 +60,11 @@
     }
     .card-body {
       bottom: 0;
+      height: 180px;
       overflow: hidden;
+      transition: 0.5s;
       .planet_details {
-        transform: translateY(200px);
+        transform: translateY(100px);
         transition: 0.5s;
       }
       .dashed-line {
