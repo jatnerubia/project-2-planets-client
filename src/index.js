@@ -9,24 +9,29 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+/* Home */
 import Layout from './components/layout/Layout';
 import HomePage from './pages/home'
 import PlanetsPage from './pages/planets';
 import AboutPage from './pages/about';
 
+/* Quiz */
 import QuizLayout from './components/layout/QuizLayout';
+import QuizPage from './pages/quiz/quiz';
+import RegisterPage from './pages/quiz/register';
 import LoginPage from './pages/quiz/login';
+import ForgotPasswordPage from './pages/quiz/forgot_password';
+import ResetPasswordPage from './pages/quiz/reset_password';
 
+/* User */
 import UserLayout from './components/layout/UserLayout';
 import DashboardPage from './pages/user/dashboard';
 
+/* Verify */
 import VerifyPage from './pages/verify/verify';
 
+/* Not found */
 import PageNotFound from './pages/404';
-import RegisterPage from './pages/quiz/register';
-import QuizPage from './pages/quiz/quiz';
-import ForgotPasswordPage from './pages/quiz/forgot_password';
-import ResetPasswordPage from './pages/quiz/reset_password';
 
 const router = createBrowserRouter([
   {
