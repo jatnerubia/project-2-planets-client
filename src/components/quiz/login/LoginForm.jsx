@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 
 const LoginForm = () => {
 
@@ -13,10 +14,7 @@ const LoginForm = () => {
 
     const login = async () => {
 
-        // set loading true
         setLoading(true)
-
-        // clear error
         setError(undefined)
 
         try {
@@ -40,8 +38,30 @@ const LoginForm = () => {
             }
         } catch (error) {}
 
-        // set loading false
         setLoading(false)
+    }
+
+    const loginWithGoogle = async (credentialResponse) => {
+        try {
+            const result = await fetch(
+                `https://project-2-planets-server.onrender.com/auth/google`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(credentialResponse)
+                }
+            )
+            let response = await result.json()
+            if (result.status === 400) {
+                setError(response)
+            }
+            if (result.status === 200) {
+                /* TODO: Save token and redirect to user page */
+                console.log(response)
+            }
+        } catch (error) {}
     }
 
     return (
@@ -113,8 +133,10 @@ const LoginForm = () => {
             <div className="mb-3 text-center">
                 OR
             </div>
-            <div className="mb-3 text-center">
-                Login with google btn
+            <div className="mb-3 d-flex justify-content-center">
+                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
+                    <GoogleLogin onSuccess={loginWithGoogle} />
+                </GoogleOAuthProvider>
             </div>
             <hr />
             <div className="text-center">
