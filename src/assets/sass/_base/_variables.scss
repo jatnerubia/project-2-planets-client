@@ -1,6 +1,6 @@
 // Font
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("http://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://use.typekit.net/qjr3nak.css");
+@import url("https://use.typekit.net/qjr3nak.css");
 
 // Font Family
 $font-poppins: "Poppins", sans-serif;
@@ -10,6 +10,12 @@ $black: #000000;
 $white: #fefefe;
 $space_gray: #fefefe;
 
+:root {
+  --step--1: clamp(0.94rem, calc(0rem + 4.69vw), 1.5rem);
+  --head-2: clamp(1.13rem, calc(0.95rem + 2.89vw), 3.38rem);
+  --head-3: clamp(1.13rem, calc(1.50rem + 1.89vw), 2.38rem);
+  --step-3: clamp(1.94rem, calc(1.25rem + 7vw), 8rem);
+}
 *,
 *:before,
 *:after {
@@ -35,6 +41,22 @@ html body {
 }
 .ff-merriweather {
   font-family: $font-merriweather;
+  font-weight: 300;
+}
+h1 {
+  font-size: var(--step-3);
+}
+h2 {
+  font-size: var(--head-2);
+  font-weight: 700;
+}
+h3 {
+  font-size: var(--head-3);
+  font-weight: 500;
+}
+h4 {
+  font-size: var(--step--1);
+  font-weight: 300;
 }
 a,
 a:hover {

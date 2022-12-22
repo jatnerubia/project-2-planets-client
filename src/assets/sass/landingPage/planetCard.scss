@@ -1,87 +1,89 @@
-.planet_card {
-  .card {
-    height: 200px;
-    box-shadow: 5px 5px 14px rgb(255 255 255 / 54%);
-    transition: 0.5s;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.80);
-    &:hover {
-      height: 490px;
+.planet__section {
+  .planet_card {
+    .card {
+      height: 200px;
+      box-shadow: 5px 5px 14px rgb(255 255 255 / 54%);
       transition: 0.5s;
-      .card__planet {
-        .tiltLine  {
-          height: 250px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.80);
+      &:hover {
+        height: 490px;
+        transition: 0.5s;
+        .card__planet {
+          .tiltLine  {
+            height: 250px;
+            transition: 0.5s;
+          }
+          .planet__atmosphere {
+            width: 250px;
+            height: 250px;
+            transition: 0.5s;
+          }
+        }
+        .card-body {
+          height: 290px;
           transition: 0.5s;
+          .planet_details {
+            transform: translateY(20px);
+            transition: 0.5s;
+          }
+        }
+      }
+      .card__planet {
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        transform: translateX(-50%);
+        .tiltLine {
+          position: absolute;
+          height: 150px;
+          z-index: -2;
+          left: 50%;
+          top: 0%;
         }
         .planet__atmosphere {
-          width: 250px;
-          height: 250px;
+          height: 150px;
+          width: 150px;
+          border-radius: 100%;
+          position: relative;
+          overflow: hidden;
+          background: radial-gradient(circle at 30% 50%, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 65%);
           transition: 0.5s;
+          .planet__surface {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            background-size: cover;
+            transition: 0.5s;
+          }
         }
       }
       .card-body {
-        height: 290px;
+        bottom: 0;
+        height: 180px;
+        overflow: hidden;
         transition: 0.5s;
         .planet_details {
-          transform: translateY(20px);
+          transform: translateY(100px);
           transition: 0.5s;
         }
-      }
-    }
-    .card__planet {
-      position: absolute;
-      left: 50%;
-      top: -50px;
-      transform: translateX(-50%);
-      .tiltLine {
-        position: absolute;
-        height: 150px;
-        z-index: -2;
-        left: 50%;
-        top: 0%;
-      }
-      .planet__atmosphere {
-        height: 150px;
-        width: 150px;
-        border-radius: 100%;
-        position: relative;
-        overflow: hidden;
-        background: radial-gradient(circle at 30% 50%, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 65%);
-        transition: 0.5s;
-        .planet__surface {
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          z-index: -1;
-          background-size: cover;
-          transition: 0.5s;
+        .dashed-line {
+          flex: 1;
+          margin: 0 5px;
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
         }
-      }
-    }
-    .card-body {
-      bottom: 0;
-      height: 180px;
-      overflow: hidden;
-      transition: 0.5s;
-      .planet_details {
-        transform: translateY(100px);
-        transition: 0.5s;
-      }
-      .dashed-line {
-        flex: 1;
-        margin: 0 5px;
-        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
       }
     }
   }
-}
 
-//Planet rotation animation
-@keyframes planetRotate {
-  0%{
-    background-position: 0% center;
-  }
-  100%{
-    background-position: -200% center;
+  //Planet rotation animation
+  @keyframes planetRotate {
+    0%{
+      background-position: 0% center;
+    }
+    100%{
+      background-position: -200% center;
+    }
   }
 }
