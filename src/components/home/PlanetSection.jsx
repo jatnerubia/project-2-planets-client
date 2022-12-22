@@ -22,9 +22,9 @@ const PlanetSection = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container py-5">
       <SectionHeading name="The Planets" />
-      <div className="row">
+      <div className="row py-5">
         {planets.map((planet, index) => (
           <PlanetCard key={index} planet={planet} />
         ))}
