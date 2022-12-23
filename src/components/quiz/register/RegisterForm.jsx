@@ -9,7 +9,7 @@ const RegisterForm = () => {
         last_name: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirm_password: ''
     })
 
     const [loading, setLoading] = useState(false)
@@ -21,7 +21,7 @@ const RegisterForm = () => {
         setLoading(true)
         setError(undefined)
 
-        if (formData.password !== formData.confirmPassword) {
+        if (formData.password !== formData.confirm_password) {
             setError({
                 message: 'Confirm password does not match',
                 type: 'confirm_password'
@@ -51,7 +51,7 @@ const RegisterForm = () => {
                     last_name: '',
                     email: '',
                     password: '',
-                    confirmPassword: ''
+                    confirm_password: ''
                 })
                 setMessage(response)
             }
@@ -153,8 +153,8 @@ const RegisterForm = () => {
                     id="confirm_password"
                     type="password"
                     className="form-control"
-                    value={formData.confirmPassword}
-                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+                    value={formData.confirm_password}
+                    onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
                 {
                     error !== undefined && error.type === 'confirm_password' && (
