@@ -14,14 +14,18 @@ const RegisterForm = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
+    const [message, setMessage] = useState()
 
     const register = async () => {
-        
+
         setLoading(true)
         setError(undefined)
 
         if (formData.password !== formData.confirmPassword) {
-            setError({ message: 'Password does not match' })
+            setError({
+                message: 'Confirm password does not match',
+                type: 'confirm_password'
+            })
             setLoading(false)
             return
         }
@@ -42,7 +46,14 @@ const RegisterForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                console.log(response)
+                setFormData({
+                    first_name: '',
+                    last_name: '',
+                    email: '',
+                    password: '',
+                    confirmPassword: ''
+                })
+                setMessage(response)
             }
         } catch (error) {}
 
@@ -68,6 +79,13 @@ const RegisterForm = () => {
                         value={formData.first_name}
                         onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
                     />
+                    {
+                        error !== undefined && error.type === 'first_name' && (
+                            <span className="text-danger">
+                                {error.message}
+                            </span>
+                        )
+                    }
                 </div>
                 <div className="col-md-6">
                     <label htmlFor="last_name" className="form-label">
@@ -80,6 +98,13 @@ const RegisterForm = () => {
                         value={formData.last_name}
                         onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
                     />
+                    {
+                        error !== undefined && error.type === 'last_name' && (
+                            <span className="text-danger">
+                                {error.message}
+                            </span>
+                        )
+                    }
                 </div>
             </div>
             <div className="mb-3">
@@ -93,6 +118,13 @@ const RegisterForm = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
+                {
+                    error !== undefined && error.type === 'email' && (
+                        <span className="text-danger">
+                            {error.message}
+                        </span>
+                    )
+                }
             </div>
             <div className="mb-3">
                 <label htmlFor="password" className="form-label">
@@ -105,6 +137,13 @@ const RegisterForm = () => {
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                {
+                    error !== undefined && error.type === 'password' && (
+                        <span className="text-danger">
+                            {error.message}
+                        </span>
+                    )
+                }
             </div>
             <div className="mb-3">
                 <label htmlFor="confirm_password" className="form-label">
@@ -117,6 +156,13 @@ const RegisterForm = () => {
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                 />
+                {
+                    error !== undefined && error.type === 'confirm_password' && (
+                        <span className="text-danger">
+                            {error.message}
+                        </span>
+                    )
+                }
             </div>
             <div className="mb-3">
                 By signing up you confirm that you've read and accepted
@@ -127,6 +173,13 @@ const RegisterForm = () => {
                 error !== undefined && error.type === undefined && (
                     <div class="alert alert-danger" role="alert">
                         {error.message}
+                    </div>
+                )
+            }
+            {
+                message !== undefined && (
+                    <div class="alert alert-success" role="alert">
+                        {message.message}
                     </div>
                 )
             }
