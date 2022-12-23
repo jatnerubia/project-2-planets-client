@@ -4,6 +4,21 @@ import { Link } from "react-router-dom"
 
 const RegisterForm = () => {
 
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    })
+
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState()
+
+    const register = () => {
+        console.log(formData)
+    }
+
     return (
         <div className="bg-light text-dark p-5">
             <div>
@@ -20,6 +35,8 @@ const RegisterForm = () => {
                         id="first_name"
                         type="text"
                         className="form-control"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     />
                 </div>
                 <div className="col-md-6">
@@ -30,8 +47,22 @@ const RegisterForm = () => {
                         id="last_name"
                         type="text"
                         className="form-control"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     />
                 </div>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                    Email
+                </label>
+                <input
+                    id="email"
+                    type="text"
+                    className="form-control"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
             </div>
             <div className="mb-3">
                 <label htmlFor="password" className="form-label">
@@ -41,6 +72,8 @@ const RegisterForm = () => {
                     id="password"
                     type="password"
                     className="form-control"
+                    value={formData.password}
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
             </div>
             <div className="mb-3">
@@ -51,6 +84,8 @@ const RegisterForm = () => {
                     id="confirm_password"
                     type="password"
                     className="form-control"
+                    value={formData.confirmPassword}
+                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                 />
             </div>
             <div className="mb-3">
@@ -59,7 +94,11 @@ const RegisterForm = () => {
                 <Link to="/policy">Privacy Policy</Link>
             </div>
             <div className="mb-3 text-center">
-                <button className="btn btn-primary">Register</button>
+                {
+                    loading
+                        ? <button className="btn btn-primary" disabled>Loading...</button>
+                        : <button className="btn btn-primary" onClick={register}>Register</button>
+                }
             </div>
             <div className="mb-3 text-center">
                 OR
