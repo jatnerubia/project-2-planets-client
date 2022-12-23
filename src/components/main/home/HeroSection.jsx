@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-const HeroSection = ({ planet }) => {
+
+const HeroSection = () => {
   return (
     <header className="heroSection__header vh-100">
       <div className="heroSection__wrapper"></div>
