@@ -15,7 +15,7 @@ const RegisterForm = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
-    const [message, setMessage] = useState()
+    const [success, setSuccess] = useState()
 
     const register = async () => {
 
@@ -54,7 +54,7 @@ const RegisterForm = () => {
                     password: '',
                     confirm_password: ''
                 })
-                setMessage(response)
+                setSuccess(response)
             }
         } catch (error) {}
 
@@ -194,9 +194,9 @@ const RegisterForm = () => {
                 <Link to="/policy">Privacy Policy</Link>
             </div>
             {
-                message !== undefined && (
+                success !== undefined && (
                     <div class="alert alert-success" role="alert">
-                        {message.message}
+                        {success.message}
                     </div>
                 )
             }
