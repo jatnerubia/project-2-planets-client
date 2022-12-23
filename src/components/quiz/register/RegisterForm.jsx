@@ -21,6 +21,7 @@ const RegisterForm = () => {
 
         setLoading(true)
         setError(undefined)
+        setSuccess(undefined)
 
         if (formData.password !== formData.confirm_password) {
             setError({
