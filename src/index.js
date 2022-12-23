@@ -11,9 +11,9 @@ import {
 
 /* Home */
 import Layout from './components/layout/Layout';
-import HomePage from './pages/home'
-import PlanetsPage from './pages/planets';
-import AboutPage from './pages/about';
+import HomePage from './pages/main/home'
+import PlanetsPage from './pages/main/planets';
+import AboutPage from './pages/main/about';
 
 /* Quiz */
 import QuizLayout from './components/layout/QuizLayout';

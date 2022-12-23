@@ -1,5 +1,5 @@
-import PlanetDetailsSection from "../components/planets/PlanetDetailsSection";
-import PlanetHeroSection from "../components/planets/PlanetHeroSection";
+import PlanetDetailsSection from "../../components/planets/PlanetDetailsSection";
+import PlanetHeroSection from "../../components/planets/PlanetHeroSection";
 
 const PlanetsPage = () => {
   return (

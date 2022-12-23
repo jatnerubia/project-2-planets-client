@@ -1,4 +1,4 @@
-import TeamSection from "../components/about/Team Section";
+import TeamSection from "../../components/about/Team Section";
 
 const AboutPage = () => {
   return (
