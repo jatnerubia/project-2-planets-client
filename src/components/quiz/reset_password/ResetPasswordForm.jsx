@@ -9,7 +9,7 @@ const ResetPasswordForm = () => {
         id: '',
         token: '',
         password: '',
-        confirmPassword: ''
+        confirm_password: ''
     })
 
     const [loading, setLoading] = useState(false)
@@ -36,7 +36,7 @@ const ResetPasswordForm = () => {
         setError(undefined)
         setMessage(undefined)
 
-        if (formData.password !== formData.confirmPassword) {
+        if (formData.password !== formData.confirm_password) {
             setError({
                 message: 'Password does not match',
                 type: 'confirm_password'
@@ -65,7 +65,7 @@ const ResetPasswordForm = () => {
                     return {
                         ...prevData,
                         password: '',
-                        confirmPassword: ''
+                        confirm_password: ''
                     }
                 })
                 setMessage(response)
@@ -109,8 +109,8 @@ const ResetPasswordForm = () => {
                     id="confirm_password"
                     type="password"
                     className="form-control"
-                    value={formData.confirmPassword}
-                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+                    value={formData.confirm_password}
+                    onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
                 {
                     error !== undefined && error.type === 'confirm_password' && (
