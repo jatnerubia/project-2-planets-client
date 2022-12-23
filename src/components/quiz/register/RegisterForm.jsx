@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 const RegisterForm = () => {
 
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        first_name: '',
+        last_name: '',
         email: '',
         password: '',
         confirmPassword: ''
@@ -15,8 +15,38 @@ const RegisterForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
 
-    const register = () => {
-        console.log(formData)
+    const register = async () => {
+        
+        setLoading(true)
+        setError(undefined)
+
+        if (formData.password !== formData.confirmPassword) {
+            setError({ message: 'Password does not match' })
+            setLoading(false)
+            return
+        }
+
+        try {
+            const result = await fetch(
+                `https://project-2-planets-server.onrender.com/auth/register`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                }
+            )
+            let response = await result.json()
+            if (result.status === 400) {
+                setError(response)
+            }
+            if (result.status === 200) {
+                console.log(response)
+            }
+        } catch (error) {}
+
+        setLoading(false)
     }
 
     return (
@@ -35,8 +65,8 @@ const RegisterForm = () => {
                         id="first_name"
                         type="text"
                         className="form-control"
-                        value={formData.firstName}
-                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        value={formData.first_name}
+                        onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
                     />
                 </div>
                 <div className="col-md-6">
@@ -47,8 +77,8 @@ const RegisterForm = () => {
                         id="last_name"
                         type="text"
                         className="form-control"
-                        value={formData.lastName}
-                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        value={formData.last_name}
+                        onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
                     />
                 </div>
             </div>
@@ -93,6 +123,13 @@ const RegisterForm = () => {
                 our <Link to="/terms">Terms of Service</Link> and
                 <Link to="/policy">Privacy Policy</Link>
             </div>
+            {
+                error !== undefined && error.type === undefined && (
+                    <div class="alert alert-danger" role="alert">
+                        {error.message}
+                    </div>
+                )
+            }
             <div className="mb-3 text-center">
                 {
                     loading
