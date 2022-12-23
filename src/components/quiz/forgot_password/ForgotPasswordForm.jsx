@@ -10,12 +10,12 @@ const ForgotPasswordForm = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
-    const [message, setMessage] = useState()
+    const [success, setSuccess] = useState()
 
     const sendRecoveryLink = async () => {
         setLoading(true)
         setError(undefined)
-        setMessage(undefined)
+        setSuccess(undefined)
 
         try {
             const result = await fetch(
@@ -36,7 +36,7 @@ const ForgotPasswordForm = () => {
                 setFormData({
                     email: ''
                 })
-                setMessage(response)
+                setSuccess(response)
             }
         } catch (error) {}
 
@@ -74,9 +74,9 @@ const ForgotPasswordForm = () => {
                 }
             </div>
             {
-                message !== undefined && (
+                success !== undefined && (
                     <div class="alert alert-success" role="alert">
-                        {message.message}
+                        {success.message}
                     </div>
                 )
             }
