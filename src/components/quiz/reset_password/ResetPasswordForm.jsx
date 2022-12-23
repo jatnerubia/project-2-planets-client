@@ -36,14 +36,11 @@ const ResetPasswordForm = () => {
         setError(undefined)
         setMessage(undefined)
 
-        if (formData.password === "" || formData.confirmPassword === "") {
-            setError({ message: 'Please enter a new password' })
-            setLoading(false)
-            return
-        }
-
         if (formData.password !== formData.confirmPassword) {
-            setError({ message: 'Password does not match' })
+            setError({
+                message: 'Password does not match',
+                type: 'confirm_password'
+            })
             setLoading(false)
             return
         }
@@ -115,6 +112,13 @@ const ResetPasswordForm = () => {
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                 />
+                {
+                    error !== undefined && error.type === 'confirm_password' && (
+                        <span className="text-danger">
+                            {error.message}
+                        </span>
+                    )
+                }
             </div>
             {
                 error !== undefined && error.type === undefined && (
