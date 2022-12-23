@@ -1,4 +1,4 @@
-import RedirectButton from "../RedirectButton";
+import RedirectButton from "../../RedirectButton";
 
 const PlanetCard = ({ planet }) => {
   const planetStyles = {

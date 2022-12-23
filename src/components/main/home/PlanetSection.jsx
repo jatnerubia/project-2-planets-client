@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import RedirectButton from "../RedirectButton";
+import RedirectButton from "../../RedirectButton";
 import PlanetCard from "./PlanetCard";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../../SectionHeading";
 
 const PlanetSection = () => {
   const [planets, setPlanets] = useState([]);

@@ -1,6 +1,6 @@
 
-import HeroSection from '../../components/home/HeroSection'
-import PlanetSection from "../../components/home/PlanetSection";
+import HeroSection from '../../components/main/home/HeroSection'
+import PlanetSection from "../../components/main/home/PlanetSection";
 
 const HomePage = () => {
   return (
