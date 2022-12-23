@@ -194,13 +194,6 @@ const RegisterForm = () => {
                 <Link to="/policy">Privacy Policy</Link>
             </div>
             {
-                error !== undefined && error.type === undefined && (
-                    <div class="alert alert-danger" role="alert">
-                        {error.message}
-                    </div>
-                )
-            }
-            {
                 message !== undefined && (
                     <div class="alert alert-success" role="alert">
                         {message.message}
