@@ -14,7 +14,7 @@ const ResetPasswordForm = () => {
 
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
-    const [message, setMessage] = useState()
+    const [success, setSuccess] = useState()
 
     useEffect(() => {
         const applyToken = () => {
@@ -34,7 +34,7 @@ const ResetPasswordForm = () => {
     const resetPassword = async () => {
         setLoading(true)
         setError(undefined)
-        setMessage(undefined)
+        setSuccess(undefined)
 
         if (formData.password !== formData.confirm_password) {
             setError({
@@ -68,7 +68,7 @@ const ResetPasswordForm = () => {
                         confirm_password: ''
                     }
                 })
-                setMessage(response)
+                setSuccess(response)
             }
         } catch (error) {}
 
@@ -128,9 +128,9 @@ const ResetPasswordForm = () => {
                 )
             }
             {
-                message !== undefined && (
+                success !== undefined && (
                     <div class="alert alert-success" role="alert">
-                        {message.message}
+                        {success.message}
                     </div>
                 )
             }
