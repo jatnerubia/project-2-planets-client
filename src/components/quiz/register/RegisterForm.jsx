@@ -218,7 +218,7 @@ const RegisterForm = () => {
                 }
             </div>
             <div className="mb-3 text-center">
-                <span className="small">OR</span>
+                <span className="fs-6 text-muted">OR</span>
             </div>
             <div className="mb-3 d-flex justify-content-center">
               <button className="btn-google mb-3">

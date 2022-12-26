@@ -107,7 +107,7 @@ const LoginForm = () => {
               }
             </div>
             <div className="mb-3">
-                <Link to="/quiz/forgot-password">Forgot Password?</Link>
+                <Link to="/quiz/forgot-password" className="fs-6 text-muted">Forgot Password?</Link>
             </div>
             {
                 error !== undefined && error.type === undefined && (
@@ -116,24 +116,26 @@ const LoginForm = () => {
                     </div>
                 )
             }
-            <div className="mb-3 text-center">
+            <div className="mb-3 pt-4 text-center">
                 {
                     loading
-                        ? <button className="btn" disabled>Loading...</button>
-                        : <button className="btn" onClick={login}>Login</button>
+                        ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
+                        : <button className="btn btn-lg btn-quiz" onClick={login}>Login</button>
                 }
             </div>
             <div className="mb-3 text-center">
-                OR
+                <span className="fs-6 text-muted">OR</span>
             </div>
             <div className="mb-3 d-flex justify-content-center">
-                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
-                    <GoogleLogin onSuccess={loginWithGoogle} />
-                </GoogleOAuthProvider>
+                <button className="btn-google mb-3">
+                  <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
+                      <GoogleLogin onSuccess={loginWithGoogle} />
+                  </GoogleOAuthProvider>
+                </button>
             </div>
             <hr />
-            <div className="text-center">
-                Don't have an account? <strong><Link to="/quiz/register">Register</Link></strong>
+            <div className="text-center mt-4 text-muted fs-6">
+                Don't have an account? <strong><Link to="/quiz/register" className="text-dark">Register</Link></strong>
             </div>
           </div>
         </div>
