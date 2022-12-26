@@ -65,8 +65,9 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="bg-light text-dark p-5">
-            <div>
+        <div className="login h-100 bg-light text-dark p-5 d-flex justify-content-center align-items-center">
+          <div className="form-content">
+          <div>
                 <h3 className="text-center">
                     Login
                 </h3>
@@ -138,6 +139,7 @@ const LoginForm = () => {
             <div className="text-center">
                 Don't have an account? <strong><Link to="/quiz/register">Register</Link></strong>
             </div>
+          </div>
         </div>
     )
 }

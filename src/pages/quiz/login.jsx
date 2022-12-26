@@ -2,16 +2,18 @@ import LoginForm from "../../components/quiz/login/LoginForm"
 
 const LoginPage = () => {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6">
-                    Image Here
+        // <div className="container">
+            <div className="row form-wrapper h-100">
+                <div className="col-md-6 p-0">
+                  <div className="img-wrapper h-100 position-relative">
+                    <img src={require("../../assets/img/login.jpg")} className="h-100 position-absolute w-100" alt="" />
+                  </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 p-0">
                     <LoginForm />
                 </div>
             </div>
-        </div>
+        // </div>
     )
 }
 
