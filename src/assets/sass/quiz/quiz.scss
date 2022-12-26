@@ -6,6 +6,9 @@
     height: 800px;
     .form-wrapper {
       .img-wrapper {
+        .forgot-img {
+          object-fit: inherit;
+        }
         img {
           object-fit: cover;
         }
