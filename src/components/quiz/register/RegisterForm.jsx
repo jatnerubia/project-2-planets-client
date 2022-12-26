@@ -86,8 +86,9 @@ const RegisterForm = () => {
     }
 
     return (
-        <div className="bg-light text-dark p-5">
-            <div>
+        <div className="registration h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
+          <div className="form-content">
+          <div>
                 <h3 className="text-center">
                     Create an Account
                 </h3>
@@ -220,6 +221,7 @@ const RegisterForm = () => {
             <div className="text-center">
                 Already have an account? <strong><Link to="/quiz/login">Login</Link></strong>
             </div>
+          </div>
         </div>
     )
 }
