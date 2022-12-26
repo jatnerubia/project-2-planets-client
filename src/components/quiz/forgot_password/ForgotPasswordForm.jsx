@@ -48,7 +48,7 @@ const ForgotPasswordForm = () => {
         <div className="forgot-pass right h-100 bg-light text-dark p-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
             <h3 className="text-center pb-5">Forgot Password</h3>
-            <p className="small pb-3">
+            <p className="fs-6 pb-3 text-muted">
                 We'll send a recovery link to
             </p>
             <div className="mb-3">
@@ -82,19 +82,19 @@ const ForgotPasswordForm = () => {
             <div className="mb-3 text-center">
                 {
                     loading
-                        ? <button className="btn btn-primary" disabled>Loading...</button>
-                        : <button className="btn btn-primary" onClick={sendRecoveryLink}>Send recovery link</button>
+                        ? <button className="btn btn-lg btn-quiz fs-6 my-4 w-100" disabled>Loading...</button>
+                        : <button className="btn btn-lg btn-quiz fs-6 my-4 w-100" onClick={sendRecoveryLink}>Send recovery link</button>
                 }
             </div>
             <hr />
-            <div className="mb-3 text-center">
-                Return to <strong><Link to="/quiz/login">Login</Link></strong>
+            <div className="mb-3 text-center fs-6 text-muted">
+                Return to <strong><Link to="/quiz/login" className="text-dark">Login</Link></strong>
             </div>
             <div className="mb-3 text-center">
-                OR
+                <span className="fs-6 text-muted">OR</span>
             </div>
-            <div className="text-center">
-                Don't have an account? <strong><Link to="/quiz/register">Register</Link></strong>
+            <div className="text-center fs-6 text-muted">
+                Don't have an account? <strong><Link to="/quiz/register" className="text-dark">Register</Link></strong>
             </div>
           </div>
         </div>
