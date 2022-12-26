@@ -3,13 +3,13 @@ const FooterSection = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-3 text-center">
-        <Link to="/">
-        <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="50%" alt="SpaceVerse"/>
-        </Link>
-        <h5>SpaceVerse</h5>
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3 text-center">
+          <Link to="/">
+            <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="50%" alt="SpaceVerse" />
+          </Link>
+          <h5>SpaceVerse</h5>
         </div>
-        <div className="col-3">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3 ">
           <ul class="list-unstyled mb-0 text-center">
             <li>
               <a href="#" class="text-white fw-bold display-7">
@@ -39,7 +39,7 @@ const FooterSection = () => {
             </li>
           </ul>
         </div>
-        <div className="col-3 text-center">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3  text-center">
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#" class="text-white fw-bold display-7">
@@ -65,7 +65,7 @@ const FooterSection = () => {
           </ul>
         </div>
 
-        <div className="col-3 text-center">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3  text-center">
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#" class="text-white fw-bold display-7">
