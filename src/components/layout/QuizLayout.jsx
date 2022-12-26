@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom"
-import FooterSection from "../FooterSection"
 
 const QuizLayout = () => {
     return (
@@ -9,8 +8,6 @@ const QuizLayout = () => {
             <main>
                 <Outlet />
             </main>
-
-            <FooterSection />
         </>
     )
 }
