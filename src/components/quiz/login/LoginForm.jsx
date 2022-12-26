@@ -65,7 +65,7 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="login h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
+        <div className="login right h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
           <div>
                 <h3 className="text-center">

@@ -4,6 +4,7 @@
   .container {
     max-width: 1120px;
     width: 100%;
+    box-shadow: 0 60px 40px -30px rgb(0 0 0 / 27%);
     .form-wrapper {
       min-height: 800px;
       .img-wrapper {
@@ -12,6 +13,17 @@
         }
         img {
           object-fit: cover;
+        }
+      }
+      .left {
+        border-radius: 3.3rem 0 0 3.3rem;
+      }
+      .right {
+        border-radius: 0 3.3rem 3.3rem 0;
+      }
+      @media screen and (max-width: 990px) {
+        .left, .right {
+          border-radius: 50px;
         }
       }
     }
