@@ -86,9 +86,9 @@ const RegisterForm = () => {
     }
 
     return (
-        <div className="registration left h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
+        <div className="registration left h-100 bg-light text-dark p-4 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-            <h3 className="text-center mb-5">Create an Account</h3>
+            <h3 className="text-center mb-4">Create an Account</h3>
             <div className="row mb-3">
                 <div className="col-md-6">
                   <div className="input-group mt-4 pt-2">
@@ -196,7 +196,7 @@ const RegisterForm = () => {
                     )
                 }
             </div>
-            <div className="mb-3">
+            <div className="mb-4">
               <span className="small text-muted lh-sm">
                 By signing up you confirm that you've read and accepted
                 our <Link to="/terms">Terms of Service</Link> and
@@ -213,21 +213,23 @@ const RegisterForm = () => {
             <div className="mb-3 text-center">
                 {
                     loading
-                        ? <button className="btn btn-primary" disabled>Loading...</button>
-                        : <button className="btn btn-primary" onClick={register}>Register</button>
+                        ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
+                        : <button className="btn btn-lg btn-quiz" onClick={register}>Register</button>
                 }
             </div>
             <div className="mb-3 text-center">
-                OR
+                <span className="small">OR</span>
             </div>
             <div className="mb-3 d-flex justify-content-center">
+              <button className="btn-google mb-3">
                 <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
-                    <GoogleLogin onSuccess={loginWithGoogle} />
+                  <GoogleLogin onSuccess={loginWithGoogle} />
                 </GoogleOAuthProvider>
+              </button>
             </div>
             <hr />
-            <div className="text-center">
-                Already have an account? <strong><Link to="/quiz/login">Login</Link></strong>
+            <div className="text-center mt-4 text-muted fs-6">
+                Already have an account? <strong><Link to="/quiz/login" className="text-dark">Login</Link></strong>
             </div>
           </div>
         </div>

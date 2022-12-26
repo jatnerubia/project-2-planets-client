@@ -7,8 +7,9 @@ $font-poppins: "Poppins", sans-serif;
 $font-merriweather: "Merriweather", sans-serif;
 //Colors
 $black: #000000;
-$white: #fefefe;
+$white: #ffffff;
 $space_gray: #fefefe;
+$dark_violet: #2D2A43;
 
 :root {
   --step--1: clamp(0.94rem, calc(0rem + 4.69vw), 1.5rem);
@@ -74,6 +75,17 @@ ul li {
   font-size: 12px;
   line-height: 2px;
   letter-spacing: 1px;
+}
+.btn-quiz {
+  background: $dark_violet;
+  color: $space_gray;
+}
+.btn-google {
+  border: 0;
+  background:none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 #stars {
   > i {

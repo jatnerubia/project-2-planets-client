@@ -66,7 +66,7 @@ const ForgotPasswordForm = () => {
               </div>
                 {
                     error !== undefined && error.type === 'email' && (
-                        <span className="text-danger">
+                        <span className="text-danger small">
                             {error.message}
                         </span>
                     )

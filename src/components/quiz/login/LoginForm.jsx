@@ -82,7 +82,7 @@ const LoginForm = () => {
               </div>
               {
                   error !== undefined && error.type === 'email' && (
-                      <span className="text-danger">
+                      <span className="text-danger small">
                           {error.message}
                       </span>
                   )
@@ -100,7 +100,7 @@ const LoginForm = () => {
               </label>
               {
                 error !== undefined && error.type === 'password' && (
-                  <span className="text-danger">
+                  <span className="text-danger small">
                     {error.message}
                   </span>
                 )
@@ -119,8 +119,8 @@ const LoginForm = () => {
             <div className="mb-3 text-center">
                 {
                     loading
-                        ? <button className="btn btn-primary" disabled>Loading...</button>
-                        : <button className="btn btn-primary" onClick={login}>Login</button>
+                        ? <button className="btn" disabled>Loading...</button>
+                        : <button className="btn" onClick={login}>Login</button>
                 }
             </div>
             <div className="mb-3 text-center">

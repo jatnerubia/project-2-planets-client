@@ -94,7 +94,7 @@ const ResetPasswordForm = () => {
               </div>
                 {
                     error !== undefined && error.type === 'password' && (
-                        <span className="text-danger">
+                        <span className="text-danger small">
                             {error.message}
                         </span>
                     )
@@ -115,7 +115,7 @@ const ResetPasswordForm = () => {
               </div>
                 {
                     error !== undefined && error.type === 'confirm_password' && (
-                        <span className="text-danger">
+                        <span className="text-danger small">
                             {error.message}
                         </span>
                     )

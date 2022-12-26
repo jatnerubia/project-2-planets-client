@@ -55,6 +55,7 @@
             padding: 7px 0 7px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.463);
             border-radius: 0;
+            margin-bottom: 6px;
             &:not([value=""]),
             &:focus {
               border-bottom: 1px solid $black;
@@ -65,10 +66,23 @@
                 font-weight: 600;
               }
             }
-            // &:invalid {
-            //   color: #000;
-            //     transform: translateY(0);
-            // }
+          }
+        }
+        button {
+          width: 200px;
+        }
+        .btn-google {
+          width: 100%;
+          div {
+            &:nth-child(2) {
+              justify-content: center;
+            }
+            span {
+              flex-grow: 0;
+              -webkit-flex-grow: 0;
+              font-family: $font-poppins;
+              margin-top: 3px;
+            };
           }
         }
       }
