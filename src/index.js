@@ -15,6 +15,9 @@ import HomePage from './pages/main/home'
 import PlanetsPage from './pages/main/planets';
 import AboutPage from './pages/main/about';
 
+/* Verify */
+import VerifyPage from './pages/verify/verify';
+
 /* Quiz */
 import QuizLayout from './components/layout/QuizLayout';
 import QuizPage from './pages/quiz/quiz';
@@ -27,13 +30,11 @@ import ResetPasswordPage from './pages/quiz/reset_password';
 import UserLayout from './components/layout/UserLayout';
 import DashboardPage from './pages/user/dashboard';
 
-/* Verify */
-import VerifyPage from './pages/verify/verify';
-
 /* Not found */
 import PageNotFound from './pages/404';
 
 const router = createBrowserRouter([
+  /* Main */
   {
     element: <Layout />,
     children: [
@@ -51,6 +52,12 @@ const router = createBrowserRouter([
       },
     ]
   },
+  /* Verify */
+  {
+    path: "verify",
+    element: <VerifyPage />
+  },
+  /* Quiz */
   {
     path: "quiz",
     element: <QuizLayout />,
@@ -77,6 +84,7 @@ const router = createBrowserRouter([
       }
     ]
   },
+  /* User */
   {
     path: "user",
     element: <UserLayout />,
@@ -87,10 +95,7 @@ const router = createBrowserRouter([
       }
     ]
   },
-  {
-    path: "verify",
-    element: <VerifyPage />
-  },
+  /* Not found */
   {
     path: "*",
     element: <PageNotFound />

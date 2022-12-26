@@ -19,7 +19,7 @@ const LoginForm = () => {
 
         try {
             const result = await fetch(
-                `https://project-2-planets-server.onrender.com/auth/login`,
+                `https://project-2-planets-server.onrender.com/quiz/auth/login`,
                 {
                     method: 'POST',
                     headers: {
@@ -44,7 +44,7 @@ const LoginForm = () => {
     const loginWithGoogle = async (credentialResponse) => {
         try {
             const result = await fetch(
-                `https://project-2-planets-server.onrender.com/auth/google`,
+                `https://project-2-planets-server.onrender.com/quiz/auth/google`,
                 {
                     method: 'POST',
                     headers: {
