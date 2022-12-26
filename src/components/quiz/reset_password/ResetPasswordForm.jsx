@@ -138,8 +138,8 @@ const ResetPasswordForm = () => {
             <div className="mb-3 text-center">
                 {
                     loading
-                        ? <button className="btn btn-primary" disabled>Loading...</button>
-                        : <button className="btn btn-primary" onClick={resetPassword}>Reset Password</button>
+                        ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
+                        : <button className="btn btn-lg btn-quiz" onClick={resetPassword}>Reset Password</button>
                 }
             </div>
           </div>
