@@ -76,7 +76,8 @@ const ResetPasswordForm = () => {
     }
 
     return (
-        <div className="bg-light text-dark p-5">
+        <div className="reset-pass h-100 bg-light text-dark p-2 d-flex justify-content-center align-items-center">
+          <div className="form-content">
             <div>
                 <h3 className="text-center">
                     Reset Password
@@ -141,6 +142,7 @@ const ResetPasswordForm = () => {
                         : <button className="btn btn-primary" onClick={resetPassword}>Reset Password</button>
                 }
             </div>
+          </div>
         </div>
     )
 }
