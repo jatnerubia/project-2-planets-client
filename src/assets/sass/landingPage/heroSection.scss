@@ -20,9 +20,7 @@
     height: 50px;
     left: 50%;
     transform: translateX(-50%);
-    &::after {
-      content: "\f103";
-      font-family: FontAwesome;
+   .icon {
       color: #fff;
       top: 20%;
       position: absolute;

@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,7 @@ const HeroSection = () => {
         </div>
       </div>
       <button className='btn rounded-pill bg-transparent border border-2 border-white bottom-0 position-absolute mb-3 pt-4'>
-        {/* <FontAwesomeIcon className='text-white' icon={solid('angles-down')} /> */}
+        <FontAwesomeIcon className='text-white icon' icon={solid('angles-down')} />
       </button>
     </header>
   );
