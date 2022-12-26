@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 const FooterSection = () => {
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-3 text-center">
-          <img
-            src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png"
-            width="50%"
-          />
-          <h5>SpaceVerse</h5>
+        <Link to="/">
+        <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="50%" />
+        </Link>
+        <h5>SpaceVerse</h5>
         </div>
         <div className="col-3">
           <ul class="list-unstyled mb-0 text-center">
