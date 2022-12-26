@@ -2,7 +2,7 @@ const TeamSection = () => {
     return (
              
                <div>
-                <h3>Meet the Team</h3>
+                <h3 className="text-center">Meet the Team</h3>
                </div>  
     )
 }
