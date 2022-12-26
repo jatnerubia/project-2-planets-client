@@ -5,7 +5,7 @@ const FooterSection = () => {
       <div className="row">
         <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3 text-center">
           <Link to="/">
-            <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="50%" alt="SpaceVerse" />
+            <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" className=" w-50 img-fluid" alt="SpaceVerse" />
           </Link>
           <h5>SpaceVerse</h5>
         </div>
