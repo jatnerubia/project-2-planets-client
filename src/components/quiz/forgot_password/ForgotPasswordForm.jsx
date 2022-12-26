@@ -47,25 +47,23 @@ const ForgotPasswordForm = () => {
     return (
         <div className="forgot-pass right h-100 bg-light text-dark p-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-          <div>
-                <h3 className="text-center">
-                    Forgot Password
-                </h3>
-            </div>
-            <div>
+            <h3 className="text-center pb-5">Forgot Password</h3>
+            <p className="small pb-3">
                 We'll send a recovery link to
-            </div>
+            </p>
             <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                    Email
-                </label>
+              <div className="input-group mt-4 pt-2">
                 <input
-                    id="email"
-                    type="text"
-                    className="form-control"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  id="email"
+                  type="text"
+                  className="form-control"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+              </div>
                 {
                     error !== undefined && error.type === 'email' && (
                         <span className="text-danger">

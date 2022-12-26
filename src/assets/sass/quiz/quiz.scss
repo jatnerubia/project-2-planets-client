@@ -26,6 +26,52 @@
           border-radius: 50px;
         }
       }
+      .login {
+        .form-content {
+          width: 100%;
+          max-width: 500px;
+        }
+      }
+      .form-content {
+        .input-group {
+          label {
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            margin: 0;
+            padding: 7px 0 7px;
+            color: rgba(0, 0, 0, 0.463);
+            pointer-events: none;
+            letter-spacing: 0.1em;
+            transition: 0.5s;
+          }
+          input {
+            background: transparent;
+            color: $black;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            letter-spacing: 0.1em;
+            padding: 7px 0 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.463);
+            border-radius: 0;
+            &:not([value=""]),
+            &:focus {
+              border-bottom: 1px solid $black;
+              ~ label {
+                color: $black;
+                transform: translateY(-25px);
+                font-size: .89em;
+                font-weight: 600;
+              }
+            }
+            // &:invalid {
+            //   color: #000;
+            //     transform: translateY(0);
+            // }
+          }
+        }
+      }
     }
     .reset-pass {
       max-width: 550px;

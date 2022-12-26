@@ -3,7 +3,7 @@ import ResetPasswordForm from "../../components/quiz/reset_password/ResetPasswor
 const ResetPasswordPage = () => {
     return (
         // <div className="container">
-            <div className="row">
+            <div className="row form-wrapper h-100">
                 <div className="col-lg-6 col-md-8 m-auto">
                     <ResetPasswordForm />
                 </div>

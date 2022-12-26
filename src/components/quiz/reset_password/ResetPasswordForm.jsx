@@ -78,15 +78,9 @@ const ResetPasswordForm = () => {
     return (
         <div className="reset-pass h-100 bg-light text-dark p-2 d-flex justify-content-center align-items-center">
           <div className="form-content">
-            <div>
-                <h3 className="text-center">
-                    Reset Password
-                </h3>
-            </div>
+            <h3 className="text-center mb-5">Reset Password</h3>
             <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                    Password
-                </label>
+              <div className="input-group mt-4 pt-2">
                 <input
                     id="password"
                     type="password"
@@ -94,6 +88,10 @@ const ResetPasswordForm = () => {
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+              </div>
                 {
                     error !== undefined && error.type === 'password' && (
                         <span className="text-danger">
@@ -103,9 +101,7 @@ const ResetPasswordForm = () => {
                 }
             </div>
             <div className="mb-3">
-                <label htmlFor="confirm_password" className="form-label">
-                    Confirm Password
-                </label>
+              <div className="input-group mt-4 pt-2 mb-5">
                 <input
                     id="confirm_password"
                     type="password"
@@ -113,6 +109,10 @@ const ResetPasswordForm = () => {
                     value={formData.confirm_password}
                     onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
+                <label htmlFor="confirm_password" className="form-label">
+                    Confirm Password
+                </label>
+              </div>
                 {
                     error !== undefined && error.type === 'confirm_password' && (
                         <span className="text-danger">

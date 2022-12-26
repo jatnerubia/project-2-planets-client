@@ -88,45 +88,45 @@ const RegisterForm = () => {
     return (
         <div className="registration left h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-          <div>
-                <h3 className="text-center">
-                    Create an Account
-                </h3>
-            </div>
+            <h3 className="text-center mb-5">Create an Account</h3>
             <div className="row mb-3">
                 <div className="col-md-6">
-                    <label htmlFor="first_name" className="form-label">
-                        First Name
-                    </label>
+                  <div className="input-group mt-4 pt-2">
                     <input
-                        id="first_name"
-                        type="text"
-                        className="form-control"
-                        value={formData.first_name}
-                        onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
+                      id="first_name"
+                      type="text"
+                      className="form-control"
+                      value={formData.first_name}
+                      onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
                     />
-                    {
-                        error !== undefined && error.type === 'first_name' && (
-                            <span className="text-danger">
-                                {error.message}
-                            </span>
-                        )
-                    }
+                    <label htmlFor="first_name" className="form-label">
+                      First Name
+                    </label>
+                  </div>
+                  {
+                    error !== undefined && error.type === 'first_name' && (
+                      <span className="text-danger small">
+                        {error.message}
+                      </span>
+                    )
+                  }
                 </div>
                 <div className="col-md-6">
-                    <label htmlFor="last_name" className="form-label">
-                        Last Name
-                    </label>
+                  <div className="input-group mt-4 pt-2">
                     <input
-                        id="last_name"
-                        type="text"
-                        className="form-control"
-                        value={formData.last_name}
-                        onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
+                      id="last_name"
+                      type="text"
+                      className="form-control"
+                      value={formData.last_name}
+                      onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
                     />
+                    <label htmlFor="last_name" className="form-label">
+                      Last Name
+                    </label>
+                  </div>
                     {
                         error !== undefined && error.type === 'last_name' && (
-                            <span className="text-danger">
+                            <span className="text-danger small">
                                 {error.message}
                             </span>
                         )
@@ -134,66 +134,74 @@ const RegisterForm = () => {
                 </div>
             </div>
             <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                    Email
-                </label>
+              <div className="input-group mt-4 pt-2">
                 <input
-                    id="email"
-                    type="text"
-                    className="form-control"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  id="email"
+                  type="text"
+                  className="form-control"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+              </div>
                 {
-                    error !== undefined && error.type === 'email' && (
-                        <span className="text-danger">
-                            {error.message}
-                        </span>
-                    )
+                  error !== undefined && error.type === 'email' && (
+                      <span className="text-danger small">
+                          {error.message}
+                      </span>
+                  )
                 }
             </div>
             <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                    Password
-                </label>
+              <div className="input-group mt-4 pt-2">
                 <input
-                    id="password"
-                    type="password"
-                    className="form-control"
-                    value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                  id="password"
+                  type="password"
+                  className="form-control"
+                  value={formData.password}
+                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+              </div>
                 {
                     error !== undefined && error.type === 'password' && (
-                        <span className="text-danger">
+                        <span className="text-danger small">
                             {error.message}
                         </span>
                     )
                 }
             </div>
             <div className="mb-3">
-                <label htmlFor="confirm_password" className="form-label">
-                    Confirm Password
-                </label>
+              <div className="input-group mt-4 pt-2">
                 <input
-                    id="confirm_password"
-                    type="password"
-                    className="form-control"
-                    value={formData.confirm_password}
-                    onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
+                  id="confirm_password"
+                  type="password"
+                  className="form-control"
+                  value={formData.confirm_password}
+                  onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
+                <label htmlFor="confirm_password" className="form-label">
+                  Confirm Password
+                </label>
+              </div>
                 {
                     error !== undefined && error.type === 'confirm_password' && (
-                        <span className="text-danger">
+                        <span className="text-danger small">
                             {error.message}
                         </span>
                     )
                 }
             </div>
             <div className="mb-3">
+              <span className="small text-muted lh-sm">
                 By signing up you confirm that you've read and accepted
                 our <Link to="/terms">Terms of Service</Link> and
-                <Link to="/policy">Privacy Policy</Link>
+                <Link to="/policy"> Privacy Policy</Link>
+              </span>
             </div>
             {
                 success !== undefined && (

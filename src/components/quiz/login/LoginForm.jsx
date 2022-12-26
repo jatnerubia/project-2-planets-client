@@ -67,15 +67,8 @@ const LoginForm = () => {
     return (
         <div className="login right h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-          <div>
-                <h3 className="text-center">
-                    Login
-                </h3>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                    Email
-                </label>
+            <h3 className="text-center mb-5">Login</h3>
+              <div className="input-group">
                 <input
                     id="email"
                     type="text"
@@ -83,32 +76,35 @@ const LoginForm = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
-                {
-                    error !== undefined && error.type === 'email' && (
-                        <span className="text-danger">
-                            {error.message}
-                        </span>
-                    )
-                }
-            </div>
-            <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                    Password
-                </label>
-                <input
-                    id="password"
-                    type="password"
-                    className="form-control"
-                    value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                />
-                {
-                    error !== undefined && error.type === 'password' && (
-                        <span className="text-danger">
-                            {error.message}
-                        </span>
-                    )
-                }
+                  <label htmlFor="email" className="form-label">
+                      Email
+                  </label>
+              </div>
+              {
+                  error !== undefined && error.type === 'email' && (
+                      <span className="text-danger">
+                          {error.message}
+                      </span>
+                  )
+              }
+            <div className="input-group my-4 pt-2">
+              <input
+                id="password"
+                type="password"
+                className="form-control"
+                value={formData.password}
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              />
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              {
+                error !== undefined && error.type === 'password' && (
+                  <span className="text-danger">
+                    {error.message}
+                  </span>
+                )
+              }
             </div>
             <div className="mb-3">
                 <Link to="/quiz/forgot-password">Forgot Password?</Link>

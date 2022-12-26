@@ -31,6 +31,7 @@ html {
 body {
   position: relative;
   height: 100vh;
+  line-height: 1;
 }
 html body {
   font-family: $font-poppins;
@@ -69,7 +70,11 @@ ul {
 ul li {
   list-style-type: none;
 }
-
+.small {
+  font-size: 12px;
+  line-height: 2px;
+  letter-spacing: 1px;
+}
 #stars {
   > i {
     position: fixed;
