@@ -86,7 +86,7 @@ const RegisterForm = () => {
     }
 
     return (
-        <div className="registration h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
+        <div className="registration left h-100 bg-light text-dark p-3 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
           <div>
                 <h3 className="text-center">
