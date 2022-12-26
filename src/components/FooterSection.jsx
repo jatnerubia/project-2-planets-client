@@ -1,15 +1,21 @@
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+
+
+
 const FooterSection = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-3 text-center">
-          <img
-            src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png"
-            width="50%"
-          />
-          <h5>SpaceVerse</h5>
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3 text-center">
+          <Link to="/">
+            <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" className=" w-50 img-fluid" alt="SpaceVerse" />
+            <h5>SpaceVerse</h5>
+          </Link>
+         
         </div>
-        <div className="col-3">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3 ">
           <ul class="list-unstyled mb-0 text-center">
             <li>
               <a href="#" class="text-white fw-bold display-7">
@@ -39,7 +45,7 @@ const FooterSection = () => {
             </li>
           </ul>
         </div>
-        <div className="col-3 text-center">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3  text-center">
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#" class="text-white fw-bold display-7">
@@ -65,7 +71,7 @@ const FooterSection = () => {
           </ul>
         </div>
 
-        <div className="col-3 text-center">
+        <div className="col-3 col-sm-3 col-xs-3 col-md-3 col-lg-3  text-center">
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#" class="text-white fw-bold display-7">
@@ -73,9 +79,10 @@ const FooterSection = () => {
               </a>
             </li>
             <li>
-              <i className="fa-brands fa-facebook m-2" />
-              <i className="fa-brands fa-instagram m-2" />
-              <i className="fa-brands fa-twitter m-2" />
+                          {/* <FontAwesomeIcon icon={solid('user-secret')} />
+                          <FontAwesomeIcon icon={regular('coffee')} />
+                          <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} />
+                          <FontAwesomeIcon icon={brands('twitter')} /> */}
             </li>
           </ul>
         </div>
