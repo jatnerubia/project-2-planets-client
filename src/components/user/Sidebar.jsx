@@ -15,7 +15,7 @@ const Sidebar = () => {
             </span>
           </li>
           <NavLink to="/user/dashboard">
-            <li className='rounded-pill rounded-end'>
+            <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('grip')} />
               </span>
@@ -25,7 +25,7 @@ const Sidebar = () => {
             </li>
           </NavLink>
           <NavLink to="/user/leaderboard">
-            <li className='rounded-pill rounded-end'>
+            <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('chart-simple')} />
               </span>
@@ -35,7 +35,7 @@ const Sidebar = () => {
             </li>
           </NavLink>
           <NavLink to="/user/quiz">
-            <li className='rounded-pill rounded-end'>
+            <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('user-pen')} />
               </span>
@@ -45,7 +45,7 @@ const Sidebar = () => {
             </li>
           </NavLink>
           <NavLink to="/user/settings">
-            <li className='rounded-pill rounded-end'>
+            <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('gear')} />
               </span>
@@ -55,7 +55,7 @@ const Sidebar = () => {
             </li>
           </NavLink>
           <NavLink to="/">
-            <li className='rounded-pill rounded-end'>
+            <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('right-from-bracket')} />
               </span>
