@@ -29,9 +29,13 @@ import ResetPasswordPage from './pages/quiz/reset_password';
 /* User */
 import UserLayout from './components/layout/UserLayout';
 import DashboardPage from './pages/user/dashboard';
+import LeaderboardPage from './pages/user/leaderboard';
+import UserQuizPage from './pages/user/quiz'
+import SettingsPage from './pages/user/settings'
 
 /* Not found */
 import PageNotFound from './pages/404';
+
 
 const router = createBrowserRouter([
   /* Main */
@@ -92,6 +96,18 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardPage />
+      },
+      {
+        path: "leaderboard",
+        element: <LeaderboardPage />
+      },
+      {
+        path: "quiz",
+        element: <UserQuizPage />
+      },
+      {
+        path: "settings",
+        element: <SettingsPage />
       }
     ]
   },

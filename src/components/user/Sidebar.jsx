@@ -44,7 +44,7 @@ const Sidebar = () => {
               </span>
             </li>
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/user/settings">
             <li className='rounded-pill rounded-end'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('gear')} />
