@@ -1,6 +1,6 @@
 
 import HeroSection from '../../components/main/home/HeroSection'
-import NewsArticles from '../../components/main/home/NewsArticles';
+import NewsSection from '../../components/main/home/NewsSection';
 import PlanetSection from '../../components/main/home/PlanetSection';
 
 const HomePage = () => {
@@ -8,8 +8,7 @@ const HomePage = () => {
     <>
       <HeroSection />
       <PlanetSection />
-      <NewsArticles />
-      {/* News Section */}
+      <NewsSection />
       {/* Feedback Section */}
     </>
   );
