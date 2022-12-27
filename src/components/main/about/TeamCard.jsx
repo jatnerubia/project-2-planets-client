@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
+
 const TeamCard = () => {
     return (
 
@@ -9,6 +12,11 @@ const TeamCard = () => {
                         <div className="card-body mt-5 pt-5 text-center ">
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
+                            <li className="text-black list-unstyled">
+                          <FontAwesomeIcon icon={brands('facebook')} />
+                          <FontAwesomeIcon icon={brands('linkedin')} />
+                          <FontAwesomeIcon icon={brands('twitter')} />
+                            </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
                         </div>
@@ -21,6 +29,11 @@ const TeamCard = () => {
                         <div className="card-body mt-5 pt-5 text-center">
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
+                            <li className="text-black list-unstyled">
+                          <FontAwesomeIcon icon={brands('facebook')} />
+                          <FontAwesomeIcon icon={brands('linkedin')} />
+                          <FontAwesomeIcon icon={brands('twitter')} />
+                            </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
                         </div>
@@ -35,6 +48,11 @@ const TeamCard = () => {
                         <div className="card-body mt-5 pt-5 text-center">
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
+                            <li className="text-black list-unstyled">
+                          <FontAwesomeIcon icon={brands('facebook')} />
+                          <FontAwesomeIcon icon={brands('linkedin')} />
+                          <FontAwesomeIcon icon={brands('twitter')} />
+                            </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
                         </div>
@@ -47,6 +65,11 @@ const TeamCard = () => {
                         <div className="card-body mt-5 pt-5 text-center">
                             <h5 className="text-black ">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
+                            <li className="text-black list-unstyled">
+                          <FontAwesomeIcon icon={brands('facebook')} />
+                          <FontAwesomeIcon icon={brands('linkedin')} />
+                          <FontAwesomeIcon icon={brands('twitter')} />
+                            </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
                         </div>
