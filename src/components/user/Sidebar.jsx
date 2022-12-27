@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { NavLink } from "react-router-dom"
 
-const Sidebar = () => {
+const Sidebar = ({ activeCheck}) => {
+
   return (
-      <div className="sidebar">
+      <div className={`sidebar ${activeCheck}`}>
         <ul>
-          <li className='mb-5 mt-2 pe-none d-flex align-items-center'>
+          <li className='mb-5 mt-2 ps-0 ms-0 pe-none d-flex align-items-center'>
             <span className="sidebar-logo me-4">
-              <img src={require('../../assets/img/sidebar-logo.png')} className="img-fluid" width={50} height={50} alt="" />
+              <img src={require('../../assets/img/sidebar-logo.png')} width={60} height={60} alt="" />
             </span>
             <span className='sidebar-title'>
               SpaceVerse
