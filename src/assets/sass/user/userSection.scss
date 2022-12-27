@@ -13,5 +13,23 @@
       width: calc(100% - 80px);
       left: 80px;
     }
+    @media (max-width: 991px) {
+      width: 100%;
+      left: 0;
+      &.active {
+        left: 300px;
+      }
+    }
+    @media (max-width: 480px) {
+      &.active {
+        button {
+          z-index: 1000;
+          color: $white;
+          position: fixed;
+          right: 30px;
+          left: initial;
+        }
+      }
+    }
   }
 }

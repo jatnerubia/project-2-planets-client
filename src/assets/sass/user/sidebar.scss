@@ -95,4 +95,26 @@
       }
     }
   }
+  @media (max-width: 991px) {
+    left: -300px;
+    &.active {
+      width: 300px;
+      left: 0;
+      ul li {
+        .sidebar-title {
+          display: block;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    left:-100%;
+    z-index: 5;
+    &.active {
+      width: 100%;
+      left: 0;
+    }
+  }
 }
