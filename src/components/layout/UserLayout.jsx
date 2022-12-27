@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import decode from 'jwt-decode'
+import Sidebar from "../user/Sidebar"
 
 const UserLayout = () => {
 
@@ -24,8 +25,7 @@ const UserLayout = () => {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-md-3">
-                    {/* TODO: Sidebar */}
-                    Sidebar here
+                    <Sidebar />
                 </div>
                 <div className="col-md-9">
                     <Outlet />
