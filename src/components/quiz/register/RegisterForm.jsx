@@ -1,10 +1,13 @@
 
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import * as RestApi from "../../../utils/rest_api_util"
+import { useEffect } from "react"
 
 const RegisterForm = () => {
+
+  const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
         first_name: '',
@@ -17,6 +20,13 @@ const RegisterForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+
+    useEffect(() => {
+      const token = localStorage.getItem('token')
+      if (token) {
+        navigate('/user/dashboard')
+      }
+    }, [])
 
     const register = async () => {
 
@@ -62,8 +72,8 @@ const RegisterForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                /* TODO: Save token and redirect to user page */
-                console.log(response)
+              localStorage.setItem('token', response.token)
+              navigate('/user/dashboard')
             }
         } catch (error) {}
     }
