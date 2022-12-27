@@ -1,0 +1,14 @@
+.news_article__section {
+  .card {
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 5px 14px rgb(255 255 255 / 54%);
+    .card-body {
+       .card-text,
+       .post-meta span {
+        font-size: 10px;
+        line-height: 15px;
+       }
+    }
+  }
+}
