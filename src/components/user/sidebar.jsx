@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { NavLink } from "react-router-dom"
 
-const SideBar = () => {
+const Sidebar = () => {
   return (
       <div className="sidebar">
         <ul>
@@ -78,5 +78,4 @@ const SideBar = () => {
       </div>
   )
 }
-
-export default SideBar
+export default Sidebar
