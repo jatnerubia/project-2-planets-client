@@ -8,14 +8,14 @@ const FooterSection = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center">
+        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <Link to="/">
             <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" className=" w-50 img-fluid" alt="SpaceVerse" />
             <h5>SpaceVerse</h5>
           </Link>
          
         </div>
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center">
+        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0 ">
             <li>
               <a href="#" className="text-white fw-bold display-7">
@@ -45,7 +45,7 @@ const FooterSection = () => {
             </li>
           </ul>
         </div>
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center">
+        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0">
             <li>
               <a href="#" className="text-white fw-bold display-7">
@@ -71,7 +71,7 @@ const FooterSection = () => {
           </ul>
         </div>
 
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center">
+        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0">
             <li>
               <a href="#" className="text-white fw-bold display-7">
