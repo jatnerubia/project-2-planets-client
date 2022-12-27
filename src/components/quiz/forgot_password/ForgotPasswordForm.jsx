@@ -19,7 +19,7 @@ const ForgotPasswordForm = () => {
 
         try {
             const result = await fetch(
-                `https://project-2-planets-server.onrender.com/auth/forgot-password`,
+                `https://project-2-planets-server.onrender.com/quiz/auth/forgot-password`,
                 {
                     method: 'POST',
                     headers: {

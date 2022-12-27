@@ -34,7 +34,7 @@ const RegisterForm = () => {
 
         try {
             const result = await fetch(
-                `https://project-2-planets-server.onrender.com/auth/register`,
+                `https://project-2-planets-server.onrender.com/quiz/auth/register`,
                 {
                     method: 'POST',
                     headers: {
@@ -65,7 +65,7 @@ const RegisterForm = () => {
     const loginWithGoogle = async (credentialResponse) => {
         try {
             const result = await fetch(
-                `https://project-2-planets-server.onrender.com/auth/google`,
+                `https://project-2-planets-server.onrender.com/quiz/auth/google`,
                 {
                     method: 'POST',
                     headers: {
