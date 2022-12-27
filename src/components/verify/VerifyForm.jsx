@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
+import * as RestApi from "../../utils/rest_api_util"
 
 const VerifyForm = () => {
 
@@ -11,19 +12,10 @@ const VerifyForm = () => {
             try {
                 const id = new URLSearchParams(location.search).get('id')
                 const token = new URLSearchParams(location.search).get('token')
-                const result = await fetch(
-                    `https://project-2-planets-server.onrender.com/verify/account`,
-                    {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            id: id,
-                            token: token
-                        })
-                    }
-                );
+                const result = await RestApi.verifyAccount({
+                    id: id,
+                    token: token
+                })
                 let response = await result.json();
                 setTimeout(async () => {
                     setMessage(response)

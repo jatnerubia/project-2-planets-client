@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
+import * as RestApi from "../../../utils/rest_api_util"
 
 const ResetPasswordForm = () => {
 
@@ -46,16 +47,7 @@ const ResetPasswordForm = () => {
         }
 
         try {
-            const result = await fetch(
-                `https://project-2-planets-server.onrender.com/verify/password`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                }
-            )
+            const result = await RestApi.verifyPassword(formData)
             let response = await result.json();
             if (result.status === 400) {
                 setError(response)

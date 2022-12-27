@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
+import * as RestApi from "../../../utils/rest_api_util"
 
 const LoginForm = () => {
 
@@ -18,16 +19,7 @@ const LoginForm = () => {
         setError(undefined)
 
         try {
-            const result = await fetch(
-                `https://project-2-planets-server.onrender.com/quiz/auth/login`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                }
-            )
+            const result = await RestApi.login(formData)
             let response = await result.json()
             if (result.status === 400) {
                 setError(response)
@@ -43,16 +35,7 @@ const LoginForm = () => {
 
     const loginWithGoogle = async (credentialResponse) => {
         try {
-            const result = await fetch(
-                `https://project-2-planets-server.onrender.com/quiz/auth/google`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(credentialResponse)
-                }
-            )
+            const result = await RestApi.loginWithGoogle(credentialResponse)
             let response = await result.json()
             if (result.status === 400) {
                 setError(response)
