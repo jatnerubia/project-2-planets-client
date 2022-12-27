@@ -4,6 +4,7 @@ import * as RestApi from "../../../utils/rest_api_util"
 const QuizSection = () => {
 
     const [quizData, setQuizData] = useState()
+    const [answer, setAnswer] = useState()
 
     const [loading, setLoading] = useState(false)
 
@@ -15,9 +16,6 @@ const QuizSection = () => {
         try {
             const result = await RestApi.getQuiz()
             let response = await result.json()
-            if (result.status === 400) {
-                console.log(response)
-            }
             if (result.status === 200) {
                 setQuizData(response)
             }
@@ -29,12 +27,24 @@ const QuizSection = () => {
         try {
             const result = await RestApi.startQuiz()
             let response = await result.json()
-            if (result.status === 400) {
-                console.log(response)
-            }
             if (result.status === 200) {
                 setQuizData(response)
             }
+        } catch (error) {}
+        setLoading(false)
+    }
+
+    const submitAnswer = async () => {
+        setLoading(true)
+        try {
+            const result = await RestApi.submitAnswer({
+                answer
+            })
+            let response = await result.json()
+            if (result.status === 200) {
+                setQuizData(response)
+            }
+            setAnswer(undefined)
         } catch (error) {}
         setLoading(false)
     }
@@ -50,6 +60,7 @@ const QuizSection = () => {
     return (
         <div>
             
+            {/* Quiz start */}
             {
                 quizData !== undefined && quizData.status === 'start' && (
                     <div className="container">
@@ -105,6 +116,7 @@ const QuizSection = () => {
                 )
             }
 
+            {/* Quiz answering */}
             {
                 quizData !== undefined && quizData.status === 'answering' && (
                     <div className="container">
@@ -112,27 +124,46 @@ const QuizSection = () => {
                             Time Here
                         </div>
                         <div className="progress mb-5">
-                            <div className="progress-bar" role="progressbar" style={{ width: quizData.totalCompletedQuestion / 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 5) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="mb-5">
                             {quizData.question}
                         </div>
-                        <div className="d-grid mb-2">
-                            <button type="button" className="btn btn-light text-start">{quizData.choices.a}</button>
+                        <div className="mb-5">
+                            <div className="d-grid mb-2">
+                                <button type="button" className={"btn text-start " + (answer === "a" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('a')}>
+                                    {quizData.choices.a}
+                                </button>
+                            </div>
+                            <div className="d-grid mb-2">
+                                <button type="button" className={"btn text-start " + (answer === "b" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('b')}>
+                                    {quizData.choices.b}
+                                </button>
+                            </div>
+                            <div className="d-grid mb-2">
+                                <button type="button" className={"btn text-start " + (answer === "c" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('c')}>
+                                    {quizData.choices.c}
+                                </button>
+                            </div>
+                            <div className="d-grid">
+                                <button type="button" className={"btn text-start " + (answer === "d" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('d')}>
+                                    {quizData.choices.d}
+                                </button>
+                            </div>
                         </div>
-                        <div className="d-grid mb-2">
-                            <button type="button" className="btn btn-light text-start">{quizData.choices.b}</button>
-                        </div>
-                        <div className="d-grid mb-2">
-                            <button type="button" className="btn btn-light text-start">{quizData.choices.c}</button>
-                        </div>
-                        <div className="d-grid">
-                            <button type="button" className="btn btn-light text-start">{quizData.choices.d}</button>
+                        <div className="text-end">
+                            {
+                                answer !== undefined && loading && <button type="button" className="btn btn-quiz" disabled>Loading...</button>
+                            }
+                            {
+                                answer !== undefined && !loading && <button type="button" className="btn btn-quiz" onClick={submitAnswer}>NEXT</button>
+                            }
                         </div>
                     </div>
                 )
             }
 
+            {/* Quiz done */}
             {
                 quizData !== undefined && quizData.status === 'done' && (
                     <div className="container">

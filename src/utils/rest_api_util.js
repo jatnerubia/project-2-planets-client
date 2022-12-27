@@ -29,3 +29,5 @@ export const forgotPassword = async (data) => await fetch(baseUrl + "/quiz/auth/
 /* User */
 export const getQuiz = async () => await fetch(baseUrl + "/user/quiz", { method: "GET", headers: getHeaders() })
 export const startQuiz = async () => await fetch(baseUrl + "/user/quiz", { method: "POST", headers: getHeaders() })
+export const submitAnswer = async (data) => await fetch(baseUrl + "/user/quiz/submit", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
+
