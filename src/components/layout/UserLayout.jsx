@@ -24,9 +24,11 @@ const UserLayout = () => {
     return (
         <div className="user_section">
           <div className="section_wrapper position-relative w-100">
-                {/* TODO: Sidebar */}
-                <Sidebar />
-                <Outlet />
+            {/* TODO: Sidebar */}
+            <Sidebar />
+            <main className="position-absolute">
+              <Outlet />
+            </main>
           </div>
         </div>
     )

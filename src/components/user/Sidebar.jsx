@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
       <div className="sidebar">
         <ul>
-          <li className='my-5 pe-none d-flex align-items-center'>
+          <li className='mb-5 mt-2 pe-none d-flex align-items-center'>
             <span className="sidebar-logo me-4">
               <img src={require('../../assets/img/sidebar-logo.png')} className="img-fluid" width={50} height={50} alt="" />
             </span>
