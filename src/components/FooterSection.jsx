@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { solid, regular, brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
 
 
 
@@ -78,11 +78,10 @@ const FooterSection = () => {
                 Social
               </a>
             </li>
-            <li>
-                          {/* <FontAwesomeIcon icon={solid('user-secret')} />
-                          <FontAwesomeIcon icon={regular('coffee')} />
-                          <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} />
-                          <FontAwesomeIcon icon={brands('twitter')} /> */}
+            <li className="text-white">
+                          <FontAwesomeIcon icon={brands('facebook')} />
+                          <FontAwesomeIcon icon={brands('linkedin')} />
+                          <FontAwesomeIcon icon={brands('twitter')} />
             </li>
           </ul>
         </div>
