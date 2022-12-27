@@ -48,7 +48,7 @@ const ForgotPasswordForm = () => {
         <div className="forgot-pass right h-100 bg-light text-dark p-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
             <h3 className="text-center pb-5">Forgot Password</h3>
-            <p className="fs-6 pb-3 text-muted">
+            <p className="fs-6 pb-3 text-dark">
                 We'll send a recovery link to
             </p>
             <div className="mb-3">

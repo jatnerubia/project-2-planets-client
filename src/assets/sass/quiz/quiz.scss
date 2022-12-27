@@ -71,20 +71,6 @@
         button {
           width: 200px;
         }
-        .btn-google {
-          width: 100%;
-          div {
-            &:nth-child(2) {
-              justify-content: center;
-            }
-            span {
-              flex-grow: 0;
-              -webkit-flex-grow: 0;
-              font-family: $font-poppins;
-              margin-top: 3px;
-            };
-          }
-        }
       }
     }
     .reset-pass {

@@ -197,7 +197,7 @@ const RegisterForm = () => {
                 }
             </div>
             <div className="mb-4">
-              <span className="small text-muted lh-sm">
+              <span className="small text-dark lh-sm">
                 By signing up you confirm that you've read and accepted
                 our <Link to="/terms">Terms of Service</Link> and
                 <Link to="/policy"> Privacy Policy</Link>

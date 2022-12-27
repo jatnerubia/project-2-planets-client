@@ -107,7 +107,7 @@ const LoginForm = () => {
               }
             </div>
             <div className="mb-3">
-                <Link to="/quiz/forgot-password" className="fs-6 text-muted">Forgot Password?</Link>
+                <Link to="/quiz/forgot-password" className="fs-6 text-dark">Forgot Password?</Link>
             </div>
             {
                 error !== undefined && error.type === undefined && (
