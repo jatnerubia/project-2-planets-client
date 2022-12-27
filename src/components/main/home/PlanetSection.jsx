@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RedirectButton from "../../RedirectButton";
 import PlanetCard from "./PlanetCard";
 import SectionHeading from "../../SectionHeading";
+import * as RestApi from "../../../utils/rest_api_util"
 
 const PlanetSection = () => {
   const [planets, setPlanets] = useState([]);
@@ -12,9 +13,7 @@ const PlanetSection = () => {
 
   const getPlanets = async () => {
     try {
-      const result = await fetch(
-        "https://project-2-planets-server.onrender.com/planets"
-      );
+      const result = await RestApi.getPlanets()
       let response = await result.json();
       response = response.slice(0, 6);
       setPlanets(response);

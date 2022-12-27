@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PlanetDetails from "./PlanetDetails";
+import * as RestApi from "../../../utils/rest_api_util"
 
 const PlanetDetailsSection = () => {
   const [planets, setPlanets] = useState([]);
@@ -10,9 +11,7 @@ const PlanetDetailsSection = () => {
 
   const getPlanets = async () => {
     try {
-      const result = await fetch(
-        "https://project-2-planets-server.onrender.com/planets"
-      );
+      const result = await RestApi.getPlanets()
       let response = await result.json();
       setPlanets(response);
     } catch (error) {}

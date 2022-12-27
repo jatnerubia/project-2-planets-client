@@ -1,6 +1,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import * as RestApi from "../../../utils/rest_api_util"
 
 const ForgotPasswordForm = () => {
 
@@ -18,16 +19,7 @@ const ForgotPasswordForm = () => {
         setSuccess(undefined)
 
         try {
-            const result = await fetch(
-                `https://project-2-planets-server.onrender.com/quiz/auth/forgot-password`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                }
-            )
+            const result = await RestApi.forgotPassword(formData)
             let response = await result.json()
             if (result.status === 400) {
                 setError(response)
