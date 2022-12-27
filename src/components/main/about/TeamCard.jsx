@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
+import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const TeamCard = () => {
     return (
@@ -13,9 +13,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                          <FontAwesomeIcon icon={brands('facebook')} />
-                          <FontAwesomeIcon icon={brands('linkedin')} />
-                          <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon icon={brands('facebook')} />
+                                <FontAwesomeIcon icon={brands('linkedin')} />
+                                <FontAwesomeIcon icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -30,9 +30,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                          <FontAwesomeIcon icon={brands('facebook')} />
-                          <FontAwesomeIcon icon={brands('linkedin')} />
-                          <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon icon={brands('facebook')} />
+                                <FontAwesomeIcon icon={brands('linkedin')} />
+                                <FontAwesomeIcon icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -49,9 +49,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                          <FontAwesomeIcon icon={brands('facebook')} />
-                          <FontAwesomeIcon icon={brands('linkedin')} />
-                          <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon icon={brands('facebook')} />
+                                <FontAwesomeIcon icon={brands('linkedin')} />
+                                <FontAwesomeIcon icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -66,9 +66,9 @@ const TeamCard = () => {
                             <h5 className="text-black ">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                          <FontAwesomeIcon icon={brands('facebook')} />
-                          <FontAwesomeIcon icon={brands('linkedin')} />
-                          <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon icon={brands('facebook')} />
+                                <FontAwesomeIcon icon={brands('linkedin')} />
+                                <FontAwesomeIcon icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
