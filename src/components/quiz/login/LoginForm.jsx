@@ -70,7 +70,7 @@ const LoginForm = () => {
                       </span>
                   )
               }
-            <div className="input-group my-4 pt-2">
+            <div className="input-group mt-4 pt-2">
               <input
                 id="password"
                 type="password"
@@ -81,15 +81,15 @@ const LoginForm = () => {
               <label htmlFor="password" className="form-label">
                 Password
               </label>
-              {
+            </div>
+            {
                 error !== undefined && error.type === 'password' && (
                   <span className="text-danger small">
                     {error.message}
                   </span>
                 )
               }
-            </div>
-            <div className="mb-3">
+            <div className="mb-3 mt-4">
                 <Link to="/quiz/forgot-password" className="fs-6 text-dark">Forgot Password?</Link>
             </div>
             {
