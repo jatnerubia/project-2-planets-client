@@ -14,6 +14,7 @@ const getHeaders = () => {
 
 /* Main */
 export const getPlanets = async () => await fetch(baseUrl + "/planets", { method: "GET", headers: getHeaders() })
+export const getNews = async () => await fetch(baseUrl + "/news", { method: "GET", headers: getHeaders() })
 
 /* Verify */
 export const verifyAccount = async (data) => await fetch(baseUrl + "/verify/account", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })

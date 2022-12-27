@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import SectionHeading from "../../SectionHeading";
 import NewsCard from "./NewsCard";
+import * as RestApi from "../../../utils/rest_api_util"
 
-const NewsArticles = () => {
+const NewsSection = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -11,9 +12,7 @@ const NewsArticles = () => {
 
   const getNews = async () => {
     try {
-      const result = await fetch(
-        "https://project-2-planets-server.onrender.com/news"
-      );
+      const result = await RestApi.getNews()
       let response = await result.json();
       setNews(response);
     } catch (error) {}
@@ -31,4 +30,4 @@ const NewsArticles = () => {
   )
 }
 
-export default NewsArticles;
+export default NewsSection;
