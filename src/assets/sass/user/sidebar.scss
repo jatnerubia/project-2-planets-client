@@ -19,6 +19,9 @@
       margin-left: 10px;
       display: flex;
       align-items: center;
+      &:last-child {
+        width: 97%;
+      }
       .sidebar-title {
         transition: 0.5s;
       }
@@ -85,14 +88,43 @@
         transition: 0.5s;
       }
     }
+    #settingsCollapse {
+      margin-left: 40px;
+    }
+  }
+  .settings-collapse{
+    .icon {
+      transition: 0.5s;
+    }
+    &[aria-expanded="true"] {
+      div {
+        transition: 0.5s;
+      }
+      .icon {
+        rotate: 90deg;
+        transition: 0.5s;
+      }
+    }
+    &:focus {
+      border: none;
+    }
   }
   &.active {
     width: 80px;
-    ul li {
+    ul li,
+    ul button {
       .sidebar-title {
         display: none;
         transition: 0.5s;
       }
+    }
+    .settings-collapse {
+      .icon {
+        display: none;
+      }
+    }
+    ul #settingsCollapse {
+      margin-left: 0;
     }
   }
   @media (max-width: 991px) {
@@ -100,12 +132,16 @@
     &.active {
       width: 300px;
       left: 0;
-      ul li {
+      ul li,
+      ul button {
         .sidebar-title {
           display: block;
           transition: 0.5s;
         }
       }
+    }
+    #settingsCollapse {
+      margin-left: 40px !important;
     }
   }
   @media (max-width: 480px) {
