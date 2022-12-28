@@ -53,7 +53,7 @@ const QuizSection = () => {
         const startedAt = new Date(quizData.startedAt).getTime()
         const finishedAt = new Date(quizData.finishedAt).getTime()
         const totalSeconds = (finishedAt - startedAt) / 1000
-        if (totalSeconds >= 600) return "10:00"
+        if (totalSeconds >= 600) return "00:10:00"
         return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
     }
 
@@ -156,36 +156,36 @@ const QuizSection = () => {
                             <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 5) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="mb-5">
-                            {quizData.question}
+                            <h1 className="fs-4 fw-bold">{quizData.question}</h1>
                         </div>
                         <div className="mb-5">
                             <div className="d-grid mb-2">
-                                <button type="button" className={"btn text-start " + (answer === "a" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('a')}>
+                                <button type="button" className={"btn-choice btn text-start " + (answer === "a" ? "selected" : "unselect")} onClick={() => setAnswer('a')}>
                                     {quizData.choices.a}
                                 </button>
                             </div>
                             <div className="d-grid mb-2">
-                                <button type="button" className={"btn text-start " + (answer === "b" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('b')}>
+                                <button type="button" className={"btn-choice btn text-start " + (answer === "b" ? "selected" : "unselect")} onClick={() => setAnswer('b')}>
                                     {quizData.choices.b}
                                 </button>
                             </div>
                             <div className="d-grid mb-2">
-                                <button type="button" className={"btn text-start " + (answer === "c" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('c')}>
+                                <button type="button" className={"btn-choice btn text-start " + (answer === "c" ? "selected" : "unselect")} onClick={() => setAnswer('c')}>
                                     {quizData.choices.c}
                                 </button>
                             </div>
                             <div className="d-grid">
-                                <button type="button" className={"btn text-start " + (answer === "d" ? "btn-primary" : "btn-light")} onClick={() => setAnswer('d')}>
+                                <button type="button" className={"btn-choice btn text-start " + (answer === "d" ? "selected" : "unselect")} onClick={() => setAnswer('d')}>
                                     {quizData.choices.d}
                                 </button>
                             </div>
                         </div>
                         <div className="text-end">
                             {
-                                answer !== undefined && loading && <button type="button" className="btn btn-quiz" disabled>Loading...</button>
+                                answer !== undefined && loading && <button type="button" className="btn px-4 btn-quiz" disabled>Loading...</button>
                             }
                             {
-                                answer !== undefined && !loading && <button type="button" className="btn btn-quiz" onClick={submitAnswer}>NEXT</button>
+                                answer !== undefined && !loading && <button type="button" className="btn px-4 btn-quiz" onClick={submitAnswer}>NEXT</button>
                             }
                         </div>
                     </div>

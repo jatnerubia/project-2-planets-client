@@ -6,4 +6,18 @@
     margin: 0 auto;
     padding-top: 100px;
   }
+  .btn-choice {
+    &:hover {
+      background: $dark_violet !important;
+      color: $space_gray !important;
+    }
+    &.selected {
+      background: $dark_violet;
+      color: $space_gray;
+    }
+    &.unselect {
+      background: #2d2a4332;
+      color: $dark_violet;
+    }
+  }
 }
