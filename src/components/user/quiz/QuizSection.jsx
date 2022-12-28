@@ -112,7 +112,7 @@ const QuizSection = () => {
                             START
                           </button>
                           {/* Modal Content */}
-                          <div class="modal fade" id="quizModal" tabIndex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+                          <div class="modal fade" id="quizModal" tabIndex="-1" data-bs-backdrop="static" aria-labelledby="quizModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -131,7 +131,7 @@ const QuizSection = () => {
                                       {
                                         loading
                                           ? <button className="btn btn-md btn-quiz d-block m-auto px-5" disabled>Loading...</button>
-                                          : <button className="btn btn-md btn-quiz d-block m-auto px-5" onClick={startQuiz}>Let's Go</button>
+                                          : <button className="btn btn-md btn-quiz d-block m-auto px-5" data-bs-dismiss="modal" onClick={startQuiz}>Let's Go</button>
                                       }
                                     </div>
                                   </p>
