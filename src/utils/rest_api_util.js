@@ -27,6 +27,7 @@ export const loginWithGoogle = async (data) => await fetch(baseUrl + "/quiz/auth
 export const forgotPassword = async (data) => await fetch(baseUrl + "/quiz/auth/forgot-password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
 /* TODO: Quiz - Leaderboards */
+export const getLeaderboards = async () => await fetch(baseUrl + "/quiz/leaderboards", { method: "GET", headers: getHeaders() })
 
 /* TODO: User - Dashboard */
 
