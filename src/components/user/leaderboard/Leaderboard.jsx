@@ -16,13 +16,13 @@ const LeaderboardComponent = () => {
       setLeaderboard(response);
     } catch (error) {}
   };
-  // const getTimeSpent = () => {
-  //   const startedAt = new Date(leaderboards.startedAt).getTime()
-  //   const finishedAt = new Date(leaderboards.finishedAt).getTime()
-  //   const totalSeconds = (finishedAt - startedAt) / 1000
-  //   if (totalSeconds >= 3600) return "1:00:00"
-  //   return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
-  // }
+  const getTimeSpent = (index) => {
+    const startedAt = new Date(leaderboards[index].startedAt).getTime()
+    const finishedAt = new Date(leaderboards[index].finishedAt).getTime()
+    const totalSeconds = (finishedAt - startedAt) / 1000
+    if (totalSeconds >= 3600) return "1:00:00"
+    return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
+  }
   return (
     <div className="mt-4">
       <h1 className="fw-bold fs-2">LEADERBOARD</h1>
@@ -41,10 +41,10 @@ const LeaderboardComponent = () => {
             <tbody className="table-group-divider">
               {leaderboards.map((leaderboard, index) => (
                 <tr key={index}>
-                  <th scope="row">1</th>
+                  <th scope="row">{index+1}</th>
                   <td>{leaderboard.fullName}</td>
                   <td>{leaderboard.score}</td>
-                  <td>00:20:00</td>
+                  <td>{getTimeSpent(index)}</td>
                 </tr>
               ))}
             </tbody>
