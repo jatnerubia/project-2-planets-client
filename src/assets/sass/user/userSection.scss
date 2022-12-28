@@ -40,8 +40,25 @@
           left: 0%;
           top: 50%;
           bottom: 0;
-          color: gold;
           transform: translate(-17%, -60%);
+          &.gold {
+            color: #FFD700;
+          }
+          &.silver {
+            color: #C0C0C0;
+          }
+          &.bronze {
+            color: #967444;
+          }
+        }
+        h1 {
+          rotate: 45deg;
+          font-size: 50px;
+          color: #fff;
+          position: absolute;
+          top: 60%;
+          left: 45%;
+          transform: translate(-92%, -20%);
         }
       }
     }

@@ -74,7 +74,11 @@ const DashboardComponent = () => {
                     </h5>
                     <p class="card-text fs-1 fw-bold mt-4">
                       <div className="hexagon">
-                        <FontAwesomeIcon className='me-3 fs-1 medal' icon={solid('medal')} />
+                        {/* CHANGE THE MEDAL CLASS (gold, silver, bronze) IN FONT-ICON BASED ON AWARD */}
+                        <FontAwesomeIcon className='me-3 fs-1 medal gold' icon={solid('medal')} />
+
+                        {/* IF NO AWARD */}
+                        {/* <h1>Better Luck Next Life</h1> */}
                       </div>
                     </p>
                   </div>
