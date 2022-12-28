@@ -15,16 +15,20 @@ const QuizSection = () => {
 
     }, [])
 
+    useEffect(() => {
+      updateTime()
+    }, [quizData])
+
     const updateTime = () => {
       setInterval(() => {
-        console.log(quizData)
         if (quizData !== undefined) {
           const currentTime = new Date().getTime()
           const startedAt = new Date(quizData.startedAt).getTime()
-          const remainingTime = currentTime - startedAt
-          setTimer(new Date(remainingTime).toISOString().slice(11, 19))
+          const remainingTime = (currentTime - startedAt) / 1000
+          if(remainingTime <= 600 ) {
+            setTimer(new Date((600 - remainingTime) * 1000).toISOString().slice(11, 19))
+          }
         }
-
       }, 1000)
     }
 
@@ -34,7 +38,6 @@ const QuizSection = () => {
             let response = await result.json()
             if (result.status === 200) {
                 setQuizData(response)
-                updateTime()
             }
         } catch (error) {}
     }
@@ -70,51 +73,9 @@ const QuizSection = () => {
         const startedAt = new Date(quizData.startedAt).getTime()
         const finishedAt = new Date(quizData.finishedAt).getTime()
         const totalSeconds = (finishedAt - startedAt) / 1000
-        if (totalSeconds >= 3600) return "1:00:00"
+        if (totalSeconds >= 600) return "00:10:00"
         return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
     }
-
-    // const calculateTimeLeft = () => {
-    //   let year = new Date().getFullYear();
-    //   let difference = +new Date(`12/31/${year}`) - +new Date();
-
-    //   let timeLeft = {};
-
-    //   if (difference > 0) {
-    //     timeLeft = {
-    //       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    //       minutes: Math.floor((difference / 1000 / 60) % 60),
-    //       seconds: Math.floor((difference / 1000) % 60)
-    //     };
-    //   }
-
-    //   return timeLeft;
-    // }
-    // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
-    // useEffect(() => {
-    //   const timer = setTimeout(() => {
-    //     setTimeLeft(calculateTimeLeft())
-    //   }, 1000);
-
-    //   return () => clearTimeout(timer)
-    // })
-
-    // const timerComponents = [];
-
-    // Object.keys(timeLeft).forEach((interval) => {
-    //   if (!timeLeft[interval]) {
-    //     return;
-    //   }
-
-    //   timerComponents.push(
-    //     <span>
-    //       {timeLeft[interval]} {interval}{" "}
-    //     </span>
-    //   );
-    // });
-
-
     return (
         <div className="quiz-wrapper">
 
