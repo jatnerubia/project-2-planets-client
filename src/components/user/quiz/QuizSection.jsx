@@ -58,12 +58,12 @@ const QuizSection = () => {
     }
 
     return (
-        <div>
-            
+        <div className="quiz-wrapper">
+
             {/* Quiz start */}
             {
                 quizData !== undefined && quizData.status === 'start' && (
-                    <div className="container">
+                    <div className="mt-4">
                         <div className="text-center">
                             Fun Quiz
                         </div>
@@ -119,7 +119,7 @@ const QuizSection = () => {
             {/* Quiz answering */}
             {
                 quizData !== undefined && quizData.status === 'answering' && (
-                    <div className="container">
+                    <div className="mt-4">
                         <div className="text-center mb-5">
                             Time Here
                         </div>
@@ -166,18 +166,18 @@ const QuizSection = () => {
             {/* Quiz done */}
             {
                 quizData !== undefined && quizData.status === 'done' && (
-                    <div className="container">
-                        <div className="text-center">
-                            Fun Quiz
-                        </div>
+                    <div className="mt-4">
+                      <h1 className="fw-bold fs-2">FUN QUIZ</h1>
+
+                      <div className="quiz-done_wrapper">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="card text-center">
                                     <div className="card-body">
-                                        <div className="card-title">
+                                        <div className="card-title fs-5 fw-bold">
                                             Total Score
                                         </div>
-                                        <p className="card-text fw-bold">
+                                        <p className="card-text fw-bold fs-1 mt-4">
                                             {quizData.score}/100
                                         </p>
                                     </div>
@@ -188,10 +188,10 @@ const QuizSection = () => {
                             <div className="col-md-4 pt-2">
                                 <div className="card text-center">
                                     <div className="card-body">
-                                        <div className="card-title">
+                                        <div className="card-title fs-5 fw-bold">
                                             Correct
                                         </div>
-                                        <p className="card-text fw-bold">
+                                        <p className="card-text fw-bold fs-1 mt-4">
                                             {quizData.score}
                                         </p>
                                     </div>
@@ -200,10 +200,10 @@ const QuizSection = () => {
                             <div className="col-md-4 pt-2">
                                 <div className="card text-center">
                                     <div className="card-body">
-                                        <div className="card-title">
+                                        <div className="card-title fs-5 fw-bold">
                                             Incorrect
                                         </div>
-                                        <p className="card-text fw-bold">
+                                        <p className="card-text fw-bold fs-1 mt-4">
                                             {100 - quizData.score}
                                         </p>
                                     </div>
@@ -212,16 +212,17 @@ const QuizSection = () => {
                             <div className="col-md-4 pt-2">
                                 <div className="card text-center">
                                     <div className="card-body">
-                                        <div className="card-title">
+                                        <div className="card-title fs-5 fw-bold">
                                             Time Spent
                                         </div>
-                                        <p className="card-text fw-bold">
+                                        <p className="card-text fw-bold fs-1 mt-4">
                                             {getTimeSpent()}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                      </div>
                     </div>
                 )
             }
