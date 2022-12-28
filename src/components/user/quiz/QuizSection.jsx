@@ -64,54 +64,83 @@ const QuizSection = () => {
             {
                 quizData !== undefined && quizData.status === 'start' && (
                     <div className="mt-4">
-                        <div className="text-center">
-                            Fun Quiz
-                        </div>
+                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
+                      <div className="quiz-start_wrapper">
                         <div className="row">
-                            <div className="col-md-6">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title">
-                                            Question
-                                        </div>
-                                        <p className="card-text fw-bold">
-                                            100
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title">
-                                            Total Score
-                                        </div>
-                                        <p className="card-text fw-bold">
-                                            100
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                          <div className="col-md-6">
+                              <div className="card text-center">
+                                  <div className="card-body">
+                                      <div className="card-title fw-bold fs-5">
+                                          Question
+                                      </div>
+                                      <p className="card-text fw-bold fs-1 fw-bold mt-4">
+                                          100
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div className="col-md-6">
+                              <div className="card text-center">
+                                  <div className="card-body">
+                                      <div className="card-title fw-bold fs-5">
+                                          Total Score
+                                      </div>
+                                      <p className="card-text fw-bold fs-1 fw-bold mt-4">
+                                          100
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12 pt-2">
                                 <div className="card">
                                     <div className="card-body">
-                                        <p className="card-text">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            Harum non aut nisi ut dolores ullam nemo quia consectetur adipisci tenetur.
+                                        <p className="card-text lh-base">
+                                        Space is a mysterious place but there are plenty of things
+                                        we are sure about when it comes to that vast space that surrounds
+                                        us here on earth. Challenge what you think you know with our fun
+                                        space quiz.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center pt-2">
-                            {
-                                loading
-                                    ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
-                                    : <button className="btn btn-lg btn-quiz" onClick={startQuiz}>START</button>
-                            }
+                        <div className="text-center pt-5">
+                          {/* Modal Button */}
+                          <button type="button" class="btn btn-lg px-4 btn-quiz" data-bs-toggle="modal" data-bs-target="#quizModal">
+                            START
+                          </button>
+                          {/* Modal Content */}
+                          <div class="modal fade" id="quizModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="quizModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="quizModalLabel">
+                                    <em className="text-danger fw-bold fs-6">Notes: </em><br />
+                                  </h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <p className="text-start lh-base">
+                                    This quiz is set to 10mins time to answer it. Keep in mind that once you started the quiz,
+                                    the alloted time will start running. You can close the tab/browser and when you revisit, it will take
+                                    you to the question your are currently answering until the countdown stop. <br /><br />
+                                    Your rank will be based on your score and the time you spent. Goodluck 🙂
+                                    <div className="pt-4">
+                                      {
+                                        loading
+                                          ? <button className="btn btn-md btn-quiz d-block m-auto px-5" disabled>Loading...</button>
+                                          : <button className="btn btn-md btn-quiz d-block m-auto px-5" onClick={startQuiz}>Let's Go</button>
+                                      }
+                                    </div>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                 )
             }
@@ -167,7 +196,7 @@ const QuizSection = () => {
             {
                 quizData !== undefined && quizData.status === 'done' && (
                     <div className="mt-4">
-                      <h1 className="fw-bold fs-2">FUN QUIZ</h1>
+                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
 
                       <div className="quiz-done_wrapper">
                         <div className="row">

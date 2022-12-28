@@ -91,7 +91,7 @@
     }
     @media (max-width: 480px) {
       &.active {
-        button {
+        .btn-toggle {
           z-index: 1000;
           color: $white;
           position: fixed;
@@ -99,6 +99,11 @@
           left: initial;
         }
       }
+    }
+    button:hover {
+      color: #2D2A43;
+      background: transparent;
+      border: 1px solid #2D2A43;
     }
   }
 }
