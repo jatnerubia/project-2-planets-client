@@ -35,6 +35,7 @@ import SettingsPage from './pages/user/settings'
 
 /* Not found */
 import PageNotFound from './pages/404';
+import ProfilePage from './pages/user/profile';
 
 
 const router = createBrowserRouter([
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
       {
         path: "settings",
         element: <SettingsPage />
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />
       }
     ]
   },
