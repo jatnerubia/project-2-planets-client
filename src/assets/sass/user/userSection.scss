@@ -21,12 +21,12 @@
         transform: rotate(-30deg) skewX(30deg) scaleY(.866);
         &::before {
           position: absolute;
-        right: 6.7%;
-        bottom: 0;
-        left: 6.7%;
-        top: 0;
-        transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
-        background: linear-gradient(59.82deg, #0976CE 0%, #0976CE 49.36%, #3A91D7 50.11%, #3A91D7 100%);
+          right: 6.7%;
+          bottom: 0;
+          left: 6.7%;
+          top: 0;
+          transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+          background: linear-gradient(59.82deg, rgba(27,24,31,1) 0%, rgba(27,24,31,1) 49.36%, rgba(50,4,89,1) 50.11%, rgba(50,4,89,1) 100%);
         content: '';
         }
         .medal {
