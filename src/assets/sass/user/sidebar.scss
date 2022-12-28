@@ -19,6 +19,9 @@
       margin-left: 10px;
       display: flex;
       align-items: center;
+      &:last-child {
+        width: 97%;
+      }
       .sidebar-title {
         transition: 0.5s;
       }
