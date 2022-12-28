@@ -112,7 +112,7 @@ const QuizSection = () => {
                             START
                           </button>
                           {/* Modal Content */}
-                          <div class="modal fade" id="quizModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="quizModalLabel" aria-hidden="true">
+                          <div class="modal fade" id="quizModal" tabIndex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
