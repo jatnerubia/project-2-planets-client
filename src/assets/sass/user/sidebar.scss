@@ -139,6 +139,11 @@
           transition: 0.5s;
         }
       }
+      .settings-collapse {
+        .icon {
+          display: block;
+        }
+      }
     }
     #settingsCollapse {
       margin-left: 40px !important;
