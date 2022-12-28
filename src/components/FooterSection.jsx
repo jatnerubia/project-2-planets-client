@@ -17,11 +17,13 @@ const FooterSection = () => {
         </div>
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0 ">
+            <Link to="/about">
             <li>
               <a href="#" className="text-white fw-bold display-7">
                 About Us
               </a>
             </li>
+            </Link>
 
             <li>
               <a href="#" className="text-white">
