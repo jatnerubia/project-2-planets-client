@@ -5,12 +5,28 @@ const QuizSection = () => {
 
     const [quizData, setQuizData] = useState()
     const [answer, setAnswer] = useState()
+    const [timer, setTimer] = useState("00:00:00")
+
 
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         getQuiz()
+
     }, [])
+
+    const updateTime = () => {
+      setInterval(() => {
+        console.log(quizData)
+        if (quizData !== undefined) {
+          const currentTime = new Date().getTime()
+          const startedAt = new Date(quizData.startedAt).getTime()
+          const remainingTime = currentTime - startedAt
+          setTimer(new Date(remainingTime).toISOString().slice(11, 19))
+        }
+
+      }, 1000)
+    }
 
     const getQuiz = async () => {
         try {
@@ -18,6 +34,7 @@ const QuizSection = () => {
             let response = await result.json()
             if (result.status === 200) {
                 setQuizData(response)
+                updateTime()
             }
         } catch (error) {}
     }
@@ -53,9 +70,50 @@ const QuizSection = () => {
         const startedAt = new Date(quizData.startedAt).getTime()
         const finishedAt = new Date(quizData.finishedAt).getTime()
         const totalSeconds = (finishedAt - startedAt) / 1000
-        if (totalSeconds >= 600) return "00:10:00"
+        if (totalSeconds >= 3600) return "1:00:00"
         return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
     }
+
+    // const calculateTimeLeft = () => {
+    //   let year = new Date().getFullYear();
+    //   let difference = +new Date(`12/31/${year}`) - +new Date();
+
+    //   let timeLeft = {};
+
+    //   if (difference > 0) {
+    //     timeLeft = {
+    //       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    //       minutes: Math.floor((difference / 1000 / 60) % 60),
+    //       seconds: Math.floor((difference / 1000) % 60)
+    //     };
+    //   }
+
+    //   return timeLeft;
+    // }
+    // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+    // useEffect(() => {
+    //   const timer = setTimeout(() => {
+    //     setTimeLeft(calculateTimeLeft())
+    //   }, 1000);
+
+    //   return () => clearTimeout(timer)
+    // })
+
+    // const timerComponents = [];
+
+    // Object.keys(timeLeft).forEach((interval) => {
+    //   if (!timeLeft[interval]) {
+    //     return;
+    //   }
+
+    //   timerComponents.push(
+    //     <span>
+    //       {timeLeft[interval]} {interval}{" "}
+    //     </span>
+    //   );
+    // });
+
 
     return (
         <div className="quiz-wrapper">
@@ -150,7 +208,7 @@ const QuizSection = () => {
                 quizData !== undefined && quizData.status === 'answering' && (
                     <div className="mt-4">
                         <div className="text-center mb-5">
-                            Time Here
+                          <h2>{timer}</h2>
                         </div>
                         <div className="progress mb-5">
                             <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 5) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
@@ -197,7 +255,7 @@ const QuizSection = () => {
                 quizData !== undefined && quizData.status === 'done' && (
                     <div className="mt-4">
                       <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
-
+                      {/* {timerComponents.length ? timerComponents : <span>Time's up!</span>} */}
                       <div className="quiz-done_wrapper">
                         <div className="row">
                             <div className="col-md-12">
