@@ -1,8 +1,9 @@
+import ChangePassword from "../../components/user/settings/ChangePassword"
 
 const SettingsPage = () => {
     return (
         <div>
-            Settings Page
+            <ChangePassword />
         </div>
     )
 }
