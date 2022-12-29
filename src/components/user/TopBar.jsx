@@ -14,6 +14,15 @@ const Topbar = ({ handleClick }) => {
     if (location.pathname === '/user/leaderboard') {
       setCurrentLocation('LEADERBOARD')
     }
+    if (location.pathname === '/user/quiz') {
+      setCurrentLocation('SPACE QUIZ')
+    }
+    if (location.pathname === '/user/settings') {
+      setCurrentLocation('CHANGE PASSWORD')
+    }
+    if (location.pathname === '/user/profile') {
+      setCurrentLocation('PROFILE')
+    }
   }, [location])
   return (
     <>

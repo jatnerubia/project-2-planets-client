@@ -25,7 +25,6 @@ const LeaderboardComponent = () => {
   }
   return (
     <div className="mt-4">
-      <h1 className="fw-bold fs-2">LEADERBOARD</h1>
 
       <div className="leaderboard-wrapper mt-5">
         <h3 className="fw-bold">TOP 10 HIGHEST SCORE</h3>

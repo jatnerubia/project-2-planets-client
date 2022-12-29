@@ -86,7 +86,6 @@ const QuizSection = () => {
             {
                 quizData !== undefined && quizData.status === 'start' && (
                     <div className="mt-4">
-                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
                       <div className="quiz-start_wrapper">
                         <div className="row">
                           <div className="col-md-6">
@@ -200,7 +199,6 @@ const QuizSection = () => {
             {
                 quizData !== undefined && quizData.status === 'done' && (
                     <div className="mt-4">
-                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
                       {/* {timerComponents.length ? timerComponents : <span>Time's up!</span>} */}
                       <div className="quiz-done_wrapper">
                         <div className="row">
