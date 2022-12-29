@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import * as RestApi from "../../../utils/rest_api_util"
+import QuizCard from "../QuizCard"
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 
 const QuizSection = () => {
 
@@ -87,33 +90,15 @@ const QuizSection = () => {
                       <div className="quiz-start_wrapper">
                         <div className="row">
                           <div className="col-md-6">
-                              <div className="card text-center">
-                                  <div className="card-body">
-                                      <div className="card-title fw-bold fs-5">
-                                          Question
-                                      </div>
-                                      <p className="card-text fw-bold fs-1 fw-bold mt-4">
-                                          100
-                                      </p>
-                                  </div>
-                              </div>
+                            <QuizCard title="QUESTION" text="100" icon={solid('circle-question')} />
                           </div>
                           <div className="col-md-6">
-                              <div className="card text-center">
-                                  <div className="card-body">
-                                      <div className="card-title fw-bold fs-5">
-                                          Total Score
-                                      </div>
-                                      <p className="card-text fw-bold fs-1 fw-bold mt-4">
-                                          100
-                                      </p>
-                                  </div>
-                              </div>
+                            <QuizCard title="TOTAL SCORE" text="100" icon={solid('bookmark')} />
                           </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-12 pt-2">
-                                <div className="card">
+                            <div className="col-md-12 pt-4">
+                                <div className="card mx-5">
                                     <div className="card-body">
                                         <p className="card-text lh-base">
                                         Space is a mysterious place but there are plenty of things
@@ -141,7 +126,7 @@ const QuizSection = () => {
                                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body">
-                                  <p className="text-start lh-base">
+                                  <div className="text-start lh-base">
                                     This quiz is set to 10mins time to answer it. Keep in mind that once you started the quiz,
                                     the alloted time will start running. You can close the tab/browser and when you revisit, it will take
                                     you to the question your are currently answering until the countdown stop. <br /><br />
@@ -153,7 +138,7 @@ const QuizSection = () => {
                                           : <button className="btn btn-md btn-quiz d-block m-auto px-5" data-bs-dismiss="modal" onClick={startQuiz}>Let's Go</button>
                                       }
                                     </div>
-                                  </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
