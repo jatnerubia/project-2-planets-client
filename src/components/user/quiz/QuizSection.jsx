@@ -88,7 +88,7 @@ const QuizSection = () => {
                       <div className="quiz-start_wrapper">
                         <div className="row">
                           <div className="col-md-6">
-                            <QuizCard title="QUESTION" text="50" icon={solid('circle-question')} />
+                            <QuizCard title="QUESTION" text="10" icon={solid('circle-question')} />
                           </div>
                           <div className="col-md-6">
                             <QuizCard title="TOTAL SCORE" text="100" icon={solid('bookmark')} />
@@ -155,7 +155,7 @@ const QuizSection = () => {
                           <h2>{timer}</h2>
                         </div>
                         <div className="progress mb-5">
-                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 50) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 10) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="mb-5">
                             <h1 className="fs-4 fw-bold">{quizData.question}</h1>
@@ -207,10 +207,10 @@ const QuizSection = () => {
                         </div>
                         <div className="row">
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="CORRECT" text={quizData.score / 2} icon={solid('circle-check')} />
+                              <QuizCard title="CORRECT" text={quizData.score / 10} icon={solid('circle-check')} />
                             </div>
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="INCORRECT" text={50 - (quizData.score / 2)} icon={solid('circle-xmark')} />
+                              <QuizCard title="INCORRECT" text={10 - (quizData.score / 10)} icon={solid('circle-xmark')} />
                             </div>
                             <div className="col-md-4 pt-2">
                               <QuizCard title="TIME SPENT" text={getTimeSpent()} icon={solid('hourglass-half')} />
