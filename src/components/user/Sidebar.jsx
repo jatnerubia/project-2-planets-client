@@ -14,7 +14,7 @@ const Sidebar = ({ activeCheck}) => {
   return (
       <div className={`sidebar ${activeCheck}`}>
         <ul>
-          <li className='mb-5 mt-2 ps-0 ms-0 pe-none d-flex align-items-center'>
+          <li className='mb-5 ps-0 ms-0 pe-none d-flex align-items-center'>
             <span className="sidebar-logo me-4">
               <img src={require('../../assets/img/sidebar-logo.png')} width={60} height={60} alt="" />
             </span>
