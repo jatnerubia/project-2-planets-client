@@ -112,7 +112,7 @@ const DashboardComponent = () => {
                       <FontAwesomeIcon className='me-3' icon={solid('gift')} />
                       YOUR AWARD
                     </h5>
-                    <p className="card-text fs-1 fw-bold mt-4">
+                    <div className="card-text fs-1 fw-bold mt-4">
                       <div className="hexagon">
                         {
                           dashboard.rank === null && (
@@ -140,7 +140,7 @@ const DashboardComponent = () => {
                           )
                         }
                       </div>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>

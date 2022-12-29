@@ -39,13 +39,11 @@ const UserLayout = () => {
         {/* TODO: Sidebar */}
         <Sidebar className={activeCheck} activeCheck={activeCheck} />
         <main className={`position-absolute ${activeCheck}`}>
-          <div>
             <button className='btn-toggle border-0 btn btn-white p-0' onClick={handleClick}>
               <FontAwesomeIcon className='fs-1' icon={solid('bars')} />
             </button>
 
             <Outlet />
-          </div>
         </main>
       </div>
     </div>
