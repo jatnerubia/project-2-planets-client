@@ -112,7 +112,7 @@ const ChangePasswordForm = () => {
                   </div>
                   {
                       success !== undefined && (
-                          <div className="alert alert-success" role="alert">
+                          <div className="alert alert-success py-4" role="alert">
                               {success.message}
                           </div>
                       )

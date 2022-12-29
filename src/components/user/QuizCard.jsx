@@ -3,7 +3,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const QuizCard = ({ title, text, icon, footerText = '' }) => {
   return (
-    <div className="card text-center">
+    <div className="card text-center mx-sm-2">
       <div className="d-flex flex-column justify-content-center align-items-center card-body">
         <h5 className="card-title fw-bold fs-5 text-muted">
           <FontAwesomeIcon className='me-3' icon={icon} />

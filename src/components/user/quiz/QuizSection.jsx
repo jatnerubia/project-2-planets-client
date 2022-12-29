@@ -87,10 +87,10 @@ const QuizSection = () => {
                     <div className="mt-4">
                       <div className="quiz-start_wrapper">
                         <div className="row">
-                          <div className="mb-4 col-md-6">
+                          <div className="mb-4 col-md-6 p-0">
                             <QuizCard title="QUESTION" text="10" icon={solid('circle-question')} />
                           </div>
-                          <div className="col-md-6">
+                          <div className="col-md-6 p-0">
                             <QuizCard title="TOTAL SCORE" text="100" icon={solid('bookmark')} />
                           </div>
                         </div>
@@ -150,8 +150,8 @@ const QuizSection = () => {
             {/* Quiz answering */}
             {
                 quizData !== undefined && quizData.status === 'answering' && (
-                    <div className="mt-4">
-                        <div className="text-center mb-5">
+                    <div className="mt-4 pt-3">
+                        <div className="text-center mb-5 pt-5">
                           <h2>{timer}</h2>
                         </div>
                         <div className="progress mb-5">
