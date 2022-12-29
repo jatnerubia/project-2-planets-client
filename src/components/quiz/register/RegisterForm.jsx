@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
@@ -20,6 +21,8 @@ const RegisterForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [confirmPasswordShow, setConfirmPasswordShow] = useState(false)
 
     useEffect(() => {
       const token = localStorage.getItem('token')
@@ -27,6 +30,13 @@ const RegisterForm = () => {
         navigate('/user/dashboard')
       }
     }, [])
+
+    const showHidePassword = () => {
+      setPasswordShow(!passwordShow)
+    }
+    const showHideConfirmPassword = () => {
+      setConfirmPasswordShow(!confirmPasswordShow)
+    }
 
     const register = async () => {
 
@@ -151,11 +161,12 @@ const RegisterForm = () => {
               <div className="input-group mt-4 pt-2">
                 <input
                   id="password"
-                  type="password"
+                  type={passwordShow ? "text" : "password"}
                   className="form-control"
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                <span><FontAwesomeIcon onClick={showHidePassword} className='text-dark icon position-absolute end-0 fs-4' type='button' icon={passwordShow ? solid("eye-slash") : solid("eye")} /></span>
                 <label htmlFor="password" className="form-label">
                   Password
                 </label>
@@ -172,11 +183,12 @@ const RegisterForm = () => {
               <div className="input-group mt-4 pt-2">
                 <input
                   id="confirm_password"
-                  type="password"
+                  type={confirmPasswordShow ? "text" : "password"}
                   className="form-control"
                   value={formData.confirm_password}
                   onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
+                <span><FontAwesomeIcon onClick={showHideConfirmPassword} className='text-dark icon position-absolute end-0 fs-4' type='button' icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")} /></span>
                 <label htmlFor="confirm_password" className="form-label">
                   Confirm Password
                 </label>
