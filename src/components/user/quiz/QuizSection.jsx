@@ -205,54 +205,18 @@ const QuizSection = () => {
                       <div className="quiz-done_wrapper">
                         <div className="row">
                             <div className="col-md-12">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title fs-5 fw-bold">
-                                            Total Score
-                                        </div>
-                                        <p className="card-text fw-bold fs-1 mt-4">
-                                            {quizData.score}/100
-                                        </p>
-                                    </div>
-                                </div>
+                              <QuizCard title="TOTAL SCORE" text={quizData.score + ' /100'} icon={solid('bookmark')} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-4 pt-2">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title fs-5 fw-bold">
-                                            Correct
-                                        </div>
-                                        <p className="card-text fw-bold fs-1 mt-4">
-                                            {quizData.score}
-                                        </p>
-                                    </div>
-                                </div>
+                              <QuizCard title="CORRECT" text={quizData.score} icon={solid('circle-check')} />
                             </div>
                             <div className="col-md-4 pt-2">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title fs-5 fw-bold">
-                                            Incorrect
-                                        </div>
-                                        <p className="card-text fw-bold fs-1 mt-4">
-                                            {100 - quizData.score}
-                                        </p>
-                                    </div>
-                                </div>
+                              <QuizCard title="INCORRECT" text={100 - quizData.score} icon={solid('circle-xmark')} />
                             </div>
                             <div className="col-md-4 pt-2">
-                                <div className="card text-center">
-                                    <div className="card-body">
-                                        <div className="card-title fs-5 fw-bold">
-                                            Time Spent
-                                        </div>
-                                        <p className="card-text fw-bold fs-1 mt-4">
-                                            {getTimeSpent()}
-                                        </p>
-                                    </div>
-                                </div>
+                              <QuizCard title="TIME SPENT" text={getTimeSpent()} icon={solid('hourglass-half')} />
                             </div>
                         </div>
                       </div>
