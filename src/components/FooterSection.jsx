@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
 
@@ -28,9 +28,9 @@ const FooterSection = () => {
             </NavLink>
 
             <li>
-              <a href="#" className="text-white">
-                Contact Us
-              </a>
+              <Link to="" className="text-white">      
+              Contact Us
+              </Link>
             </li>
             <li>
               <a href="#" className="text-white">
