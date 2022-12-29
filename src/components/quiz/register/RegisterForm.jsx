@@ -29,6 +29,7 @@ const RegisterForm = () => {
       if (token) {
         navigate('/user/dashboard')
       }
+      // eslint-disable-next-line
     }, [])
 
     const showHidePassword = () => {
