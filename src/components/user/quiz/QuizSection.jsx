@@ -210,7 +210,7 @@ const QuizSection = () => {
                               <QuizCard title="CORRECT" text={quizData.score / 2} icon={solid('circle-check')} />
                             </div>
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="INCORRECT" text={100 - quizData.score} icon={solid('circle-xmark')} />
+                              <QuizCard title="INCORRECT" text={50 - (quizData.score / 2)} icon={solid('circle-xmark')} />
                             </div>
                             <div className="col-md-4 pt-2">
                               <QuizCard title="TIME SPENT" text={getTimeSpent()} icon={solid('hourglass-half')} />
