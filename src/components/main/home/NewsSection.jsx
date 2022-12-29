@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SectionHeading from "../../SectionHeading";
+import SectionHeading from "../SectionHeading";
 import NewsCard from "./NewsCard";
 import * as RestApi from "../../../utils/rest_api_util"
 
