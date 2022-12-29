@@ -8,22 +8,24 @@ const VerifyForm = () => {
     const [message, setMessage] = useState()
     
     useEffect(() => {
-        const validateAccount = async () => {
-            try {
-                const id = new URLSearchParams(location.search).get('id')
-                const token = new URLSearchParams(location.search).get('token')
-                const result = await RestApi.verifyAccount({
-                    id: id,
-                    token: token
-                })
-                let response = await result.json();
-                setTimeout(async () => {
-                    setMessage(response)
-                }, 3000)
-            } catch (error) {}
-        }
         validateAccount()
+        // eslint-disable-next-line
     }, [location]);
+
+    const validateAccount = async () => {
+        try {
+            const id = new URLSearchParams(location.search).get('id')
+            const token = new URLSearchParams(location.search).get('token')
+            const result = await RestApi.verifyAccount({
+                id: id,
+                token: token
+            })
+            let response = await result.json();
+            setTimeout(async () => {
+                setMessage(response)
+            }, 3000)
+        } catch (error) {}
+    }
 
     return (
         <div className="container vh-100 d-flex justify-content-center align-items-center">

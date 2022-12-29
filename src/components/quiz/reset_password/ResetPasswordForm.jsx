@@ -22,19 +22,21 @@ const ResetPasswordForm = () => {
     const [confirmPasswordShow, setConfirmPasswordShow] = useState(false)
 
     useEffect(() => {
-        const applyToken = () => {
-            const id = new URLSearchParams(location.search).get('id')
-            const token = new URLSearchParams(location.search).get('token')
-            setFormData((prevData) => {
-                return {
-                    ...prevData,
-                    id,
-                    token
-                }
-            })
-        }
         applyToken()
+        // eslint-disable-next-line
     }, [location])
+
+    const applyToken = () => {
+        const id = new URLSearchParams(location.search).get('id')
+        const token = new URLSearchParams(location.search).get('token')
+        setFormData((prevData) => {
+            return {
+                ...prevData,
+                id,
+                token
+            }
+        })
+    }
 
     const showHidePassword = () => {
       setPasswordShow(!passwordShow)

@@ -15,11 +15,11 @@ const QuizSection = () => {
 
     useEffect(() => {
         getQuiz()
-
     }, [])
 
     useEffect(() => {
       updateTime()
+      // eslint-disable-next-line
     }, [quizData])
 
     const updateTime = () => {
