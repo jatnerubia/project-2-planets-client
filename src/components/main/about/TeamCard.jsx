@@ -13,9 +13,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                                <FontAwesomeIcon icon={brands('facebook')} />
-                                <FontAwesomeIcon icon={brands('linkedin')} />
-                                <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -30,9 +30,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                                <FontAwesomeIcon icon={brands('facebook')} />
-                                <FontAwesomeIcon icon={brands('linkedin')} />
-                                <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -49,9 +49,9 @@ const TeamCard = () => {
                             <h5 className="text-black">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                                <FontAwesomeIcon icon={brands('facebook')} />
-                                <FontAwesomeIcon icon={brands('linkedin')} />
-                                <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
@@ -66,9 +66,9 @@ const TeamCard = () => {
                             <h5 className="text-black ">Alan Demol</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
-                                <FontAwesomeIcon icon={brands('facebook')} />
-                                <FontAwesomeIcon icon={brands('linkedin')} />
-                                <FontAwesomeIcon icon={brands('twitter')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+                                <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
                             </li>
                             <button className="bg-black text-white btn rounded-pill m-2">FOLLOW</button>
                             <button className="border-dark text-black btn rounded-pill">HIRE ME</button>
