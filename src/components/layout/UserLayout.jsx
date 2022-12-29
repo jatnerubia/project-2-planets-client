@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 import { useEffect, useState } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import decode from 'jwt-decode'
@@ -28,10 +27,12 @@ const UserLayout = () => {
       }
       const decodedToken = decode(token)
       if (decodedToken.exp * 1000 < new Date().getTime()) {
-          localStorage.clear()
-          navigate('/quiz')
-          return
+        console.log('Token expired, check if I can still send request')
+        // localStorage.clear()
+        // navigate('/quiz')
+        return
       }
+      // eslint-disable-next-line
   }, [])
 
   return (
