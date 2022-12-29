@@ -83,9 +83,9 @@ const FooterSection = () => {
               </a>
             </li>
             <li className="text-white">
-                          <FontAwesomeIcon className="m-2" icon={brands('facebook')} />
-                          <FontAwesomeIcon className="m-2" icon={brands('linkedin')} />
-                          <FontAwesomeIcon className="m-2" icon={brands('twitter')} />
+                          <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+                          <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+                          <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
             </li>
           </ul>
         </div>
