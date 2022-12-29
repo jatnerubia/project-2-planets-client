@@ -59,7 +59,7 @@ const DashboardComponent = () => {
                           <QuizCard title="CORRECT ANSWER" text='N/A' icon={solid('list-check')} />
                         )
                         : (
-                          <QuizCard title="CORRECT ANSWER" text={(dashboard.correctAnswer / 2) + ' / 100'} icon={solid('list-check')} />
+                          <QuizCard title="CORRECT ANSWER" text={(dashboard.correctAnswer / 2) + ' / 50'} icon={solid('list-check')} />
                         )
                     }
 
