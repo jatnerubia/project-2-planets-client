@@ -29,7 +29,7 @@ const DashboardComponent = () => {
     return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
 }
   return (
-      <div className="mt-4">
+      <div className="mt-5">
           <div className="py-5 user_avatar d-flex justify-content-center flex-column align-items-center">
             <img src="https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" className="rounded-circle" alt="User Avatar" width={150} height={150} />
             <h4 className="mt-4 fw-bold">John Doe</h4>

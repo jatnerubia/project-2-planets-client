@@ -87,7 +87,7 @@ const QuizSection = () => {
                     <div className="mt-4">
                       <div className="quiz-start_wrapper">
                         <div className="row">
-                          <div className="col-md-6">
+                          <div className="mb-4 col-md-6">
                             <QuizCard title="QUESTION" text="10" icon={solid('circle-question')} />
                           </div>
                           <div className="col-md-6">
@@ -96,7 +96,7 @@ const QuizSection = () => {
                         </div>
                         <div className="row">
                             <div className="col-md-12 pt-4">
-                                <div className="card mx-5">
+                                <div className="card mx-lg-5">
                                     <div className="card-body">
                                         <p className="card-text lh-base">
                                         Space is a mysterious place but there are plenty of things

@@ -40,7 +40,7 @@ const UserLayout = () => {
         <Sidebar className={activeCheck} activeCheck={activeCheck} />
         <main className={`position-absolute p-0 ${activeCheck}`}>
           <Topbar handleClick={handleClick}/>
-          <div className='p-4'>
+          <div className='p-4 pt-5'>
             <Outlet />
           </div>
         </main>

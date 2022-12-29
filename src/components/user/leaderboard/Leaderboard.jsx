@@ -22,7 +22,7 @@ const LeaderboardComponent = () => {
     return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
   }
   return (
-    <div className="mt-4">
+    <div className="mt-4 pt-5">
 
       <div className="leaderboard-wrapper mt-5">
         <h3 className="fw-bold">TOP 10 HIGHEST SCORE</h3>
