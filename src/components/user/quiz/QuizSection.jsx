@@ -155,7 +155,7 @@ const QuizSection = () => {
                           <h2>{timer}</h2>
                         </div>
                         <div className="progress mb-5">
-                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 5) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 50) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="mb-5">
                             <h1 className="fs-4 fw-bold">{quizData.question}</h1>
