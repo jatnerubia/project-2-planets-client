@@ -59,10 +59,10 @@ const DashboardComponent = () => {
                     {
                       dashboard.correctAnswer === null
                         ? (
-                          <QuizCard title="CORRECT ANSWER" text='N/A' icon={solid('ranking-star')} />
+                          <QuizCard title="CORRECT ANSWER" text='N/A' icon={solid('list-check')} />
                         )
                         : (
-                          <QuizCard title="CORRECT ANSWER" text={dashboard.correctAnswer + ' / 100'} icon={solid('ranking-star')} />
+                          <QuizCard title="CORRECT ANSWER" text={dashboard.correctAnswer + ' / 100'} icon={solid('list-check')} />
                         )
                     }
 
@@ -73,10 +73,10 @@ const DashboardComponent = () => {
                     {
                       dashboard.correctAnswer === null
                       ? (
-                         <QuizCard title="SCORE" text='N/A' icon={solid('ranking-star')} />
+                         <QuizCard title="SCORE" text='N/A' icon={solid('bookmark')} />
                       )
                       : (
-                        <QuizCard title="SCORE" text={dashboard.correctAnswer / 100 * 100 + '%'} icon={solid('ranking-star')} />
+                        <QuizCard title="SCORE" text={dashboard.correctAnswer / 100 * 100 + '%'} icon={solid('bookmark')} />
                       )
                     }
                   </div>
@@ -84,31 +84,19 @@ const DashboardComponent = () => {
                     {
                       dashboard.startedAt === null
                       ? (
-                         <QuizCard title="TIME SPENT" text='N/A' icon={solid('ranking-star')} />
+                         <QuizCard title="TIME SPENT" text='N/A' icon={solid('hourglass-half')} />
                       )
                       : (
-                        <QuizCard title="TIME SPENT" footerText='Hr:Mins:Sec' text={getTimeSpent()} icon={solid('ranking-star')} />
+                        <QuizCard title="TIME SPENT" footerText='Hr:Mins:Sec' text={getTimeSpent()} icon={solid('hourglass-half')} />
                       )
                     }
-                    {/* <div className="card text-center">
-                      <div className="d-flex flex-column justify-content-center align-items-center card-body">
-                        <h5 className="card-title fw-bold fs-5">
-                        <FontAwesomeIcon className='me-3' icon={solid('hourglass-half')} />
-                          TIME SPENT
-                        </h5>
-                        <p className="card-text d-flex flex-column fs-1 fw-bold mt-4">
-                          00:20:30
-                          <span className="small mt-2">Hr:Mins:Sec</span>
-                        </p>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               </div>
               <div className="col-md-6 right mb-4">
                 <div className="card text-center">
                   <div className="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h5 className="card-title fw-bold fs-4">
+                    <h5 className="card-title fw-bold fs-4 text-muted">
                       <FontAwesomeIcon className='me-3' icon={solid('gift')} />
                       YOUR AWARD
                     </h5>
