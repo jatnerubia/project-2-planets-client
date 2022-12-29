@@ -30,6 +30,7 @@ export const forgotPassword = async (data) => await fetch(baseUrl + "/quiz/auth/
 export const getLeaderboards = async () => await fetch(baseUrl + "/quiz/leaderboards", { method: "GET", headers: getHeaders() })
 
 /* TODO: User - Dashboard */
+export const getDashboards = async () => await fetch(baseUrl + "/user/dashboard", { method: "GET", headers: getHeaders() })
 
 /* User - Quiz Game */
 export const getQuiz = async () => await fetch(baseUrl + "/user/quiz", { method: "GET", headers: getHeaders() })
