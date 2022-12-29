@@ -198,7 +198,7 @@ const RegisterForm = () => {
             </div>
             {
                 success !== undefined && (
-                    <div class="alert alert-success" role="alert">
+                    <div className="alert alert-success" role="alert">
                         {success.message}
                     </div>
                 )

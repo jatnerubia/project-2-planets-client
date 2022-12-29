@@ -90,13 +90,13 @@ const DashboardComponent = () => {
                         <QuizCard title="TIME SPENT" footerText='Hr:Mins:Sec' text={getTimeSpent()} icon={solid('ranking-star')} />
                       )
                     }
-                    {/* <div class="card text-center">
-                      <div class="d-flex flex-column justify-content-center align-items-center card-body">
-                        <h5 class="card-title fw-bold fs-5">
+                    {/* <div className="card text-center">
+                      <div className="d-flex flex-column justify-content-center align-items-center card-body">
+                        <h5 className="card-title fw-bold fs-5">
                         <FontAwesomeIcon className='me-3' icon={solid('hourglass-half')} />
                           TIME SPENT
                         </h5>
-                        <p class="card-text d-flex flex-column fs-1 fw-bold mt-4">
+                        <p className="card-text d-flex flex-column fs-1 fw-bold mt-4">
                           00:20:30
                           <span className="small mt-2">Hr:Mins:Sec</span>
                         </p>
@@ -106,13 +106,13 @@ const DashboardComponent = () => {
                 </div>
               </div>
               <div className="col-md-6 right mb-4">
-                <div class="card text-center">
-                  <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h5 class="card-title fw-bold fs-4">
+                <div className="card text-center">
+                  <div className="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h5 className="card-title fw-bold fs-4">
                       <FontAwesomeIcon className='me-3' icon={solid('gift')} />
                       YOUR AWARD
                     </h5>
-                    <p class="card-text fs-1 fw-bold mt-4">
+                    <p className="card-text fs-1 fw-bold mt-4">
                       <div className="hexagon">
                         {
                           dashboard.rank === null && (

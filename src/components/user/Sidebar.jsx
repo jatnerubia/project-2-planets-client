@@ -53,7 +53,7 @@ const Sidebar = ({ activeCheck}) => {
             </li>
           </NavLink>
           <div>
-            <button class="w-100 px-3 settings-collapse btn btn-transparent text-white d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="false" aria-controls="settingsCollapse">
+            <button className="w-100 px-3 settings-collapse btn btn-transparent text-white d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#settingsCollapse" aria-expanded="false" aria-controls="settingsCollapse">
               <span className='d-flex align-items-center ms-1'>
                 <FontAwesomeIcon className='me-4 fs-5' icon={solid('gear')} />
                 <span className='sidebar-title'>
@@ -62,7 +62,7 @@ const Sidebar = ({ activeCheck}) => {
               </span>
               <FontAwesomeIcon className='icon fs-5' icon={solid('chevron-right')} />
             </button>
-            <div class="collapse" id="settingsCollapse">
+            <div className="collapse" id="settingsCollapse">
               <NavLink to="/user/settings">
                 <li className='rounded-pill rounded-end my-2 d-flex align-items-center'>
                   <span className="sidebar-icon">

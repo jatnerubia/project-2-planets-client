@@ -115,14 +115,14 @@ const ResetPasswordForm = () => {
             </div>
             {
                 error !== undefined && error.type === undefined && (
-                    <div class="alert alert-danger" role="alert">
+                    <div className="alert alert-danger" role="alert">
                         {error.message}
                     </div>
                 )
             }
             {
                 success !== undefined && (
-                    <div class="alert alert-success" role="alert">
+                    <div className="alert alert-success" role="alert">
                         {success.message}
                     </div>
                 )

@@ -127,20 +127,20 @@ const QuizSection = () => {
                         </div>
                         <div className="text-center pt-5">
                           {/* Modal Button */}
-                          <button type="button" class="btn btn-lg px-4 btn-quiz" data-bs-toggle="modal" data-bs-target="#quizModal">
+                          <button type="button" className="btn btn-lg px-4 btn-quiz" data-bs-toggle="modal" data-bs-target="#quizModal">
                             START
                           </button>
                           {/* Modal Content */}
-                          <div class="modal fade" id="quizModal" tabIndex="-1" data-bs-backdrop="static" aria-labelledby="quizModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="quizModalLabel">
+                          <div className="modal fade" id="quizModal" tabIndex="-1" data-bs-backdrop="static" aria-labelledby="quizModalLabel" aria-hidden="true">
+                            <div className="modal-dialog modal-dialog-centered">
+                              <div className="modal-content">
+                                <div className="modal-header">
+                                  <h1 className="modal-title fs-5" id="quizModalLabel">
                                     <em className="text-danger fw-bold fs-6">Notes: </em><br />
                                   </h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                   <p className="text-start lh-base">
                                     This quiz is set to 10mins time to answer it. Keep in mind that once you started the quiz,
                                     the alloted time will start running. You can close the tab/browser and when you revisit, it will take

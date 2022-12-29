@@ -104,7 +104,7 @@ const LoginForm = () => {
             </div>
             {
                 error !== undefined && error.type === undefined && (
-                    <div class="alert alert-danger" role="alert">
+                    <div className="alert alert-danger" role="alert">
                         {error.message}
                     </div>
                 )
