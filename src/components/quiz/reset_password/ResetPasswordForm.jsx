@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import * as RestApi from "../../../utils/rest_api_util"
@@ -16,6 +18,8 @@ const ResetPasswordForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [confirmPasswordShow, setConfirmPasswordShow] = useState(false)
 
     useEffect(() => {
         const applyToken = () => {
@@ -31,6 +35,13 @@ const ResetPasswordForm = () => {
         }
         applyToken()
     }, [location])
+
+    const showHidePassword = () => {
+      setPasswordShow(!passwordShow)
+    }
+    const showHideConfirmPassword = () => {
+      setConfirmPasswordShow(!confirmPasswordShow)
+    }
 
     const resetPassword = async () => {
         setLoading(true)
@@ -75,11 +86,12 @@ const ResetPasswordForm = () => {
               <div className="input-group mt-4 pt-2">
                 <input
                     id="password"
-                    type="password"
+                    type={passwordShow ? "text" : "password"}
                     className="form-control"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                <span><FontAwesomeIcon onClick={showHidePassword} className='text-dark icon position-absolute end-0 fs-4' type='button' icon={passwordShow ? solid("eye-slash") : solid("eye")} /></span>
                 <label htmlFor="password" className="form-label">
                   Password
                 </label>
@@ -96,11 +108,12 @@ const ResetPasswordForm = () => {
               <div className="input-group mt-4 pt-2 mb-5">
                 <input
                     id="confirm_password"
-                    type="password"
+                    type={confirmPasswordShow ? "text" : "password"}
                     className="form-control"
                     value={formData.confirm_password}
                     onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
+                <span><FontAwesomeIcon onClick={showHideConfirmPassword} className='text-dark icon position-absolute end-0 fs-4' type='button' icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")} /></span>
                 <label htmlFor="confirm_password" className="form-label">
                     Confirm Password
                 </label>
