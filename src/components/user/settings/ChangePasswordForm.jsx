@@ -1,7 +1,7 @@
 import { useState } from "react"
 import * as RestApi from "../../../utils/rest_api_util"
 
-const ChangePassword = () => {
+const ChangePasswordForm = () => {
 
     const [formData, setFormData] = useState({
         old_password: '',
@@ -131,4 +131,4 @@ const ChangePassword = () => {
     )
 }
 
-export default ChangePassword
+export default ChangePasswordForm
