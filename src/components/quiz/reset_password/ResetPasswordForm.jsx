@@ -113,7 +113,7 @@ const ResetPasswordForm = () => {
                     value={formData.confirm_password}
                     onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
-                <span><FontAwesomeIcon onClick={showHideConfirmPassword} className='text-dark icon position-absolute end-0 fs-4' type='button' icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")} /></span>
+                <span><FontAwesomeIcon onClick={showHideConfirmPassword} className='icon position-absolute end-0 fs-4' type='button' icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")} /></span>
                 <label htmlFor="confirm_password" className="form-label">
                     Confirm Password
                 </label>

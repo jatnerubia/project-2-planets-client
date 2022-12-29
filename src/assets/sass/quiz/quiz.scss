@@ -69,10 +69,19 @@
           }
           .icon {
             z-index: 5;
+            color: #2D2A43;
           }
         }
-        button {
+        button,
+        .btn-quiz {
           width: 200px;
+        }
+        .btn-quiz {
+          &:hover {
+            color: #2D2A43;
+            background: transparent;
+            border: 1px solid #2D2A43;
+          }
         }
       }
     }
