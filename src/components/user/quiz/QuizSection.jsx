@@ -73,12 +73,11 @@ const QuizSection = () => {
     }
 
     const getTimeSpent = () => {
-        const startedAt = new Date(quizData.startedAt).getTime()
-        const finishedAt = new Date(quizData.finishedAt).getTime()
-        const totalSeconds = (finishedAt - startedAt) / 1000
+        const totalSeconds = quizData.timeSpent
         if (totalSeconds >= 600) return "00:10:00"
         return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
     }
+    
     return (
         <div className="quiz-wrapper">
 

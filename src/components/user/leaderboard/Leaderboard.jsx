@@ -17,9 +17,7 @@ const LeaderboardComponent = () => {
     } catch (error) {}
   };
   const getTimeSpent = (index) => {
-    const startedAt = new Date(leaderboards[index].startedAt).getTime()
-    const finishedAt = new Date(leaderboards[index].finishedAt).getTime()
-    const totalSeconds = (finishedAt - startedAt) / 1000
+    const totalSeconds = leaderboards[index].timeSpent
     if (totalSeconds >= 600) return "00:10:00"
     return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
   }
