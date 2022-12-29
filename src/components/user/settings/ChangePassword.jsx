@@ -49,7 +49,7 @@ const ChangePassword = () => {
     }
 
     return (
-        <div className="mt-4">
+        <div className="mt-4 pt-5">
             <div className="change-pass_wrapper mt-4">
               <div className="card p-4 ">
                 <div className="card-wrapper d-flex align-items-center justify-content-center flex-column">
