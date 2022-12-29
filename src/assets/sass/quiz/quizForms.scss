@@ -1,0 +1,95 @@
+.quiz-wrapper {
+  min-height: 100vh;
+  background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
+  .container {
+    max-width: 1120px;
+    width: 100%;
+    box-shadow: 0 60px 40px -30px rgb(0 0 0 / 27%);
+    .form-wrapper {
+      min-height: 800px;
+      .img-wrapper {
+        .forgot-img {
+          object-fit: inherit;
+        }
+        img {
+          object-fit: cover;
+        }
+      }
+      .left {
+        border-radius: 3.3rem 0 0 3.3rem;
+      }
+      .right {
+        border-radius: 0 3.3rem 3.3rem 0;
+      }
+      @media screen and (max-width: 990px) {
+        .left, .right {
+          border-radius: 50px;
+        }
+      }
+      .login, .forgot-pass {
+        .form-content {
+          width: 100%;
+          max-width: 500px;
+        }
+      }
+      .form-content {
+        .input-group {
+          label {
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            margin: 0;
+            padding: 7px 0 7px;
+            color: rgba(0, 0, 0, 0.463);
+            pointer-events: none;
+            letter-spacing: 0.1em;
+            transition: 0.5s;
+          }
+          input {
+            background: transparent;
+            color: $black;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            letter-spacing: 0.1em;
+            padding: 7px 0 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.463);
+            border-radius: 0;
+            margin-bottom: 6px;
+            &:not([value=""]),
+            &:focus {
+              border-bottom: 1px solid $black;
+              ~ label {
+                color: $black;
+                transform: translateY(-25px);
+                font-size: .89em;
+                font-weight: 600;
+              }
+            }
+          }
+          .icon {
+            z-index: 5;
+            color: #2D2A43;
+          }
+        }
+        button,
+        .btn-quiz {
+          width: 200px;
+        }
+        .btn-quiz {
+          &:hover {
+            color: #2D2A43;
+            background: transparent;
+            border: 1px solid #2D2A43;
+          }
+        }
+      }
+    }
+    .reset-pass {
+      max-width: 550px;
+      width: 100%;
+      min-height: 500px;
+      margin: 0 auto;
+    }
+  }
+}
