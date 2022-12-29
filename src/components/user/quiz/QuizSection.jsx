@@ -88,7 +88,7 @@ const QuizSection = () => {
                       <div className="quiz-start_wrapper">
                         <div className="row">
                           <div className="col-md-6">
-                            <QuizCard title="QUESTION" text="100" icon={solid('circle-question')} />
+                            <QuizCard title="QUESTION" text="50" icon={solid('circle-question')} />
                           </div>
                           <div className="col-md-6">
                             <QuizCard title="TOTAL SCORE" text="100" icon={solid('bookmark')} />
@@ -207,7 +207,7 @@ const QuizSection = () => {
                         </div>
                         <div className="row">
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="CORRECT" text={quizData.score} icon={solid('circle-check')} />
+                              <QuizCard title="CORRECT" text={quizData.score / 2} icon={solid('circle-check')} />
                             </div>
                             <div className="col-md-4 pt-2">
                               <QuizCard title="INCORRECT" text={100 - quizData.score} icon={solid('circle-xmark')} />
