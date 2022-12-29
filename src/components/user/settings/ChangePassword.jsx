@@ -15,8 +15,6 @@ const ChangePassword = () => {
 
     const updatePassword = async () => {
 
-        console.log('WTF')
-
         setLoading(true)
         setError(undefined)
         setSuccess(undefined)
@@ -33,8 +31,6 @@ const ChangePassword = () => {
         try {
             const result = await RestApi.updatePassword(formData)
             let response = await result.json()
-
-            console.log(response)
 
             if (result.status === 400) {
                 setError(response)
