@@ -1,9 +1,10 @@
+import QuizLeaderboard from "../../components/quiz/LeaderboardSection"
 
 const QuizPage = () => {
     return (
-        <div>
-            Quiz Page
-        </div>
+        <>
+          <QuizLeaderboard />
+        </>
     )
 }
 
