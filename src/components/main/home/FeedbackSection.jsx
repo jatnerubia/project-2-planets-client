@@ -46,7 +46,7 @@ const FeedbackSection = () => {
     <div className="feedback_section py-5 my-5">
       <div>
         <div className="container">
-          <SectionHeading name="SUGGESTION" />
+          <SectionHeading classname="suggestion" name="SUGGESTION" />
         </div>
         <div className="feedback_wrapper p-4 py-5">
           <span className="overlay_bg w-100 h-100"></span>

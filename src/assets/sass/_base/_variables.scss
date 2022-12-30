@@ -87,6 +87,34 @@ ul li {
   margin: 0;
   padding: 0;
 }
+.section__head {
+  position: relative;
+  text-align: center;
+  &.news {
+    &::before {
+      content: 'ARTICLES';
+    }
+  }
+  &.planets {
+    &::before {
+      content: 'PLANETS';
+    }
+  }
+  &.suggestion {
+    &::before {
+      content: 'FEEDBACK';
+    }
+  }
+  &::before {
+    font-size: 7rem;
+    left: 50%;
+    color: rgb(214 214 214 / 20%);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 #stars {
   > i {
     position: fixed;

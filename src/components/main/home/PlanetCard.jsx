@@ -19,7 +19,7 @@ const PlanetCard = ({ planet }) => {
   }
   return (
     <>
-    <div className="planet_card col-lg-4 col-md-6 py-4 my-5">
+    <div className="planet_card col-lg-4 col-md-6 py-4 my-3">
       <div className="card position-relative mb-4 mx-2">
         <div className="card__planet">
           <span className="tiltLine" style={planetStyles.tiltLine}></span>
