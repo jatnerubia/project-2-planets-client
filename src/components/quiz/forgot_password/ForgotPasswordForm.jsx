@@ -37,25 +37,32 @@ const ForgotPasswordForm = () => {
 
 
     return (
-        <div className="forgot-pass right h-100 bg-light text-dark p-5 d-flex justify-content-center align-items-center">
+        <div className="forgot-pass right h-100 bg-light text-dark p-4 d-flex justify-content-center align-items-center">
           <div className="form-content">
-            <h3 className="text-center pb-5">Forgot Password</h3>
-            <p className="fs-6 pb-3 text-dark">
+
+            {/* Title */}
+            <h3 className="text-center mb-5">
+                Forgot Password
+            </h3>
+
+            <p className="mb-4 fs-6 text-dark">
                 We'll send a recovery link to
             </p>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2">
-                <input
-                  id="email"
-                  type="text"
-                  className="form-control"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-              </div>
+
+            {/* Email */}
+            <div className="mb-4">
+                <div className="input-group">
+                    <input
+                        id="email"
+                        type="text"
+                        className="form-control"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    />
+                    <label htmlFor="email" className="form-label">
+                        Email
+                    </label>
+                </div>
                 {
                     error !== undefined && error.type === 'email' && (
                         <span className="text-danger small">
@@ -64,29 +71,46 @@ const ForgotPasswordForm = () => {
                     )
                 }
             </div>
+
+            {/* Success message */}
             {
                 success !== undefined && (
-                    <div className="alert alert-success" role="alert">
+                    <div className="mb-4 alert alert-success" role="alert">
                         {success.message}
                     </div>
                 )
             }
-            <div className="mb-3 text-center">
-                {
-                    loading
-                        ? <button className="btn btn-lg btn-quiz fs-6 my-4 w-100" disabled>Loading...</button>
-                        : <button className="btn btn-lg btn-quiz fs-6 my-4 w-100" onClick={sendRecoveryLink}>Send recovery link</button>
-                }
-            </div>
-            <hr />
-            <div className="mb-3 text-center fs-6 text-muted">
-                Return to <strong><Link to="/quiz/login" className="text-dark">Login</Link></strong>
-            </div>
-            <div className="mb-3 text-center">
-                <span className="fs-6 text-muted">OR</span>
-            </div>
-            <div className="text-center fs-6 text-muted">
-                Don't have an account? <strong><Link to="/quiz/register" className="text-dark">Register</Link></strong>
+
+            {/* Buttons */}
+            <div className="text-center">
+
+                {/* Send button */}
+                <div className="mb-4">
+                    {
+                        loading
+                            ? <button className="btn btn-lg btn-quiz fs-6 w-100" disabled>Loading...</button>
+                            : <button className="btn btn-lg btn-quiz fs-6 w-100" onClick={sendRecoveryLink}>Send recovery link</button>
+                    }
+                </div>
+
+                {/* Divider */}
+                <hr className='mb-4' />
+
+                {/* Login */}
+                <div className="mb-4 text-muted fs-6 ">
+                    Return to <strong><Link to="/quiz/login" className="text-dark">Login</Link></strong>
+                </div>
+
+                {/* Or */}
+                <div className="mb-4">
+                    <span className="fs-6 text-muted">OR</span>
+                </div>
+
+                {/* Register */}
+                <div className="text-muted fs-6">
+                    Don't have an account? <strong><Link to="/quiz/register" className="text-dark">Register</Link></strong>
+                </div>
+
             </div>
           </div>
         </div>
