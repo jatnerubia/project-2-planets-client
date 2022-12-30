@@ -1,8 +1,85 @@
 .quiz {
   min-height: 100vh;
-  background-image: url('https://images.pexels.com/photos/6498990/pexels-photo-6498990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url('https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-position:center;
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size: cover;
+  box-shadow: inset 0px 810px 100px rgb(9 33 45 / 65%), inset 0px -600px 390px rgb(9 33 45 / 65%);
+  .navbar {
+    background: rgb(0 0 0 / 75%);
+    button:not(.btn-quiz) {
+      background: $white;
+    }
+    .toggle {
+      width: 50px;
+      height: 40px;
+      background: $white;
+      position: relative;
+      span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        position: absolute;
+        background: $black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) translateY(-10px);
+          transition: 0.2s;
+        }
+        &:nth-child(4) {
+          transform: translate(-50%, -50%) translateY(10px);
+          transition: 0.2s;
+        }
+      }
+      &.active {
+        span {
+          &:nth-child(1) {
+            transform: translate(-50%, -50%) translateY(-20px);
+            opacity: 0;
+          }
+          &:nth-child(4) {
+            transform: translate(-50%, -50%) translateY(20px);
+            opacity: 0;
+          }
+          &:nth-child(2) {
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition-delay: .2s;
+          }
+          &:nth-child(3) {
+            transform: translate(-50%, -50%) rotate(-45deg);
+            transition-delay: .2s;
+          }
+        }
+      }
+    }
+    .btn-quiz {
+      border-radius: 20px;
+      &:hover {
+        color: $white;
+        background: transparent;
+        border: solid 1px $white;
+      }
+      &:last-child {
+        background-color: transparent;
+        color: $white;
+        border: solid 1px $white;
+        &:hover {
+          color: $white;
+          background: $dark_violet;
+          border: solid 1px $dark_violet;
+        }
+      }
+      @media (max-width: 767px) {
+        display: flex;
+        margin: 10px;
+        width: 200px;
+        justify-content: center;
+        float: right;
+      }
+    }
+  }
 }
