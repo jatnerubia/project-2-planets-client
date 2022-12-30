@@ -19,9 +19,9 @@ const NewsSection = () => {
   };
 
   return (
-    <div className="container news_article__section my-5">
+    <div className="container news_article__section py-5 my-5">
       <SectionHeading name="NEWS" />
-      <div className="row">
+      <div className="row py-5">
         {news.map((news, index) => (
           <NewsCard key={index} news={news} />
         ))}

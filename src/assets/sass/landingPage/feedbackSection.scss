@@ -1,0 +1,86 @@
+.feedback_section {
+  .feedback_wrapper {
+    background-image: url('https://images.pexels.com/photos/3607542/pexels-photo-3607542.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    .overlay_bg {
+      position: absolute;
+      top: 0;
+      left: 0;background-color: rgb(0 0 0 / 50%);
+    }
+    .container {
+      z-index: 3;
+      position: relative;
+      .feedback_form {
+        h4 {
+          font-weight: 600;
+          letter-spacing: .1em;
+        }
+        .input-group {
+          label {
+            position: absolute;
+            left: 0;
+            z-index: 5;
+            margin: 0;
+            padding: 7px 0 7px;
+            color: rgba(255, 255, 255, 0.463);
+            pointer-events: none;
+            letter-spacing: 0.1em;
+            transition: 0.5s;
+          }
+          textarea {
+            background: transparent;
+            color: $space_gray;
+            border: 1px solid rgba(255, 255, 255, 0.463);
+            padding: 10px;
+            outline: none;
+            box-shadow: none;
+            border-radius: 0;
+            &:not([value=""]):not(:focus):valid,
+            &:focus {
+              border-bottom: 1px solid $space_gray;
+              ~ label {
+                color: $space_gray;
+                transform: translateY(-50px);
+                left: 0;
+                font-size: 1.2em;
+              }
+            }
+            ~ label {
+              left: 20px;
+              padding: 20px 0 7px;
+            }
+          }
+          input {
+            background: transparent;
+            color: $space_gray;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            letter-spacing: 0.1em;
+            padding: 7px 0 7px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.463);
+            border-radius: 0;
+            margin-bottom: 6px;
+            &:not([value=""]):not(:focus):valid,
+            &:focus {
+              border-bottom: 1px solid $space_gray;
+              ~ label {
+                color: $space_gray;
+                transform: translateY(-25px);
+                font-size: 1.2em;
+              }
+            }
+          }
+          .icon {
+            z-index: 5;
+            color: #2D2A43;
+          }
+        }
+      }
+    }
+  }
+}
