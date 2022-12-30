@@ -35,20 +35,44 @@ const QuizLeaderboard = () => {
                 <div className="card top-3">
                   <h3 className="mt-4 text-center fw-bold">3</h3>
                   <div className="user-info">
-                    <h5>Jomar</h5>
+                    {
+                      leaderboards.length < 3
+                      ? (
+                        <h5>N/A</h5>
+                      )
+                      : (
+                        <h5>{leaderboards[2].fullName}</h5>
+                      )
+                    }
                   </div>
                 </div>
 
                 <div className="card top-1">
                 <h3 className="mt-4 text-center fw-bold">1</h3>
                   <div className="user-info">
-                    <h5>Jomar</h5>
+                  {
+                      leaderboards.length < 1
+                      ? (
+                        <h5>N/A</h5>
+                      )
+                      : (
+                        <h5>{leaderboards[0].fullName}</h5>
+                      )
+                    }
                   </div>
                 </div>
                 <div className="card top-2">
                 <h3 className="mt-4 text-center fw-bold">2</h3>
                   <div className="user-info">
-                    <h5>Jomar</h5>
+                  {
+                      leaderboards.length < 2
+                      ? (
+                        <h5>N/A</h5>
+                      )
+                      : (
+                        <h5>{leaderboards[1].fullName}</h5>
+                      )
+                    }
                   </div>
                 </div>
               </div>

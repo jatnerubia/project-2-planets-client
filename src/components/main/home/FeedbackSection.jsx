@@ -1,6 +1,47 @@
 import SectionHeading from "../SectionHeading"
+import { useState } from "react";
+import * as RestApi from "../../../utils/rest_api_util"
+
+
 
 const FeedbackSection = () => {
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    message: ''
+  })
+
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState()
+  const [success, setSuccess] = useState()
+
+  const sendFeedback = async () => {
+
+        setLoading(true)
+        setError(undefined)
+        setSuccess(undefined)
+
+        try {
+            const result = await RestApi.sendFeedback(formData)
+            let response = await result.json()
+            if (result.status === 400) {
+                setError(response)
+            }
+            if (result.status === 200) {
+                setFormData({
+                    first_name: '',
+                    last_name: '',
+                    email: '',
+                    message: ''
+                })
+                setSuccess(response)
+            }
+        } catch (error) {}
+
+        setLoading(false)
+    }
+
   return (
     <div className="feedback_section py-5 my-5">
       <div>
@@ -14,7 +55,7 @@ const FeedbackSection = () => {
               <div className="col-lg-6">
                 <div className="feedback_form">
                   <h4 className="fs-4 pb-5">Have any questions or suggestions about
-                  the website? <br />
+                  the website? <br /> <br />
                   Feel free to contact us!</h4>
                     {/* FIRST AND LAST NAME */}
                     <div className="row pt-5">
@@ -24,12 +65,21 @@ const FeedbackSection = () => {
                               id="firt_name"
                               type="text"
                               className="form-control"
-                              required
+                              value={formData.first_name}
+                              onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
+
                           />
                           <label htmlFor="first_name" className="form-label">
                               First Name
                           </label>
                         </div>
+                        {
+                          error !== undefined && error.type === 'first_name' && (
+                            <span className="text-danger small">
+                                {error.message}
+                            </span>
+                          )
+                        }
                       </div>
                       <div className="pb-4 col-lg-6">
                         <div className="input-group">
@@ -37,12 +87,21 @@ const FeedbackSection = () => {
                               id="last_name"
                               type="text"
                               className="form-control"
-                              required
+                              value={formData.last_name}
+                              onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
+
                           />
                           <label htmlFor="last_name" className="form-label">
                               Last Name
                           </label>
                         </div>
+                        {
+                          error !== undefined && error.type === 'last_name' && (
+                            <span className="text-danger small">
+                                {error.message}
+                            </span>
+                          )
+                        }
                       </div>
                     </div>
                     {/* EMAIL */}
@@ -52,12 +111,21 @@ const FeedbackSection = () => {
                             id="email"
                             type="text"
                             className="form-control"
-                            required
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+
                         />
                         <label htmlFor="email" className="form-label">
                             Email
                         </label>
                       </div>
+                      {
+                        error !== undefined && error.type === 'email' && (
+                          <span className="text-danger small">
+                              {error.message}
+                          </span>
+                        )
+                      }
                     </div>
                     <div className="mb-4 pt-4">
                       <div className="input-group">
@@ -66,22 +134,41 @@ const FeedbackSection = () => {
                         id="message"
                         cols="30"
                         rows="10"
-                        required
+
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+
                         className="w-100"></textarea>
-                        {/* <textarea
-                            id="message"
-                            type="textarea"
-                            className="form-control"
-                            required
-                        /> */}
                         <label htmlFor="email" className="form-label">
                             Message
                         </label>
                       </div>
+                      {
+                        error !== undefined && error.type === 'message' && (
+                          <span className="text-danger small">
+                              {error.message}
+                          </span>
+                        )
+                      }
                     </div>
-                    <button className="btn btn-transparent text-white rounded-4 border border-2 border-white px-4 d-block m-auto">
-                      SEND TO MOON🚀
-                    </button>
+                    {/* Success message */}
+                    {
+                      success !== undefined && (
+                        <div className="mb-4 alert alert-success" role="alert">
+                          {success.message}
+                        </div>
+                      )
+                    }
+                    <div>
+                      {
+                        loading
+                          ? <button className="btn btn-transparent text-white rounded-4 border border-2 border-white px-4 d-block m-auto"
+                            disabled>Loading...</button>
+                          : <button className="btn btn-transparent text-white rounded-4 border border-2 border-white px-4 d-block m-auto"
+                            onClick={sendFeedback}>SEND TO MOON🚀</button>
+                      }
+
+                    </div>
                 </div>
               </div>
               <div className="col-lg-6 d-flex justify-content-center align-items-center">
