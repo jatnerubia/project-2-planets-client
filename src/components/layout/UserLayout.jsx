@@ -27,9 +27,8 @@ const UserLayout = () => {
       }
       const decodedToken = decode(token)
       if (decodedToken.exp * 1000 < new Date().getTime()) {
-        console.log('Token expired, check if I can still send request')
-        // localStorage.clear()
-        // navigate('/quiz')
+        localStorage.clear()
+        navigate('/quiz')
         return
       }
       // eslint-disable-next-line
