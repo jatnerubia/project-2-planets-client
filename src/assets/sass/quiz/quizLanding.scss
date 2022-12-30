@@ -56,14 +56,23 @@
         }
       }
     }
-    .btn-quiz {
-      border-radius: 20px;
-      &:hover {
-        color: $white;
-        background: transparent;
-        border: solid 1px $white;
+    span a {
+      button.btn-quiz {
+        border-radius: 20px;
+        &:hover {
+          color: $white;
+          background: transparent;
+          border: solid 1px $white;
+        }
+        @media (max-width: 767px) {
+          display: flex;
+          margin: 10px;
+          width: 200px;
+          justify-content: center;
+          float: right;
+        }
       }
-      &:last-child {
+      &:last-child .btn-quiz {
         background-color: transparent;
         color: $white;
         border: solid 1px $white;
@@ -72,13 +81,6 @@
           background: $dark_violet;
           border: solid 1px $dark_violet;
         }
-      }
-      @media (max-width: 767px) {
-        display: flex;
-        margin: 10px;
-        width: 200px;
-        justify-content: center;
-        float: right;
       }
     }
   }

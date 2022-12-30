@@ -30,12 +30,16 @@ const NavbarQuiz = () => {
       {/* </button> */}
       <div id="navbar" className="collapse navbar-collapse d-lg-flex justify-content-end">
         <span>
-          <button className="btn btn-quiz btn-sm mx-2 px-5 py-2">
-            Register
-          </button>
-          <button className="btn btn-quiz btn-sm mx-2 px-5 py-2">
-            Login
-          </button>
+          <NavLink to="/quiz/register">
+            <button className="btn btn-quiz btn-sm mx-2 px-5 py-2">
+                Register
+            </button>
+          </NavLink>
+          <NavLink to="/quiz/login">
+            <button className="btn btn-quiz btn-sm mx-2 px-5 py-2">
+                Login
+            </button>
+          </NavLink>
         </span>
       </div>
     </nav>
