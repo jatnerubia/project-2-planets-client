@@ -106,7 +106,7 @@ ul li {
     }
   }
   &::before {
-    font-size: 7rem;
+    font-size: clamp(3.5rem, 0rem + 14.69vw, 7rem);
     left: 50%;
     color: rgb(214 214 214 / 20%);
     position: absolute;
