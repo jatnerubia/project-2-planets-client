@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import * as RestApi from "../../../utils/rest_api_util"
 import { useEffect } from "react"
+import { NavLink } from "react-router-dom"
+
 
 const LoginForm = () => {
 
@@ -68,7 +70,9 @@ const LoginForm = () => {
     return (
         <div className="login right h-100 bg-light text-dark p-4 px-md-5 d-flex justify-content-center align-items-center">
             <div className="form-content">
-
+              <NavLink className="navbar-brand" to="/quiz">
+                <img src={require('../../../assets/img/logo.png')} className="d-block m-auto align-text-top" alt="Logo" />
+              </NavLink>
                 {/* Title */}
                 <h3 className="text-center mb-5">
                     Login

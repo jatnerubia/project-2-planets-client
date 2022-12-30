@@ -41,7 +41,7 @@
             border-radius: 0;
             &:not([value=""]):not(:focus):valid,
             &:focus {
-              border-bottom: 1px solid $space_gray;
+              border: 1px solid $space_gray;
               ~ label {
                 color: $space_gray;
                 transform: translateY(-50px);

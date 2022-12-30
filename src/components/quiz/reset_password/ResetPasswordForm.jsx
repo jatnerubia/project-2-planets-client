@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import * as RestApi from "../../../utils/rest_api_util"
@@ -83,7 +84,9 @@ const ResetPasswordForm = () => {
     return (
         <div className="reset-pass h-100 bg-light text-dark p-4 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-
+            <NavLink className="navbar-brand" to="/quiz">
+              <img src={require('../../../assets/img/logo.png')} className="d-block m-auto align-text-top" alt="Logo" />
+            </NavLink>
             {/* Title */}
             <h3 className="text-center mb-5">
                 Reset Password
@@ -119,7 +122,7 @@ const ResetPasswordForm = () => {
                     )
                 }
             </div>
- 
+
             {/* Confirm password */}
             <div className="mb-4">
                 <div className="input-group">
