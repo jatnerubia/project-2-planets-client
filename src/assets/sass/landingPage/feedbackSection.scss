@@ -39,7 +39,7 @@
             outline: none;
             box-shadow: none;
             border-radius: 0;
-            &:not([value=""]):not(:focus):valid,
+            &:not([value=""]):valid,
             &:focus {
               border: 1px solid $space_gray;
               ~ label {
@@ -65,7 +65,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.463);
             border-radius: 0;
             margin-bottom: 6px;
-            &:not([value=""]):not(:focus):valid,
+            &:not([value=""]),
             &:focus {
               border-bottom: 1px solid $space_gray;
               ~ label {

@@ -67,7 +67,6 @@ const FeedbackSection = () => {
                               className="form-control"
                               value={formData.first_name}
                               onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
-
                           />
                           <label htmlFor="first_name" className="form-label">
                               First Name
@@ -89,7 +88,6 @@ const FeedbackSection = () => {
                               className="form-control"
                               value={formData.last_name}
                               onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
-
                           />
                           <label htmlFor="last_name" className="form-label">
                               Last Name
@@ -113,7 +111,6 @@ const FeedbackSection = () => {
                             className="form-control"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-
                         />
                         <label htmlFor="email" className="form-label">
                             Email
@@ -134,10 +131,9 @@ const FeedbackSection = () => {
                         id="message"
                         cols="30"
                         rows="10"
-
+                        required
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-
                         className="w-100"></textarea>
                         <label htmlFor="email" className="form-label">
                             Message
