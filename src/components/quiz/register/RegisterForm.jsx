@@ -115,9 +115,6 @@ const RegisterForm = () => {
                       First Name
                     </label>
                   </div>
-                  <span className="text-danger small">
-                    some error
-                  </span>
                   {
                     error !== undefined && error.type === 'first_name' && (
                       <span className="text-danger small">
@@ -234,7 +231,7 @@ const RegisterForm = () => {
                 )
               }
             </div>
- 
+
             {/* Terms */}
             <div className="mb-4">
               <span className="small text-dark lh-sm">
