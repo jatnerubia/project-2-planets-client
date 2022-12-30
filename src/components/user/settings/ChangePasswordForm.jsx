@@ -51,81 +51,94 @@ const ChangePasswordForm = () => {
     return (
         <div className="mt-4 pt-5">
             <div className="change-pass_wrapper mt-4">
-              <div className="card p-4 ">
-                <div className="card-wrapper d-flex align-items-center justify-content-center flex-column">
-                  <div className="mb-3">
-                    <label htmlFor="old_password" className="form-label fw-bold">
-                        Old Password
-                    </label>
-                    <input
-                        id="old_password"
-                        type="password"
-                        className="form-control"
-                        value={formData.old_password}
-                        onChange={(e) => setFormData({ ...formData, old_password: e.target.value })}
-                    />
-                    {
-                        error !== undefined && error.type === 'old_password' && (
-                          <span className="text-danger small">
-                            {error.message}
-                          </span>
-                        )
-                    }
-                  </div>
-                  <div className="mb-3">
-                      <label htmlFor="new_password" className="form-label fw-bold">
-                          New Password
-                      </label>
-                      <input
-                          id="new_password"
-                          type="password"
-                          className="form-control"
-                          value={formData.new_password}
-                          onChange={(e) => setFormData({ ...formData, new_password: e.target.value })}
-                      />
-                      {
-                          error !== undefined && error.type === 'new_password' && (
-                            <span className="text-danger small">
-                              {error.message}
-                            </span>
-                          )
-                      }
-                  </div>
-                  <div className="mb-3">
-                      <label htmlFor="confirm_new_password" className="form-label fw-bold">
-                          Confirm New Password
-                      </label>
-                      <input
-                          id="confirm_new_password"
-                          type="password"
-                          className="form-control"
-                          value={formData.confirm_new_password}
-                          onChange={(e) => setFormData({ ...formData, confirm_new_password: e.target.value })}
-                      />
-                      {
-                          error !== undefined && error.type === 'confirm_new_password' && (
-                            <span className="text-danger small">
-                              {error.message}
-                            </span>
-                          )
-                      }
-                  </div>
-                  {
-                      success !== undefined && (
-                          <div className="alert alert-success my-4" role="alert">
-                              {success.message}
-                          </div>
-                      )
-                  }
-                  <div className="mb-3 text-center">
-                      {
-                          loading
-                              ? <button className="btn btn-lg btn-quiz px-5" disabled>Loading...</button>
-                              : <button className="btn btn-lg btn-quiz px-5" onClick={updatePassword}>SAVE</button>
-                      }
-                  </div>
+                <div className="card p-4">
+                    <div className="my-5 card-wrapper d-flex align-items-center justify-content-center flex-column">
+
+                        {/* Old password */}
+                        <div className="mb-4">
+                            <label htmlFor="old_password" className="form-label fw-bold">
+                                Old Password
+                            </label>
+                            <input
+                                id="old_password"
+                                type="password"
+                                className="form-control"
+                                value={formData.old_password}
+                                onChange={(e) => setFormData({ ...formData, old_password: e.target.value })}
+                            />
+                            {
+                                error !== undefined && error.type === 'old_password' && (
+                                    <span className="text-danger small">
+                                        {error.message}
+                                    </span>
+                                )
+                            }
+                        </div>
+
+                        {/* New password */}
+                        <div className="mb-4">
+                            <label htmlFor="new_password" className="form-label fw-bold">
+                                New Password
+                            </label>
+                            <input
+                                id="new_password"
+                                type="password"
+                                className="form-control"
+                                value={formData.new_password}
+                                onChange={(e) => setFormData({ ...formData, new_password: e.target.value })}
+                            />
+                            {
+                                error !== undefined && error.type === 'new_password' && (
+                                    <span className="text-danger small">
+                                    {error.message}
+                                    </span>
+                                )
+                            }
+                        </div>
+
+                        {/* Confirm new password */}
+                        <div className="mb-4">
+                            <label htmlFor="confirm_new_password" className="form-label fw-bold">
+                                Confirm New Password
+                            </label>
+                            <input
+                                id="confirm_new_password"
+                                type="password"
+                                className="form-control"
+                                value={formData.confirm_new_password}
+                                onChange={(e) => setFormData({ ...formData, confirm_new_password: e.target.value })}
+                            />
+                            {
+                                error !== undefined && error.type === 'confirm_new_password' && (
+                                    <span className="text-danger small">
+                                    {error.message}
+                                    </span>
+                                )
+                            }
+                        </div>
+
+                        {/* Success message */}
+                        {
+                            success !== undefined && (
+                                <div className="mb-4 alert alert-success my-4" role="alert">
+                                    {success.message}
+                                </div>
+                            )
+                        }
+
+                        {/* Buttons */}
+                        <div className="text-center">
+                            <div>
+                                {
+                                    loading
+                                        ? <button className="btn btn-lg btn-quiz px-5" disabled>Loading...</button>
+                                        : <button className="btn btn-lg btn-quiz px-5" onClick={updatePassword}>SAVE</button>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
     )
