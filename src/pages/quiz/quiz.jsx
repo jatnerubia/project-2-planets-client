@@ -1,14 +1,14 @@
 
 import NavbarQuiz from "../../components/quiz/NavbarQuiz"
 import QuizHeroSection from "../../components/quiz/home/QuizHeroSection"
-import LeaderboardSection from "../../components/quiz/home/LeaderboardSection"
+import QuizLeaderboardSection from "../../components/quiz/home/QuizLeaderboardSection"
 
 const QuizPage = () => {
   return (
     <>
       <NavbarQuiz />
       <QuizHeroSection />
-      <LeaderboardSection />
+      <QuizLeaderboardSection />
     </>
   )
 }
