@@ -34,44 +34,48 @@ const FooterSection = () => {
             </li>
             
             <li>
-              <a href="#" className="text-white">
+              <Link to="" className="text-white">
                 FAQS
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="#" className="text-white">
+              <Link to="" className="text-white">
                 Mission
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="#" className="text-white">
+              <Link to="" className="text-white">
                 Vision
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0">
             <li>
-              <a href="#" className="text-white fw-bold display-7">
+              <Link to="" className="text-white fw-bold display-7">
                 Company
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#" className="text-white ">
+              <Link to="" className="text-white ">
                 Careers
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="#" className="text-white">
+              <Link to="" className="text-white">
                 Press
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="#" className="text-white">
+              <Link to="" className="text-white">
                 Legal Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -79,9 +83,9 @@ const FooterSection = () => {
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0">
             <li>
-              <a href="#" className="text-white fw-bold display-7">
+              <Link to="" className="text-white fw-bold display-7">
                 Social
-              </a>
+              </Link>
             </li>
             <li className="text-white">
                           <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
