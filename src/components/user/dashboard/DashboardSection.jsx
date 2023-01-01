@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import * as RestApi from "../../../utils/rest_api_util"
 import QuizCard from '../QuizCard'
 
-const DashboardComponent = () => {
+const DashboardSection = () => {
   const [dashboard, setDashboard] = useState({
     rank: null,
     correctAnswer: null,
@@ -135,4 +135,4 @@ const DashboardComponent = () => {
   )
 }
 
-export default DashboardComponent
+export default DashboardSection
