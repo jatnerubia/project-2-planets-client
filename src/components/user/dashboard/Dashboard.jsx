@@ -24,15 +24,12 @@ const DashboardComponent = () => {
   };
 
   const getTimeSpent = () => {
-    const startedAt = new Date(dashboard.startedAt).getTime()
-    const finishedAt = new Date(dashboard.finishedAt).getTime()
-    const totalSeconds = (finishedAt - startedAt) / 1000
+    const totalSeconds = dashboard.timeSpent
     if (totalSeconds >= 600) return "00:10:00"
     return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
 }
   return (
-      <div className="mt-4">
-          <h1 className="fw-bold fs-2">DASHBOARD</h1>
+      <div className="mt-5">
           <div className="py-5 user_avatar d-flex justify-content-center flex-column align-items-center">
             <img src="https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" className="rounded-circle" alt="User Avatar" width={150} height={150} />
             <h4 className="mt-4 fw-bold">John Doe</h4>
@@ -62,7 +59,7 @@ const DashboardComponent = () => {
                           <QuizCard title="CORRECT ANSWER" text='N/A' icon={solid('list-check')} />
                         )
                         : (
-                          <QuizCard title="CORRECT ANSWER" text={dashboard.correctAnswer + ' / 100'} icon={solid('list-check')} />
+                          <QuizCard title="CORRECT ANSWER" text={(dashboard.correctAnswer / 10) + ' / 10'} icon={solid('list-check')} />
                         )
                     }
 

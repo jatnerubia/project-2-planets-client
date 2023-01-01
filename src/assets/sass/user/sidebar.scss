@@ -4,7 +4,7 @@
   height: 100%;
   background: $dark_violet;
   transition: 0.5s;
-  overflow: hidden;
+  overflow: hidden auto;
   ul {
     position: absolute;
     top: 0;
@@ -90,6 +90,17 @@
     }
     #settingsCollapse {
       margin-left: 40px;
+    }
+    @media (max-height: 500px) {
+      max-height: 500px;
+      a:last-child {
+        li {
+          position: relative !important;
+          &.profile {
+            width: 100%;
+          }
+        }
+      }
     }
   }
   .settings-collapse{

@@ -8,9 +8,10 @@ const Layout = () => {
     <>
       {/* TODO: Add navbar component here */}
       <AnimatedStar />
-      <Navbar />
+
 
       <main>
+       <Navbar />
         <Outlet />
       </main>
 

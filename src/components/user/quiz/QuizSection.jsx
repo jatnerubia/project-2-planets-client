@@ -15,11 +15,11 @@ const QuizSection = () => {
 
     useEffect(() => {
         getQuiz()
-
     }, [])
 
     useEffect(() => {
       updateTime()
+      // eslint-disable-next-line
     }, [quizData])
 
     const updateTime = () => {
@@ -73,32 +73,30 @@ const QuizSection = () => {
     }
 
     const getTimeSpent = () => {
-        const startedAt = new Date(quizData.startedAt).getTime()
-        const finishedAt = new Date(quizData.finishedAt).getTime()
-        const totalSeconds = (finishedAt - startedAt) / 1000
+        const totalSeconds = quizData.timeSpent
         if (totalSeconds >= 600) return "00:10:00"
         return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
     }
+
     return (
-        <div className="quiz-wrapper">
+        <div className="quiz_wrapper">
 
             {/* Quiz start */}
             {
                 quizData !== undefined && quizData.status === 'start' && (
                     <div className="mt-4">
-                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
                       <div className="quiz-start_wrapper">
                         <div className="row">
-                          <div className="col-md-6">
-                            <QuizCard title="QUESTION" text="100" icon={solid('circle-question')} />
+                          <div className="mb-4 col-md-6 p-0">
+                            <QuizCard title="QUESTION" text="10" icon={solid('circle-question')} />
                           </div>
-                          <div className="col-md-6">
+                          <div className="col-md-6 p-0">
                             <QuizCard title="TOTAL SCORE" text="100" icon={solid('bookmark')} />
                           </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12 pt-4">
-                                <div className="card mx-5">
+                                <div className="card mx-lg-5">
                                     <div className="card-body">
                                         <p className="card-text lh-base">
                                         Space is a mysterious place but there are plenty of things
@@ -152,12 +150,12 @@ const QuizSection = () => {
             {/* Quiz answering */}
             {
                 quizData !== undefined && quizData.status === 'answering' && (
-                    <div className="mt-4">
-                        <div className="text-center mb-5">
+                    <div className="mt-4 pt-3">
+                        <div className="text-center mb-5 pt-5">
                           <h2>{timer}</h2>
                         </div>
                         <div className="progress mb-5">
-                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 5) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress-bar" role="progressbar" style={{ width: (quizData.totalCompletedQuestion / 10) * 100 + '%' }} aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="mb-5">
                             <h1 className="fs-4 fw-bold">{quizData.question}</h1>
@@ -200,7 +198,6 @@ const QuizSection = () => {
             {
                 quizData !== undefined && quizData.status === 'done' && (
                     <div className="mt-4">
-                      <h1 className="fw-bold fs-2">SPACE QUIZ</h1>
                       {/* {timerComponents.length ? timerComponents : <span>Time's up!</span>} */}
                       <div className="quiz-done_wrapper">
                         <div className="row">
@@ -210,10 +207,10 @@ const QuizSection = () => {
                         </div>
                         <div className="row">
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="CORRECT" text={quizData.score} icon={solid('circle-check')} />
+                              <QuizCard title="CORRECT" text={quizData.score / 10} icon={solid('circle-check')} />
                             </div>
                             <div className="col-md-4 pt-2">
-                              <QuizCard title="INCORRECT" text={100 - quizData.score} icon={solid('circle-xmark')} />
+                              <QuizCard title="INCORRECT" text={10 - (quizData.score / 10)} icon={solid('circle-xmark')} />
                             </div>
                             <div className="col-md-4 pt-2">
                               <QuizCard title="TIME SPENT" text={getTimeSpent()} icon={solid('hourglass-half')} />

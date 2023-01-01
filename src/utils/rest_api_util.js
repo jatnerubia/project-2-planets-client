@@ -15,7 +15,8 @@ const getHeaders = () => {
 /* Main */
 export const getPlanets = async () => await fetch(baseUrl + "/planets", { method: "GET", headers: getHeaders() })
 export const getNews = async () => await fetch(baseUrl + "/news", { method: "GET", headers: getHeaders() })
-
+// Email Feedback
+export const sendFeedback = async (data) => await fetch(baseUrl + "/feedback", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 /* Verify */
 export const verifyAccount = async (data) => await fetch(baseUrl + "/verify/account", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 export const verifyPassword = async (data) => await fetch(baseUrl + "/verify/password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })

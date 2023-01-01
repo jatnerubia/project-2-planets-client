@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 import { useEffect, useState } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import decode from 'jwt-decode'
 import Sidebar from "../user/Sidebar"
+import Topbar from '../user/TopBar'
 
 const UserLayout = () => {
 
@@ -27,23 +27,22 @@ const UserLayout = () => {
       }
       const decodedToken = decode(token)
       if (decodedToken.exp * 1000 < new Date().getTime()) {
-          localStorage.clear()
-          navigate('/quiz')
-          return
+        localStorage.clear()
+        navigate('/quiz')
+        return
       }
+      // eslint-disable-next-line
   }, [])
 
   return (
     <div className="user_section">
       <div className="section_wrapper position-relative w-100">
-        {/* TODO: Sidebar */}
         <Sidebar className={activeCheck} activeCheck={activeCheck} />
-        <main className={`position-absolute ${activeCheck}`}>
-            <button className='btn-toggle border-0 btn btn-white p-0' onClick={handleClick}>
-              <FontAwesomeIcon className='fs-1' icon={solid('bars')} />
-            </button>
-
+        <main className={`position-absolute p-0 ${activeCheck}`}>
+          <Topbar handleClick={handleClick}/>
+          <div className='p-4 pt-5'>
             <Outlet />
+          </div>
         </main>
       </div>
     </div>

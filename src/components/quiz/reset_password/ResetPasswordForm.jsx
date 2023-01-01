@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import * as RestApi from "../../../utils/rest_api_util"
@@ -16,21 +19,32 @@ const ResetPasswordForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [confirmPasswordShow, setConfirmPasswordShow] = useState(false)
 
     useEffect(() => {
-        const applyToken = () => {
-            const id = new URLSearchParams(location.search).get('id')
-            const token = new URLSearchParams(location.search).get('token')
-            setFormData((prevData) => {
-                return {
-                    ...prevData,
-                    id,
-                    token
-                }
-            })
-        }
         applyToken()
+        // eslint-disable-next-line
     }, [location])
+
+    const applyToken = () => {
+        const id = new URLSearchParams(location.search).get('id')
+        const token = new URLSearchParams(location.search).get('token')
+        setFormData((prevData) => {
+            return {
+                ...prevData,
+                id,
+                token
+            }
+        })
+    }
+
+    const showHidePassword = () => {
+      setPasswordShow(!passwordShow)
+    }
+    const showHideConfirmPassword = () => {
+      setConfirmPasswordShow(!confirmPasswordShow)
+    }
 
     const resetPassword = async () => {
         setLoading(true)
@@ -68,22 +82,38 @@ const ResetPasswordForm = () => {
     }
 
     return (
-        <div className="reset-pass h-100 bg-light text-dark p-2 d-flex justify-content-center align-items-center">
+        <div className="reset-pass h-100 bg-light text-dark p-4 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-            <h3 className="text-center mb-5">Reset Password</h3>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2">
-                <input
-                    id="password"
-                    type="password"
-                    className="form-control"
-                    value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                />
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-              </div>
+            <NavLink className="navbar-brand" to="/quiz">
+              <img src={require('../../../assets/img/logo.png')} className="d-block m-auto align-text-top" alt="Logo" />
+            </NavLink>
+            {/* Title */}
+            <h3 className="text-center mb-5">
+                Reset Password
+            </h3>
+
+            {/* Password */}
+            <div className="mb-4">
+                <div className="input-group">
+                    <input
+                        id="password"
+                        type={passwordShow ? "text" : "password"}
+                        className="form-control"
+                        value={formData.password}
+                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                    />
+                    <span>
+                        <FontAwesomeIcon
+                            onClick={showHidePassword}
+                            className='text-dark icon position-absolute end-0 fs-4'
+                            type='button'
+                            icon={passwordShow ? solid("eye-slash") : solid("eye")}
+                        />
+                    </span>
+                    <label htmlFor="password" className="form-label">
+                        Password
+                    </label>
+                </div>
                 {
                     error !== undefined && error.type === 'password' && (
                         <span className="text-danger small">
@@ -92,19 +122,29 @@ const ResetPasswordForm = () => {
                     )
                 }
             </div>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2 mb-5">
-                <input
-                    id="confirm_password"
-                    type="password"
-                    className="form-control"
-                    value={formData.confirm_password}
-                    onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
-                />
-                <label htmlFor="confirm_password" className="form-label">
-                    Confirm Password
-                </label>
-              </div>
+
+            {/* Confirm password */}
+            <div className="mb-4">
+                <div className="input-group">
+                    <input
+                        id="confirm_password"
+                        type={confirmPasswordShow ? "text" : "password"}
+                        className="form-control"
+                        value={formData.confirm_password}
+                        onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
+                    />
+                    <span>
+                        <FontAwesomeIcon
+                            onClick={showHideConfirmPassword}
+                            className='icon position-absolute end-0 fs-4'
+                            type='button'
+                            icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")}
+                        />
+                    </span>
+                    <label htmlFor="confirm_password" className="form-label">
+                        Confirm Password
+                    </label>
+                </div>
                 {
                     error !== undefined && error.type === 'confirm_password' && (
                         <span className="text-danger small">
@@ -113,26 +153,35 @@ const ResetPasswordForm = () => {
                     )
                 }
             </div>
+
+            {/* Error message */}
             {
                 error !== undefined && error.type === undefined && (
-                    <div className="alert alert-danger" role="alert">
+                    <div className="mb-4 alert alert-danger" role="alert">
                         {error.message}
                     </div>
                 )
             }
+
+            {/* Success message */}
             {
                 success !== undefined && (
-                    <div className="alert alert-success" role="alert">
+                    <div className="mb-4 alert alert-success" role="alert">
                         {success.message}
                     </div>
                 )
             }
-            <div className="mb-3 text-center">
-                {
-                    loading
-                        ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
-                        : <button className="btn btn-lg btn-quiz" onClick={resetPassword}>Reset Password</button>
-                }
+
+            {/* Buttons */}
+            <div className="text-center">
+
+                <div>
+                    {
+                        loading
+                            ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
+                            : <button className="btn btn-lg btn-quiz" onClick={resetPassword}>Reset Password</button>
+                    }
+                </div>
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import * as RestApi from "../../../utils/rest_api_util"
 import { useEffect } from "react"
+import { NavLink } from "react-router-dom"
+
 
 const RegisterForm = () => {
 
@@ -20,13 +23,24 @@ const RegisterForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+    const [passwordShow, setPasswordShow] = useState(false)
+    const [confirmPasswordShow, setConfirmPasswordShow] = useState(false)
 
     useEffect(() => {
       const token = localStorage.getItem('token')
       if (token) {
         navigate('/user/dashboard')
       }
+      // eslint-disable-next-line
     }, [])
+
+    const showHidePassword = () => {
+      setPasswordShow(!passwordShow)
+    }
+
+    const showHideConfirmPassword = () => {
+      setConfirmPasswordShow(!confirmPasswordShow)
+    }
 
     const register = async () => {
 
@@ -81,10 +95,19 @@ const RegisterForm = () => {
     return (
         <div className="registration left h-100 bg-light text-dark p-4 px-md-5 d-flex justify-content-center align-items-center">
           <div className="form-content">
-            <h3 className="text-center mb-4">Create an Account</h3>
-            <div className="row mb-3">
-                <div className="col-md-6">
-                  <div className="input-group mt-4 pt-2">
+            <NavLink className="navbar-brand" to="/quiz">
+              <img src={require('../../../assets/img/logo.png')} className="d-block m-auto align-text-top" alt="Logo" />
+            </NavLink>
+            {/* Title */}
+            <h3 className="text-center mb-5">
+              Create an Account
+            </h3>
+
+            {/* First and Last name */}
+            <div>
+              <div className="row">
+                <div className="mb-4 col-md-6">
+                  <div className="input-group">
                     <input
                       id="first_name"
                       type="text"
@@ -104,8 +127,8 @@ const RegisterForm = () => {
                     )
                   }
                 </div>
-                <div className="col-md-6">
-                  <div className="input-group mt-4 pt-2">
+                <div className="mb-4 col-md-6">
+                  <div className="input-group">
                     <input
                       id="last_name"
                       type="text"
@@ -117,17 +140,20 @@ const RegisterForm = () => {
                       Last Name
                     </label>
                   </div>
-                    {
-                        error !== undefined && error.type === 'last_name' && (
-                            <span className="text-danger small">
-                                {error.message}
-                            </span>
-                        )
-                    }
+                  {
+                    error !== undefined && error.type === 'last_name' && (
+                      <span className="text-danger small">
+                          {error.message}
+                      </span>
+                    )
+                  }
                 </div>
+              </div>
             </div>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2">
+
+            {/* Email */}
+            <div className="mb-4">
+              <div className="input-group">
                 <input
                   id="email"
                   type="text"
@@ -139,56 +165,78 @@ const RegisterForm = () => {
                   Email
                 </label>
               </div>
-                {
-                  error !== undefined && error.type === 'email' && (
-                      <span className="text-danger small">
-                          {error.message}
-                      </span>
-                  )
-                }
+              {
+                error !== undefined && error.type === 'email' && (
+                  <span className="text-danger small">
+                      {error.message}
+                  </span>
+                )
+              }
             </div>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2">
+
+            {/* Password */}
+            <div className="mb-4">
+              <div className="input-group">
                 <input
                   id="password"
-                  type="password"
+                  type={passwordShow ? "text" : "password"}
                   className="form-control"
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
+                <span>
+                  <FontAwesomeIcon
+                    onClick={showHidePassword}
+                    className='icon position-absolute end-0 fs-4'
+                    type='button'
+                    icon={passwordShow ? solid("eye-slash") : solid("eye")}
+                  />
+                </span>
                 <label htmlFor="password" className="form-label">
                   Password
                 </label>
               </div>
-                {
-                    error !== undefined && error.type === 'password' && (
-                        <span className="text-danger small">
-                            {error.message}
-                        </span>
-                    )
-                }
+              {
+                error !== undefined && error.type === 'password' && (
+                  <span className="text-danger small">
+                    {error.message}
+                  </span>
+                )
+              }
             </div>
-            <div className="mb-3">
-              <div className="input-group mt-4 pt-2">
+
+            {/* Confirm password */}
+            <div className="mb-4">
+              <div className="input-group">
                 <input
                   id="confirm_password"
-                  type="password"
+                  type={confirmPasswordShow ? "text" : "password"}
                   className="form-control"
                   value={formData.confirm_password}
                   onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                 />
+                <span>
+                  <FontAwesomeIcon
+                    onClick={showHideConfirmPassword}
+                    className='icon position-absolute end-0 fs-4'
+                    type='button'
+                    icon={confirmPasswordShow ? solid("eye-slash") : solid("eye")}
+                  />
+                </span>
                 <label htmlFor="confirm_password" className="form-label">
                   Confirm Password
                 </label>
               </div>
-                {
-                    error !== undefined && error.type === 'confirm_password' && (
-                        <span className="text-danger small">
-                            {error.message}
-                        </span>
-                    )
-                }
+              {
+                error !== undefined && error.type === 'confirm_password' && (
+                  <span className="text-danger small">
+                    {error.message}
+                  </span>
+                )
+              }
             </div>
+
+            {/* Terms */}
             <div className="mb-4">
               <span className="small text-dark lh-sm">
                 By signing up you confirm that you've read and accepted
@@ -196,33 +244,50 @@ const RegisterForm = () => {
                 <Link to="/policy"> Privacy Policy</Link>
               </span>
             </div>
+
+            {/* Success message */}
             {
-                success !== undefined && (
-                    <div className="alert alert-success" role="alert">
-                        {success.message}
-                    </div>
-                )
+              success !== undefined && (
+                <div className="mb-4 alert alert-success" role="alert">
+                  {success.message}
+                </div>
+              )
             }
-            <div className="mb-3 text-center">
+
+            {/* Buttons */}
+            <div className="text-center">
+
+              {/* Register button */}
+              <div className="mb-4">
                 {
-                    loading
-                        ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
-                        : <button className="btn btn-lg btn-quiz" onClick={register}>Register</button>
+                  loading
+                    ? <button className="btn btn-lg btn-quiz" disabled>Loading...</button>
+                    : <button className="btn btn-lg btn-quiz" onClick={register}>Register</button>
                 }
-            </div>
-            <div className="mb-3 text-center">
+              </div>
+
+              {/* Or */}
+              <div className="mb-4">
                 <span className="fs-6 text-muted">OR</span>
-            </div>
-            <div className="mb-3 d-flex justify-content-center">
-              <button className="btn-google mb-3">
-                <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
-                  <GoogleLogin onSuccess={loginWithGoogle} />
-                </GoogleOAuthProvider>
-              </button>
-            </div>
-            <hr />
-            <div className="text-center mt-4 text-muted fs-6">
+              </div>
+
+              {/* Google button */}
+              <div className="mb-4">
+                <button className="btn-google mb-3">
+                  <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}>
+                    <GoogleLogin onSuccess={loginWithGoogle} />
+                  </GoogleOAuthProvider>
+                </button>
+              </div>
+
+              {/* Divider */}
+              <hr className='mb-4' />
+
+              {/* Login */}
+              <div className="text-muted fs-6">
                 Already have an account? <strong><Link to="/quiz/login" className="text-dark">Login</Link></strong>
+              </div>
+
             </div>
           </div>
         </div>

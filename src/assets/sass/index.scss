@@ -3,10 +3,12 @@
 @import './navbar_footer/navbar.scss';
 @import './navbar_footer/footer.scss';
 @import './landingPage/heroSection.scss';
-@import './quiz/quiz.scss';
+@import './landingPage/feedbackSection.scss';
+@import './quiz/quizForms.scss';
+@import './quiz/quizLanding.scss';
 @import './landingPage/newsSection.scss';
 @import './user/sidebar.scss';
 @import './user/userSection.scss';
 @import './user/leaderboard.scss';
 @import './user/quiz.scss';
-@import './user/change-pass.scss'
+@import './user/change-pass.scss';

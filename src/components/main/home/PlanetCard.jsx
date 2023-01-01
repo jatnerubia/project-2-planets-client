@@ -1,4 +1,4 @@
-import RedirectButton from "../../RedirectButton";
+import RedirectButton from "../RedirectButton";
 
 const PlanetCard = ({ planet }) => {
   const planetStyles = {
@@ -19,7 +19,7 @@ const PlanetCard = ({ planet }) => {
   }
   return (
     <>
-    <div className="planet_card col-lg-4 col-md-6 py-4 my-5">
+    <div className="planet_card col-lg-4 col-md-6 py-4 my-3">
       <div className="card position-relative mb-4 mx-2">
         <div className="card__planet">
           <span className="tiltLine" style={planetStyles.tiltLine}></span>
@@ -53,24 +53,6 @@ const PlanetCard = ({ planet }) => {
       </div>
     </div>
     </>
-    // <div classNameName="col-md-6 col-lg-4 d-flex justify-content-center align-items-center p-2">
-    //   <div classNameName="flip-card">
-    //     <div classNameName="flip-card-inner">
-    //       <div classNameName="flip-card-front">
-    //         <img
-    //           classNameName="img-fluid"
-    //           src={planet.images[0].url}
-    //           alt={planet.name}
-    //         />
-    //       </div>
-    //       <div classNameName="flip-card-back d-flex flex-column justify-content-center align-items-center p-2">
-    //         <h5>{planet.name}</h5>
-    //         <p>{planet.images[0].description}</p>
-    //         <RedirectButton name="View More" to="/planets" />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

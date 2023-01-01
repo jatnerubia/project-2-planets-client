@@ -16,39 +16,40 @@ const LeaderboardComponent = () => {
       setLeaderboard(response);
     } catch (error) {}
   };
+
   const getTimeSpent = (index) => {
-    const startedAt = new Date(leaderboards[index].startedAt).getTime()
-    const finishedAt = new Date(leaderboards[index].finishedAt).getTime()
-    const totalSeconds = (finishedAt - startedAt) / 1000
+    const totalSeconds = leaderboards[index].timeSpent
     if (totalSeconds >= 600) return "00:10:00"
     return new Date(totalSeconds * 1000).toISOString().slice(11, 19)
   }
+
   return (
-    <div className="mt-4">
-      <h1 className="fw-bold fs-2">LEADERBOARD</h1>
+    <div className="mt-4 pt-5">
 
       <div className="leaderboard-wrapper mt-5">
         <h3 className="fw-bold">TOP 10 HIGHEST SCORE</h3>
-          <table className="table table-responsive bordered mt-4">
-            <thead className="table-light">
-              <tr>
-                <th scope="col">RANK</th>
-                <th scope="col">NAME</th>
-                <th scope="col">SCORE</th>
-                <th scope="col">TIME SPENT</th>
-              </tr>
-            </thead>
-            <tbody className="table-group-divider">
-              {leaderboards.map((leaderboard, index) => (
-                <tr key={index}>
-                  <th scope="row">{index+1}</th>
-                  <td>{leaderboard.fullName}</td>
-                  <td>{leaderboard.score}</td>
-                  <td>{getTimeSpent(index)}</td>
+          <div className="table-responsive">
+            <table className="table bordered mt-4">
+              <thead className="table-light">
+                <tr>
+                  <th scope="col">RANK</th>
+                  <th scope="col">NAME</th>
+                  <th scope="col">SCORE</th>
+                  <th scope="col">TIME SPENT</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="table-group-divider">
+                {leaderboards.map((leaderboard, index) => (
+                  <tr key={index}>
+                    <th scope="row">{index+1}</th>
+                    <td>{leaderboard.fullName}</td>
+                    <td>{leaderboard.score}</td>
+                    <td>{getTimeSpent(index)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
       </div>
     </div>
   )
