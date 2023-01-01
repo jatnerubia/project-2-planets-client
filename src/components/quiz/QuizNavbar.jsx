@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom"
 import {  useState } from "react"
 
+const QuizNavbar = () => {
 
-const NavbarQuiz = () => {
   const [toggle, setToggle] = useState(false);
 
   const handleClick = () => {
@@ -45,4 +45,4 @@ const NavbarQuiz = () => {
     </nav>
   )
 }
-export default NavbarQuiz
+export default QuizNavbar
