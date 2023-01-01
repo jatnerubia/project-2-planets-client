@@ -1,9 +1,9 @@
-import LeaderboardComponent from "../../components/user/leaderboard/Leaderboard"
+import LeaderboardSection from "../../components/user/leaderboard/LeaderboardSection"
 
 const LeaderboardPage = () => {
     return (
         <>
-        <LeaderboardComponent />
+            <LeaderboardSection />
         </>
     )
 }
