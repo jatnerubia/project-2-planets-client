@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as RestApi from "../../../utils/rest_api_util"
 
-const QuizLeaderboard = () => {
+const LeaderboardSection = () => {
   const [leaderboards, setLeaderboard] = useState([]);
 
   useEffect(() => {
@@ -107,4 +107,4 @@ const QuizLeaderboard = () => {
     </div>
   )
 }
-export default QuizLeaderboard
+export default LeaderboardSection
