@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
+import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 
 
@@ -13,26 +13,26 @@ const FooterSection = () => {
             <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" className=" w-50 img-fluid" alt="SpaceVerse" />
             <h5>SpaceVerse</h5>
           </Link>
-         
+
         </div>
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
           <ul className="list-unstyled mb-0 ">
-            
-          
-            <li>
-             <Link to="/about" className="text-white fw-bold display-7">
-                About Us
-              </Link>
-           
-            </li>
-           
+
 
             <li>
-              <Link to="" className="text-white">      
-              Contact Us
+              <Link to="/about" className="text-white fw-bold display-7">
+                About Us
+              </Link>
+
+            </li>
+
+
+            <li>
+              <Link to="" className="text-white">
+                Contact Us
               </Link>
             </li>
-            
+
             <li>
               <Link to="" className="text-white">
                 FAQS
@@ -88,9 +88,9 @@ const FooterSection = () => {
               </Link>
             </li>
             <li className="text-white">
-                          <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
-                          <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
-                          <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
+              <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
+              <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
+              <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
             </li>
           </ul>
         </div>
