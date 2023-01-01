@@ -19,13 +19,13 @@ export const getNews = async () => await fetch(baseUrl + "/news", { method: "GET
 export const sendFeedback = async (data) => await fetch(baseUrl + "/feedback", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 /* Verify */
 export const verifyAccount = async (data) => await fetch(baseUrl + "/verify/account", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
-export const verifyPassword = async (data) => await fetch(baseUrl + "/verify/password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
 /* Quiz */
 export const register = async (data) => await fetch(baseUrl + "/quiz/auth/register", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 export const login = async (data) => await fetch(baseUrl + "/quiz/auth/login", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 export const loginWithGoogle = async (data) => await fetch(baseUrl + "/quiz/auth/google", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 export const forgotPassword = async (data) => await fetch(baseUrl + "/quiz/auth/forgot-password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
+export const resetPassword = async (data) => await fetch(baseUrl + "/quiz/auth/reset-password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
 /* TODO: Quiz - Leaderboards */
 export const getLeaderboards = async () => await fetch(baseUrl + "/quiz/leaderboards", { method: "GET", headers: getHeaders() })

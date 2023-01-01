@@ -61,7 +61,7 @@ const ResetPasswordForm = () => {
         }
 
         try {
-            const result = await RestApi.verifyPassword(formData)
+            const result = await RestApi.resetPassword(formData)
             let response = await result.json();
             if (result.status === 400) {
                 setError(response)
