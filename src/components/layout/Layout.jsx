@@ -1,4 +1,4 @@
-import FooterSection from "../FooterSection";
+import FooterSection from "../main/FooterSection";
 import { Outlet } from "react-router-dom";
 import AnimatedStar from "../main/home/AnimatedStar";
 import Navbar from "../Navbar";
