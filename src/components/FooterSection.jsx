@@ -1,4 +1,4 @@
-import { NavLink,Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {brands} from '@fortawesome/fontawesome-svg-core/import.macro' 
 
@@ -9,10 +9,10 @@ const FooterSection = () => {
     <div className="container mt-5">
       <div className="row">
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
-          <NavLink to="">
+          <Link to="">
             <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" className=" w-50 img-fluid" alt="SpaceVerse" />
             <h5>SpaceVerse</h5>
-          </NavLink>
+          </Link>
          
         </div>
         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3 text-center mb-3">
