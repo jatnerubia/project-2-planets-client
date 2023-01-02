@@ -5,6 +5,10 @@ import * as RestApi from "../../../utils/rest_api_util"
 import QuizCard from '../QuizCard'
 
 const DashboardSection = () => {
+
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+
   const [dashboard, setDashboard] = useState({
     rank: null,
     correctAnswer: null,
@@ -12,6 +16,12 @@ const DashboardSection = () => {
   });
 
   useEffect(() => {
+    if (localStorage.getItem('first_name')) {
+      setFirstName(localStorage.getItem('first_name'))
+    }
+    if (localStorage.getItem('last_name')) {
+      setLastName(localStorage.getItem('last_name'))
+    }
     getDashboards();
   }, []);
 
@@ -32,9 +42,10 @@ const DashboardSection = () => {
       <div className="mt-5">
           <div className="py-5 user_avatar d-flex justify-content-center flex-column align-items-center">
             <img src="https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" className="rounded-circle" alt="User Avatar" width={150} height={150} />
-            <h4 className="mt-4 fw-bold">John Doe</h4>
+            <h4 className="mt-4 fw-bold">
+              {firstName} {lastName}
+            </h4>
           </div>
-
 
           <div className="card-wrapper">
             <div className="row">
@@ -43,12 +54,12 @@ const DashboardSection = () => {
                   <div className="mb-4 left col-lg-4 col-md-12">
                     {
                       dashboard.rank === null
-                      ? (
-                        <QuizCard title="RANK" text='N/A' icon={solid('ranking-star')} />
-                      )
-                      : (
-                        <QuizCard title="RANK" text={dashboard.rank+1} icon={solid('ranking-star')} />
-                      )
+                        ? (
+                          <QuizCard title="RANK" text='N/A' icon={solid('ranking-star')} />
+                        )
+                        : (
+                          <QuizCard title="RANK" text={dashboard.rank+1} icon={solid('ranking-star')} />
+                        )
                     }
 
                   </div>
@@ -69,23 +80,23 @@ const DashboardSection = () => {
                   <div className="mb-4 left col-lg-4 col-md-12">
                     {
                       dashboard.correctAnswer === null
-                      ? (
-                         <QuizCard title="SCORE" text='N/A' icon={solid('bookmark')} />
-                      )
-                      : (
-                        <QuizCard title="SCORE" text={dashboard.correctAnswer / 100 * 100 + '%'} icon={solid('bookmark')} />
-                      )
+                        ? (
+                          <QuizCard title="SCORE" text='N/A' icon={solid('bookmark')} />
+                        )
+                        : (
+                          <QuizCard title="SCORE" text={dashboard.correctAnswer / 100 * 100 + '%'} icon={solid('bookmark')} />
+                        )
                     }
                   </div>
                   <div className="mb-4 left col-lg-8 col-md-12">
                     {
                       dashboard.startedAt === null
-                      ? (
-                         <QuizCard title="TIME SPENT" text='N/A' icon={solid('hourglass-half')} />
-                      )
-                      : (
-                        <QuizCard title="TIME SPENT" footerText='Hr:Mins:Sec' text={getTimeSpent()} icon={solid('hourglass-half')} />
-                      )
+                        ? (
+                          <QuizCard title="TIME SPENT" text='N/A' icon={solid('hourglass-half')} />
+                        )
+                        : (
+                          <QuizCard title="TIME SPENT" footerText='Hr:Mins:Sec' text={getTimeSpent()} icon={solid('hourglass-half')} />
+                        )
                     }
                   </div>
                 </div>
