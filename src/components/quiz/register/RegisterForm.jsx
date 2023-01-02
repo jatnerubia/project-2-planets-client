@@ -86,12 +86,9 @@ const RegisterForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-              const token = response.token
-              const decodedToken = decode(token)
-              localStorage.setItem('token', token)
-              if (decodedToken.avatar !== null) {
-                localStorage.setItem('avatar', decodedToken.avatar)
-            }
+              const decodedToken = decode(response.token)
+              localStorage.setItem('token', response.token)
+              localStorage.setItem('avatar', response.avatar)
               if (decodedToken.firstName !== null) {
                   localStorage.setItem('firstName', decodedToken.firstName)
               }
