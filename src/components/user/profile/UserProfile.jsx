@@ -3,6 +3,7 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
 import { useOutletContext } from 'react-router-dom'
+import FileBase from 'react-file-base64';
 
 const UserProfile = () => {
 
@@ -75,6 +76,18 @@ const UserProfile = () => {
                     <div className="text-center mb-3">
                         <img src={formData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
                     </div>
+
+                    {
+                        isEditing && (
+                            <div className="text-center">
+                                <FileBase
+                                    type="file"
+                                    multiple={false}
+                                    onDone={({ base64 }) => setFormData({ ...formData, avatar: base64 })}
+                                />
+                            </div>
+                        )
+                    }
 
                     {/* First and Last name */}
                     <div className="row">
