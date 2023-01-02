@@ -1,11 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { NavLink, useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useEffect, useState } from 'react'
 
 const Sidebar = ({ activeCheck}) => {
-
-  const navigate = useNavigate()
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -21,7 +19,7 @@ const Sidebar = ({ activeCheck}) => {
 
   const logout = () => {
     localStorage.clear()
-    navigate('/quiz')
+    console.log('logging out')
   }
 
   return (
@@ -88,7 +86,7 @@ const Sidebar = ({ activeCheck}) => {
               </NavLink>
             </div>
           </div>
-          <a style={{ cursor: 'pointer' }} onClick={logout}>
+          <NavLink to="/quiz" onClick={logout}>
             <li className='rounded-pill rounded-end my-2'>
               <span className="sidebar-icon">
                 <FontAwesomeIcon className='me-4' icon={solid('right-from-bracket')} />
@@ -97,7 +95,7 @@ const Sidebar = ({ activeCheck}) => {
                 Logout
               </span>
             </li>
-          </a>
+          </NavLink>
           <NavLink to="/user/profile">
             <li className='profile rounded-pill rounded-end position-absolute bottom-0 mb-3'>
               <span className="sidebar-icon">
