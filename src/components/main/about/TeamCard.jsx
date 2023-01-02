@@ -27,7 +27,7 @@ const TeamCard = () => {
                     <div className="card position-relative " style={{ width: "15rem;" }} >
                         <img src="https://i.ibb.co/2c362Xy/Untitled-design-4.png" className="position-absolute img-fluid top-0 start-50 translate-middle mb-5  d-block" alt="person" style={{ height: "50%", float: "auto" }} />
                         <div className="card-body mt-5 pt-5 text-center">
-                            <h5 className="text-black">Alan Demol</h5>
+                            <h5 className="text-black">Angela Mae Morales</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
                                 <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
@@ -46,7 +46,7 @@ const TeamCard = () => {
                     <div className="card position-relative " style={{ width: "15rem;" }} >
                         <img src="https://i.ibb.co/2c362Xy/Untitled-design-4.png" className="position-absolute img-fluid top-0 start-50 translate-middle mb-5  d-block" alt="person" style={{ height: "50%", float: "auto" }} />
                         <div className="card-body mt-5 pt-5 text-center">
-                            <h5 className="text-black">Alan Demol</h5>
+                            <h5 className="text-black">Jason Lerit</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
                                 <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
@@ -63,7 +63,7 @@ const TeamCard = () => {
                     <div className="card position-relative " style={{ width: "15rem;" }} >
                         <img src="https://i.ibb.co/2c362Xy/Untitled-design-4.png" className="position-absolute img-fluid top-0 start-50 translate-middle mb-5  d-block" alt="person" style={{ height: "50%", float: "auto" }} />
                         <div className="card-body mt-5 pt-5 text-center">
-                            <h5 className="text-black ">Alan Demol</h5>
+                            <h5 className="text-black ">Jomar Clado</h5>
                             <p className="text-black">Web Developer</p>
                             <li className="text-black list-unstyled">
                                 <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
