@@ -3,7 +3,10 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
 
+
 const UserProfile = () => {
+
+    const [isEditing, setIsEditing] = useState(false)
 
     const [formData, setFormData] = useState({
         avatar: "",
@@ -29,9 +32,12 @@ const UserProfile = () => {
         <div className="container pt-5">
             <div className="card card-block ">
                 <div className="card-body">
-                    <div className="float-end">
-                        <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} />
-
+                    <div className="float-end">                       
+                        {
+                            isEditing === false && (
+                                <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)}/>
+                            )
+                        }
                     </div>
                     <div className="text-center mb-3">
                         <img src={formData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
@@ -44,7 +50,7 @@ const UserProfile = () => {
                                 type="text"
                                 className="form-control"
                                 value={formData.firstName}
-                                disabled
+                                disabled={!isEditing}
                             />
                         </div>
                         <div className="mb-4 col-md-6">
@@ -54,7 +60,7 @@ const UserProfile = () => {
                                 type="text"
                                 className="form-control"
                                 value={formData.lastName}
-                                disabled
+                                disabled={!isEditing}
                             />
                         </div></div>
                     <div className="mb-4">
@@ -64,7 +70,7 @@ const UserProfile = () => {
                             type="text"
                             className="form-control"
                             value={formData.email}
-                            disabled
+                            disabled={!isEditing}
                         />
                     </div>
                 </div>
