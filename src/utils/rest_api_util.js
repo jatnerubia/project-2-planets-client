@@ -42,3 +42,4 @@ export const submitAnswer = async (data) => await fetch(baseUrl + "/user/quiz/su
 export const updatePassword = async (data) => await fetch(baseUrl + "/user/settings/password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
 /* TODO: User - Profile */
+export const getProfile = async () => await fetch(baseUrl + "/user/profile", { method: "GET", headers: getHeaders() })
