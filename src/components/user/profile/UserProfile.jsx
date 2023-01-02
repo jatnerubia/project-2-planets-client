@@ -1,10 +1,40 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { useEffect, useState } from 'react'
+import * as RestApi from '../../../utils/rest_api_util'
+
 const UserProfile = () => {
+
+    const [formData, setFormData] = useState({
+        avatar: "",
+        email: "",
+        firstName: "",
+        lastName: ""
+    })
+
+    useEffect(() => {
+       getProfile()
+    }, [])
+
+    const getProfile = async () => {
+        try { 
+            const result = await RestApi.getProfile()
+            let response = await result.json()
+            setFormData(response)
+        } catch (error) {         
+        }
+    }
+
     return (
-        <div className="container">
-            <div className="card card-block">
+        <div className="container pt-5">
+            <div className="card card-block ">
                 <div className="card-body">
+                    <div className="float-end">
+                        <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} />
+
+                    </div>
                     <div className="text-center mb-3">
-                        <img src="https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" className="rounded-circle" alt="User Avatar" width={150} height={150} />
+                        <img src={formData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
                     </div>
                     <div className="row">
                         <div className="mb-4 col-md-6">
@@ -13,6 +43,8 @@ const UserProfile = () => {
                                 id="first_name"
                                 type="text"
                                 className="form-control"
+                                value={formData.firstName}
+                                disabled
                             />
                         </div>
                         <div className="mb-4 col-md-6">
@@ -21,6 +53,8 @@ const UserProfile = () => {
                                 id="last_name"
                                 type="text"
                                 className="form-control"
+                                value={formData.lastName}
+                                disabled
                             />
                         </div></div>
                     <div className="mb-4">
@@ -29,6 +63,8 @@ const UserProfile = () => {
                             id="email"
                             type="text"
                             className="form-control"
+                            value={formData.email}
+                            disabled
                         />
                     </div>
                 </div>
