@@ -6,6 +6,7 @@ import QuizCard from '../QuizCard'
 
 const DashboardSection = () => {
 
+  const [avatar, setAvatar] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
@@ -16,6 +17,9 @@ const DashboardSection = () => {
   });
 
   useEffect(() => {
+    if (localStorage.getItem('avatar')) {
+      setAvatar(localStorage.getItem('avatar'))
+    }
     if (localStorage.getItem('first_name')) {
       setFirstName(localStorage.getItem('first_name'))
     }
@@ -41,7 +45,7 @@ const DashboardSection = () => {
   return (
       <div className="mt-5">
           <div className="py-5 user_avatar d-flex justify-content-center flex-column align-items-center">
-            <img src="https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" className="rounded-circle" alt="User Avatar" width={150} height={150} />
+            <img src={avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
             <h4 className="mt-4 fw-bold">
               {firstName} {lastName}
             </h4>
