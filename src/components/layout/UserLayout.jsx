@@ -49,7 +49,7 @@ const UserLayout = () => {
         <main className={`position-absolute p-0 ${activeCheck}`}>
           <Topbar handleClick={handleClick}/>
           <div className='p-4 pt-5'>
-            <Outlet context={userData} />
+            <Outlet context={[userData, setUserData]} />
           </div>
         </main>
       </div>

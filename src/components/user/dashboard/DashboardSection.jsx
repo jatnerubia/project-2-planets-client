@@ -7,7 +7,7 @@ import { useOutletContext } from 'react-router-dom';
 
 const DashboardSection = () => {
 
-  const userData = useOutletContext()
+  const [userData] = useOutletContext()
 
   const [dashboard, setDashboard] = useState({
     rank: null,

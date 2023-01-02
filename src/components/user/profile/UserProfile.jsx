@@ -2,8 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
+import { useOutletContext } from 'react-router-dom'
 
 const UserProfile = () => {
+
+    const [userData, setUserData] = useOutletContext()
 
     const [isEditing, setIsEditing] = useState(false)
 
@@ -44,8 +47,10 @@ const UserProfile = () => {
                 setError(response)
             }
             if (result.status === 200) {
+                localStorage.setItem('avatar', formData.avatar)
                 localStorage.setItem('firstName', formData.firstName)
                 localStorage.setItem('lastName', formData.lastName)
+                setUserData(formData)
                 setIsEditing(false)
                 setSuccess(response)
             }
