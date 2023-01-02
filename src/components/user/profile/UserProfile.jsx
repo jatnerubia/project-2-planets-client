@@ -3,7 +3,6 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
 
-
 const UserProfile = () => {
 
     const [isEditing, setIsEditing] = useState(false)
@@ -41,17 +40,15 @@ const UserProfile = () => {
         try {
             const result = await RestApi.saveProfile(formData)
             let response = await result.json()
-            if (result === 400) {
+            if (result.status === 400) {
                 setError(response)
             }
             if (result.status === 200) {
+                setIsEditing(false)
                 setSuccess(response)
             }
+        } catch (error) {}
 
-
-        } catch (error) {
-
-        }
         setLoading(false)
     }
 
@@ -59,16 +56,20 @@ const UserProfile = () => {
         <div className="container pt-5">
             <div className="card card-block ">
                 <div className="card-body">
-                    <div className="float-end">
+
+                    <div className="d-flex justify-content-end">
                         {
                             isEditing === false && (
                                 <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)} />
                             )
                         }
                     </div>
+
                     <div className="text-center mb-3">
                         <img src={formData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
                     </div>
+
+                    {/* First and Last name */}
                     <div className="row">
                         <div className="mb-4 col-md-6">
                             <label htmlFor="first_name" className="form-label fw-bold">First Name</label>
@@ -80,6 +81,13 @@ const UserProfile = () => {
                                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                                 disabled={!isEditing}
                             />
+                            {
+                                error !== undefined && error.type === 'first_name' && (
+                                    <span className="text-danger small">
+                                        {error.message}
+                                    </span>
+                                )
+                            }
                         </div>
                         <div className="mb-4 col-md-6">
                             <label htmlFor="last_name" className="form-label fw-bold">Last Name</label>
@@ -91,7 +99,17 @@ const UserProfile = () => {
                                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                                 disabled={!isEditing}
                             />
-                        </div></div>
+                            {
+                                error !== undefined && error.type === 'last_name' && (
+                                    <span className="text-danger small">
+                                        {error.message}
+                                    </span>
+                                )
+                            }
+                        </div>
+                    </div>
+
+                    {/* Email */}
                     <div className="mb-4">
                         <label htmlFor="email" className="form-label fw-bold">Email</label>
                         <input
@@ -102,6 +120,7 @@ const UserProfile = () => {
                             disabled
                         />
                     </div>
+
                     {
                         success !== undefined && (
                             <div className="mb-4 alert alert-success my-4" role="alert">
@@ -109,12 +128,17 @@ const UserProfile = () => {
                             </div>
                         )
                     }
+
                     {
                         isEditing && (
                             <div className="text-center">
-                                <button className="btn btn-quiz btn-lg" onClick={saveProfile}>
-                                    Save
-                                </button>
+                                <div>
+                                    {
+                                        loading
+                                            ? <button className="btn btn-lg btn-quiz px-5" disabled>Loading...</button>
+                                            : <button className="btn btn-lg btn-quiz px-5" onClick={saveProfile}>SAVE</button>
+                                    }
+                                </div>
                             </div>
                         )
                     }
