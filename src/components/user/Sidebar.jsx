@@ -19,7 +19,6 @@ const Sidebar = ({ activeCheck}) => {
 
   const logout = () => {
     localStorage.clear()
-    console.log('logging out')
   }
 
   return (
