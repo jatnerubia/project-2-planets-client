@@ -48,6 +48,9 @@ const LoginForm = () => {
                 const token = response.token
                 const decodedToken = decode(token)
                 localStorage.setItem('token', token)
+                if (decodedToken.avatar !== null) {
+                    localStorage.setItem('avatar', decodedToken.avatar)
+                }
                 if (decodedToken.first_name !== null) {
                     localStorage.setItem('first_name', decodedToken.first_name)
                 }
@@ -73,6 +76,9 @@ const LoginForm = () => {
                 const token = response.token
                 const decodedToken = decode(token)
                 localStorage.setItem('token', token)
+                if (decodedToken.avatar !== null) {
+                    localStorage.setItem('avatar', decodedToken.avatar)
+                }
                 if (decodedToken.first_name !== null) {
                     localStorage.setItem('first_name', decodedToken.first_name)
                 }
