@@ -6,7 +6,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import * as RestApi from "../../../utils/rest_api_util"
 import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
-
+import decode from 'jwt-decode'
 
 const LoginForm = () => {
 
@@ -45,7 +45,16 @@ const LoginForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                localStorage.setItem('token', response.token)
+                const token = response.token
+                const decodedToken = decode(token)
+                localStorage.setItem('token', token)
+                if (decodedToken.first_name !== null) {
+                    localStorage.setItem('first_name', decodedToken.first_name)
+                }
+                if (decodedToken.last_name !== null) {
+                    localStorage.setItem('last_name', decodedToken.last_name)
+                }
+                localStorage.setItem('email', decodedToken.email)
                 navigate('/user/dashboard')
             }
         } catch (error) {}
@@ -61,7 +70,16 @@ const LoginForm = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                localStorage.setItem('token', response.token)
+                const token = response.token
+                const decodedToken = decode(token)
+                localStorage.setItem('token', token)
+                if (decodedToken.first_name !== null) {
+                    localStorage.setItem('first_name', decodedToken.first_name)
+                }
+                if (decodedToken.last_name !== null) {
+                    localStorage.setItem('last_name', decodedToken.last_name)
+                }
+                localStorage.setItem('email', decodedToken.email)
                 navigate('/user/dashboard')
             }
         } catch (error) {}
