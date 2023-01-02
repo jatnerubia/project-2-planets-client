@@ -30,7 +30,13 @@ const UserProfile = () => {
     
     const saveProfile = async () => {
         try {
-            console.log(formData)
+            const result = await RestApi.saveProfile(formData)
+            let response = await result.json()
+            if (result.status === 200) {
+                console.log(response)
+            }
+            
+            
         } catch (error) {
             
         }
