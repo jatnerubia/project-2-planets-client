@@ -15,6 +15,10 @@ const UserProfile = () => {
         lastName: ""
     })
 
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState()
+    const [success, setSuccess] = useState()
+
     useEffect(() => {
         getProfile()
     }, [])
@@ -27,19 +31,28 @@ const UserProfile = () => {
         } catch (error) {
         }
     }
-    
+
     const saveProfile = async () => {
+
+        setLoading(true)
+        setError(undefined)
+        setSuccess(undefined)
+
         try {
             const result = await RestApi.saveProfile(formData)
             let response = await result.json()
-            if (result.status === 200) {
-                console.log(response)
+            if (result === 400) {
+                setError(response)
             }
-            
-            
+            if (result.status === 200) {
+                setSuccess(response)
+            }
+
+
         } catch (error) {
-            
+
         }
+        setLoading(false)
     }
 
     return (
@@ -89,6 +102,13 @@ const UserProfile = () => {
                             disabled
                         />
                     </div>
+                    {
+                        success !== undefined && (
+                            <div className="mb-4 alert alert-success my-4" role="alert">
+                                {success.message}
+                            </div>
+                        )
+                    }
                     {
                         isEditing && (
                             <div className="text-center">
