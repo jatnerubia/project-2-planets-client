@@ -43,3 +43,4 @@ export const updatePassword = async (data) => await fetch(baseUrl + "/user/setti
 
 /* TODO: User - Profile */
 export const getProfile = async () => await fetch(baseUrl + "/user/profile", { method: "GET", headers: getHeaders() })
+export const saveProfile = async (data) => await fetch(baseUrl + "/user/profile", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
