@@ -44,6 +44,8 @@ const UserProfile = () => {
                 setError(response)
             }
             if (result.status === 200) {
+                localStorage.setItem('first_name', formData.firstName)
+                localStorage.setItem('last_name', formData.lastName)
                 setIsEditing(false)
                 setSuccess(response)
             }
