@@ -1,27 +1,46 @@
 import { NavLink } from "react-router-dom"
+
 const Navbar = () => {
     return (
-        <nav className="navbar navabar-expand-lg pt-1 d-flex ">
-            <div className="col-md-3 mx-5 d-flex justify-text-center">
-                <img src="https://i.ibb.co/jwRRDKm/IMG-20221215-224029.png" width="30%" />
-                <h4 className="pt-3 mx-3">SpaceVerse</h4>
-            </div>
-            <div className="col-md-3 navbar navabar-expand-lg d-flex justify-text-center">
-                <NavLink to="/">
-                    <button className="btn btn-none text-white ">Home</button>
-                </NavLink>
-                <NavLink to="/planets">
-                    <button className="btn btn-none text-white">Planets</button>
-                </NavLink>
-                <NavLink to="/about">
-                    <button className="btn btn-none text-white">About</button>
-                </NavLink>
-            </div>
+        <nav className="px-4 navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+            {/* Logo */}
+            <NavLink className="navbar-brand" to="/">
+                <img src={require('../../assets/img/logo1.png')}
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-text-top"
+                    alt="Logo" />
+            </NavLink>
 
-            <div className="border-4 me-5">
-                <button className="col-md-9 p-1 btn btn-light me-5">Quiz Game</button>
-            </div>
+            {/* Toggle button */}
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
 
+            <div id="navbarSupportedContent" className="collapse navbar-collapse d-lg-flex justify-content-between">
+                <ul className="navbar-nav">
+                    <li className="nav-item px-2">
+                        <NavLink to="" className="nav-link">
+                            Home
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink to="/planets" className="nav-link">
+                            Planets
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-2">
+                        <NavLink to="/about" className="nav-link">
+                            About
+                        </NavLink>
+                    </li>
+                </ul>
+                <div>
+                    <NavLink to="/quiz" className="btn btn-light py-2 px-4 custom-button">Quiz Game</NavLink>
+                </div>
+            </div>
         </nav>
     )
 }
