@@ -7,17 +7,19 @@ import Topbar from '../user/TopBar'
 
 const UserLayout = () => {
 
-  // Toogle Sidebar
-  const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate()
 
-  const handleClick = () => {
-    setToggle(!toggle);
-  };
+  const [toggle, setToggle] = useState(false)
+  const [userData, setUserData] = useState({
+    avatar: '',
+    firstName: '',
+    lastName: ''
+  })
 
   let activeCheck = toggle ? 'active' : '';
-  // End Toogle Sidebar
-
-  const navigate = useNavigate()
+  const handleClick = () => {
+    setToggle(!toggle);
+  }
 
   useEffect(() => {
       const token = localStorage.getItem('token')
@@ -31,17 +33,23 @@ const UserLayout = () => {
         navigate('/quiz')
         return
       }
+      setUserData({
+        ...userData,
+        avatar: localStorage.getItem('avatar') !== null ? localStorage.getItem('avatar') : '',
+        firstName: localStorage.getItem('firstName') !== null ? localStorage.getItem('firstName') : '',
+        lastName: localStorage.getItem('lastName') !== null ? localStorage.getItem('lastName') : '',
+      })
       // eslint-disable-next-line
   }, [])
 
   return (
     <div className="user_section">
       <div className="section_wrapper position-relative w-100">
-        <Sidebar className={activeCheck} activeCheck={activeCheck} />
+        <Sidebar className={activeCheck} activeCheck={activeCheck} userData={userData} />
         <main className={`position-absolute p-0 ${activeCheck}`}>
           <Topbar handleClick={handleClick}/>
           <div className='p-4 pt-5'>
-            <Outlet />
+            <Outlet context={userData} />
           </div>
         </main>
       </div>

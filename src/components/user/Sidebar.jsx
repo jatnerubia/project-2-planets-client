@@ -1,21 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { NavLink } from "react-router-dom"
-import { useEffect, useState } from 'react'
 
-const Sidebar = ({ activeCheck}) => {
-
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-
-  useEffect(() => {
-    if (localStorage.getItem('firstName')) {
-      setFirstName(localStorage.getItem('firstName'))
-    }
-    if (localStorage.getItem('lastName')) {
-      setLastName(localStorage.getItem('lastName'))
-    }
-  }, [])
+const Sidebar = ({ activeCheck, userData }) => {
 
   const logout = () => {
     localStorage.clear()
@@ -101,7 +88,7 @@ const Sidebar = ({ activeCheck}) => {
                 <FontAwesomeIcon className='me-4' icon={solid('circle-user')} />
               </span>
               <span className='sidebar-title'>
-                {firstName} {lastName}
+                {userData.firstName} {userData.lastName}
               </span>
             </li>
           </NavLink>

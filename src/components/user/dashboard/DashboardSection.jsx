@@ -3,12 +3,11 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from "react";
 import * as RestApi from "../../../utils/rest_api_util"
 import QuizCard from '../QuizCard'
+import { useOutletContext } from 'react-router-dom';
 
 const DashboardSection = () => {
 
-  const [avatar, setAvatar] = useState('')
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const userData = useOutletContext()
 
   const [dashboard, setDashboard] = useState({
     rank: null,
@@ -17,15 +16,6 @@ const DashboardSection = () => {
   });
 
   useEffect(() => {
-    if (localStorage.getItem('avatar')) {
-      setAvatar(localStorage.getItem('avatar'))
-    }
-    if (localStorage.getItem('firstName')) {
-      setFirstName(localStorage.getItem('firstName'))
-    }
-    if (localStorage.getItem('lastName')) {
-      setLastName(localStorage.getItem('lastName'))
-    }
     getDashboards();
   }, []);
 
@@ -45,9 +35,9 @@ const DashboardSection = () => {
   return (
       <div className="mt-5">
           <div className="py-5 user_avatar d-flex justify-content-center flex-column align-items-center">
-            <img src={avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
+            <img src={userData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
             <h4 className="mt-4 fw-bold">
-              {firstName} {lastName}
+              {userData.firstName} {userData.lastName}
             </h4>
           </div>
 
