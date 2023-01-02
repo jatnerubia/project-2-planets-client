@@ -16,15 +16,15 @@ const UserProfile = () => {
     })
 
     useEffect(() => {
-       getProfile()
+        getProfile()
     }, [])
 
     const getProfile = async () => {
-        try { 
+        try {
             const result = await RestApi.getProfile()
             let response = await result.json()
             setFormData(response)
-        } catch (error) {         
+        } catch (error) {
         }
     }
 
@@ -32,10 +32,10 @@ const UserProfile = () => {
         <div className="container pt-5">
             <div className="card card-block ">
                 <div className="card-body">
-                    <div className="float-end">                       
+                    <div className="float-end">
                         {
                             isEditing === false && (
-                                <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)}/>
+                                <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)} />
                             )
                         }
                     </div>
@@ -73,6 +73,15 @@ const UserProfile = () => {
                             disabled={!isEditing}
                         />
                     </div>
+                    {
+                        isEditing && (
+                            <div className="text-center">
+                                <button className="btn btn-quiz btn-lg">
+                                    Save
+                                </button>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>
