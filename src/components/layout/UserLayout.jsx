@@ -38,6 +38,7 @@ const UserLayout = () => {
         avatar: localStorage.getItem('avatar') !== null ? localStorage.getItem('avatar') : '',
         firstName: localStorage.getItem('firstName') !== null ? localStorage.getItem('firstName') : '',
         lastName: localStorage.getItem('lastName') !== null ? localStorage.getItem('lastName') : '',
+        email: localStorage.getItem('email') !== null ? localStorage.getItem('email') : '',
       })
       // eslint-disable-next-line
   }, [])
