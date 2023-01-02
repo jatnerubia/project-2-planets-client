@@ -13,8 +13,8 @@ const RegisterForm = () => {
   const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
-        first_name: '',
-        last_name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         password: '',
         confirm_password: ''
@@ -65,8 +65,8 @@ const RegisterForm = () => {
             }
             if (result.status === 200) {
                 setFormData({
-                    first_name: '',
-                    last_name: '',
+                    firstName: '',
+                    lastName: '',
                     email: '',
                     password: '',
                     confirm_password: ''
@@ -92,11 +92,11 @@ const RegisterForm = () => {
               if (decodedToken.avatar !== null) {
                 localStorage.setItem('avatar', decodedToken.avatar)
             }
-              if (decodedToken.first_name !== null) {
-                  localStorage.setItem('first_name', decodedToken.first_name)
+              if (decodedToken.firstName !== null) {
+                  localStorage.setItem('firstName', decodedToken.firstName)
               }
-              if (decodedToken.last_name !== null) {
-                  localStorage.setItem('last_name', decodedToken.last_name)
+              if (decodedToken.lastName !== null) {
+                  localStorage.setItem('lastName', decodedToken.lastName)
               }
               localStorage.setItem('email', decodedToken.email)
               navigate('/user/dashboard')
@@ -121,18 +121,18 @@ const RegisterForm = () => {
                 <div className="mb-4 col-md-6">
                   <div className="input-group">
                     <input
-                      id="first_name"
+                      id="firstName"
                       type="text"
                       className="form-control"
-                      value={formData.first_name}
-                      onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     />
-                    <label htmlFor="first_name" className="form-label">
+                    <label htmlFor="firstName" className="form-label">
                       First Name
                     </label>
                   </div>
                   {
-                    error !== undefined && error.type === 'first_name' && (
+                    error !== undefined && error.type === 'firstName' && (
                       <span className="text-danger small">
                         {error.message}
                       </span>
@@ -142,18 +142,18 @@ const RegisterForm = () => {
                 <div className="mb-4 col-md-6">
                   <div className="input-group">
                     <input
-                      id="last_name"
+                      id="lastName"
                       type="text"
                       className="form-control"
-                      value={formData.last_name}
-                      onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     />
-                    <label htmlFor="last_name" className="form-label">
+                    <label htmlFor="lastName" className="form-label">
                       Last Name
                     </label>
                   </div>
                   {
-                    error !== undefined && error.type === 'last_name' && (
+                    error !== undefined && error.type === 'lastName' && (
                       <span className="text-danger small">
                           {error.message}
                       </span>

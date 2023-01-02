@@ -51,11 +51,11 @@ const LoginForm = () => {
                 if (decodedToken.avatar !== null) {
                     localStorage.setItem('avatar', decodedToken.avatar)
                 }
-                if (decodedToken.first_name !== null) {
-                    localStorage.setItem('first_name', decodedToken.first_name)
+                if (decodedToken.firstName !== null) {
+                    localStorage.setItem('firstName', decodedToken.firstName)
                 }
-                if (decodedToken.last_name !== null) {
-                    localStorage.setItem('last_name', decodedToken.last_name)
+                if (decodedToken.lastName !== null) {
+                    localStorage.setItem('lastName', decodedToken.lastName)
                 }
                 localStorage.setItem('email', decodedToken.email)
                 navigate('/user/dashboard')
@@ -79,11 +79,11 @@ const LoginForm = () => {
                 if (decodedToken.avatar !== null) {
                     localStorage.setItem('avatar', decodedToken.avatar)
                 }
-                if (decodedToken.first_name !== null) {
-                    localStorage.setItem('first_name', decodedToken.first_name)
+                if (decodedToken.firstName !== null) {
+                    localStorage.setItem('firstName', decodedToken.firstName)
                 }
-                if (decodedToken.last_name !== null) {
-                    localStorage.setItem('last_name', decodedToken.last_name)
+                if (decodedToken.lastName !== null) {
+                    localStorage.setItem('lastName', decodedToken.lastName)
                 }
                 localStorage.setItem('email', decodedToken.email)
                 navigate('/user/dashboard')

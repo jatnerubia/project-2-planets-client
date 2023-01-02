@@ -44,8 +44,8 @@ const UserProfile = () => {
                 setError(response)
             }
             if (result.status === 200) {
-                localStorage.setItem('first_name', formData.firstName)
-                localStorage.setItem('last_name', formData.lastName)
+                localStorage.setItem('firstName', formData.firstName)
+                localStorage.setItem('lastName', formData.lastName)
                 setIsEditing(false)
                 setSuccess(response)
             }
@@ -74,9 +74,9 @@ const UserProfile = () => {
                     {/* First and Last name */}
                     <div className="row">
                         <div className="mb-4 col-md-6">
-                            <label htmlFor="first_name" className="form-label fw-bold">First Name</label>
+                            <label htmlFor="firstName" className="form-label fw-bold">First Name</label>
                             <input
-                                id="first_name"
+                                id="firstName"
                                 type="text"
                                 className="form-control"
                                 value={formData.firstName}
@@ -84,7 +84,7 @@ const UserProfile = () => {
                                 disabled={!isEditing}
                             />
                             {
-                                error !== undefined && error.type === 'first_name' && (
+                                error !== undefined && error.type === 'firstName' && (
                                     <span className="text-danger small">
                                         {error.message}
                                     </span>
@@ -92,9 +92,9 @@ const UserProfile = () => {
                             }
                         </div>
                         <div className="mb-4 col-md-6">
-                            <label htmlFor="last_name" className="form-label fw-bold">Last Name</label>
+                            <label htmlFor="lastName" className="form-label fw-bold">Last Name</label>
                             <input
-                                id="last_name"
+                                id="lastName"
                                 type="text"
                                 className="form-control"
                                 value={formData.lastName}
@@ -102,7 +102,7 @@ const UserProfile = () => {
                                 disabled={!isEditing}
                             />
                             {
-                                error !== undefined && error.type === 'last_name' && (
+                                error !== undefined && error.type === 'lastName' && (
                                     <span className="text-danger small">
                                         {error.message}
                                     </span>

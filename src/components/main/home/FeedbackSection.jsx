@@ -6,8 +6,8 @@ import * as RestApi from "../../../utils/rest_api_util"
 
 const FeedbackSection = () => {
   const [formData, setFormData] = useState({
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     message: ''
   })
@@ -30,8 +30,8 @@ const FeedbackSection = () => {
             }
             if (result.status === 200) {
                 setFormData({
-                    first_name: '',
-                    last_name: '',
+                    firstName: '',
+                    lastName: '',
                     email: '',
                     message: ''
                 })
@@ -65,15 +65,15 @@ const FeedbackSection = () => {
                               id="firt_name"
                               type="text"
                               className="form-control"
-                              value={formData.first_name}
-                              onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
+                              value={formData.firstName}
+                              onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                           />
-                          <label htmlFor="first_name" className="form-label">
+                          <label htmlFor="firstName" className="form-label">
                               First Name
                           </label>
                         </div>
                         {
-                          error !== undefined && error.type === 'first_name' && (
+                          error !== undefined && error.type === 'firstName' && (
                             <span className="text-danger small">
                                 {error.message}
                             </span>
@@ -83,18 +83,18 @@ const FeedbackSection = () => {
                       <div className="pb-4 col-lg-6">
                         <div className="input-group">
                           <input
-                              id="last_name"
+                              id="lastName"
                               type="text"
                               className="form-control"
-                              value={formData.last_name}
-                              onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
+                              value={formData.lastName}
+                              onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                           />
-                          <label htmlFor="last_name" className="form-label">
+                          <label htmlFor="lastName" className="form-label">
                               Last Name
                           </label>
                         </div>
                         {
-                          error !== undefined && error.type === 'last_name' && (
+                          error !== undefined && error.type === 'lastName' && (
                             <span className="text-danger small">
                                 {error.message}
                             </span>

@@ -9,11 +9,11 @@ const Sidebar = ({ activeCheck}) => {
   const [lastName, setLastName] = useState('')
 
   useEffect(() => {
-    if (localStorage.getItem('first_name')) {
-      setFirstName(localStorage.getItem('first_name'))
+    if (localStorage.getItem('firstName')) {
+      setFirstName(localStorage.getItem('firstName'))
     }
-    if (localStorage.getItem('last_name')) {
-      setLastName(localStorage.getItem('last_name'))
+    if (localStorage.getItem('lastName')) {
+      setLastName(localStorage.getItem('lastName'))
     }
   }, [])
 
