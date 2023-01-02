@@ -26,12 +26,12 @@ const Navbar = () => {
                             Home
                         </NavLink>
                     </li>
-                    <li class="nav-item px-2">
+                    <li className="nav-item px-2">
                         <NavLink to="/planets" className="nav-link">
                             Planets
                         </NavLink>
                     </li>
-                    <li class="nav-item px-2">
+                    <li className="nav-item px-2">
                         <NavLink to="/about" className="nav-link">
                             About
                         </NavLink>
