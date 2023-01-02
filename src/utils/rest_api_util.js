@@ -27,10 +27,10 @@ export const loginWithGoogle = async (data) => await fetch(baseUrl + "/quiz/auth
 export const forgotPassword = async (data) => await fetch(baseUrl + "/quiz/auth/forgot-password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 export const resetPassword = async (data) => await fetch(baseUrl + "/quiz/auth/reset-password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
-/* TODO: Quiz - Leaderboards */
+/* Quiz - Leaderboards */
 export const getLeaderboards = async () => await fetch(baseUrl + "/quiz/leaderboards", { method: "GET", headers: getHeaders() })
 
-/* TODO: User - Dashboard */
+/* User - Dashboard */
 export const getDashboards = async () => await fetch(baseUrl + "/user/dashboard", { method: "GET", headers: getHeaders() })
 
 /* User - Quiz Game */
@@ -41,6 +41,6 @@ export const submitAnswer = async (data) => await fetch(baseUrl + "/user/quiz/su
 /* User - Settings */
 export const updatePassword = async (data) => await fetch(baseUrl + "/user/settings/password", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
 
-/* TODO: User - Profile */
+/* User - Profile */
 export const getProfile = async () => await fetch(baseUrl + "/user/profile", { method: "GET", headers: getHeaders() })
 export const saveProfile = async (data) => await fetch(baseUrl + "/user/profile", { method: "POST", headers: getHeaders(), body: JSON.stringify(data) })
