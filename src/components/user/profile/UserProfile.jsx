@@ -27,6 +27,14 @@ const UserProfile = () => {
         } catch (error) {
         }
     }
+    
+    const saveProfile = async () => {
+        try {
+            console.log(formData)
+        } catch (error) {
+            
+        }
+    }
 
     return (
         <div className="container pt-5">
@@ -44,22 +52,24 @@ const UserProfile = () => {
                     </div>
                     <div className="row">
                         <div className="mb-4 col-md-6">
-                            <label htmlFor="first_name" className="form-label fw-bold">Firstname</label>
+                            <label htmlFor="first_name" className="form-label fw-bold">First Name</label>
                             <input
                                 id="first_name"
                                 type="text"
                                 className="form-control"
                                 value={formData.firstName}
+                                onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                                 disabled={!isEditing}
                             />
                         </div>
                         <div className="mb-4 col-md-6">
-                            <label htmlFor="last_name" className="form-label fw-bold">Lastname</label>
+                            <label htmlFor="last_name" className="form-label fw-bold">Last Name</label>
                             <input
                                 id="last_name"
                                 type="text"
                                 className="form-control"
                                 value={formData.lastName}
+                                onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                                 disabled={!isEditing}
                             />
                         </div></div>
@@ -70,13 +80,13 @@ const UserProfile = () => {
                             type="text"
                             className="form-control"
                             value={formData.email}
-                            disabled={!isEditing}
+                            disabled
                         />
                     </div>
                     {
                         isEditing && (
                             <div className="text-center">
-                                <button className="btn btn-quiz btn-lg">
+                                <button className="btn btn-quiz btn-lg" onClick={saveProfile}>
                                     Save
                                 </button>
                             </div>
