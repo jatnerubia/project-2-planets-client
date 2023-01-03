@@ -30,7 +30,7 @@ const PlanetDetailsSection = () => {
           anchors={anchors}
           navigation
           navigationTooltips={anchors}
-          sectionsColor={["","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
+          // sectionsColor={["","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
           render={() => {
             return (
               <ReactFullpage.Wrapper>
