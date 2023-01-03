@@ -3,10 +3,11 @@ import * as RestApi from "../../../utils/rest_api_util"
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import PlanetDetails from "./PlanetDetails";
+import PlanetHeroSection from "./PlanetHeroSection";
 
 const PlanetDetailsSection = () => {
   const [planets, setPlanets] = useState([]);
-  const anchors = ["mercury","venus","earth","mars","jupiter","saturn","uranus","neptune"];
+  const anchors = ["Hero","Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"];
 
 
   useEffect(() => {
@@ -29,14 +30,17 @@ const PlanetDetailsSection = () => {
           anchors={anchors}
           navigation
           navigationTooltips={anchors}
-          sectionsColor={["#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
+          sectionsColor={["","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
           render={() => {
             return (
               <ReactFullpage.Wrapper>
                 <div>
+                <div className="section vh-100">
+                  <PlanetHeroSection />
+                </div>
                 {
                   planets.map((planet, index) => (
-                    <PlanetDetails  planet={planet} />
+                    <PlanetDetails key={index} planet={planet} />
                   ))
                 }
                 </div>

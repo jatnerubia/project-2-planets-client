@@ -47,7 +47,7 @@ const PlanetCard = ({ planet }) => {
                 <span>{planet.year} Days</span>
               </div>
             </div>
-            <RedirectButton name="View More" to="/planets#thirdPage" />
+            <RedirectButton name="View More" to={"/planets#" + planet.name} />
           </div>
         </div>
       </div>
