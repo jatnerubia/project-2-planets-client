@@ -8,7 +8,7 @@ const PlanetHeroSection = () => {
         <div className="row">
           <div className="col-12 text-start">
             <h1 className="ff-merriweather">PLANETS</h1>
-            <h4 className="lh-base"> of the Solar System </h4>
+            <h5 className="fs-1 lh-base"> of the Solar System </h5>
           </div>
         </div>
       </div>
