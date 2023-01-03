@@ -3,16 +3,10 @@ import PlanetHeroSection from "../../components/main/planets/PlanetHeroSection";
 
 const PlanetsPage = () => {
   return (
-    <>
-      <h1 className="text-dark">PLANETS</h1>
-
-{/* Gelai Testing Planet Hero Section  */}
+    <div className="planetSection">
       <PlanetHeroSection/>
-
-      {/* Hero Section */}
-      
       <PlanetDetailsSection />
-    </>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav className="px-4 navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+        <nav className="position-absolute w-100 px-4 navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
             {/* Logo */}
             <NavLink className="navbar-brand" to="/">
                 <img src={require('../../assets/img/logo1.png')}

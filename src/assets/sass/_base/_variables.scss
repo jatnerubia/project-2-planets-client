@@ -115,6 +115,9 @@ ul li {
     transform: translate(-50%, -50%);
   }
 }
+nav {
+  z-index: 2;
+}
 #stars {
   > i {
     position: fixed;
