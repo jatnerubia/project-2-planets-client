@@ -4,7 +4,7 @@ import PlanetHeroSection from "../../components/main/planets/PlanetHeroSection";
 const PlanetsPage = () => {
   return (
     <div className="planetSection">
-      <PlanetHeroSection/>
+      {/* <PlanetHeroSection/> */}
       <PlanetDetailsSection />
     </div>
   );
