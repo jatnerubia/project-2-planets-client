@@ -23,45 +23,30 @@ const PlanetDetailsSection = () => {
 
   return (
     <>
-    {/* {planets.map((planet, index) => ( */}
-      <ReactFullpage
-        anchors={anchors}
-        navigation
-        navigationTooltips={anchors}
-        sectionsColor={["#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
-        render = {
-          planets.map((planet, index) => (
-            <PlanetDetails planet={planet} />
-          ))
-        }
-        // render={() => {
-
-        //   return (
-        //     <div>
-        //       {
-        //         planets.map((planet, index) => (
-        //           <PlanetDetails planet={planet} />
-        //         ))
-        //       }
-        //     </div>
-        //   );
-        // }}
-      />
-      {/* ))} */}
-
-      </>
-    // <div className="planet-Section__content">
-    //   {planets.map((planet, index) => (
-    //     <PlanetDetails key={index} planet={planet} />
-    //   ))}
-    // </div>
-    // <div className="container">
-    //   <div className="row">
-    //     {planets.map((planet, index) => (
-    //       <PlanetDetails key={index} planet={planet} />
-    //     ))}
-    //   </div>
-    // </div>
+    {
+      planets.length !== 0 && (
+        <ReactFullpage
+          anchors={anchors}
+          navigation
+          navigationTooltips={anchors}
+          sectionsColor={["#7fff00","#00ffff","#29ab87","#7fff00","#00ffff","#29ab87","#7fff00","#00ffff" ]}
+          render={() => {
+            return (
+              <ReactFullpage.Wrapper>
+                <div>
+                {
+                  planets.map((planet, index) => (
+                    <PlanetDetails  planet={planet} />
+                  ))
+                }
+                </div>
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      )
+    }
+    </>
   );
 };
 
