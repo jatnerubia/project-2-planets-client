@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const HeroSection = () => {
+
   return (
     <header className="heroSection__header vh-100">
       <div className="heroSection__wrapper"></div>
@@ -13,7 +14,6 @@ const HeroSection = () => {
             <h4 className="mt-4 lh-base">
               Space is the boundless three-dimensional extent in which objects
               and events have relative position.
-              {/* <FontAwesomeIcon icon={solid('arrow-down')} /> */}
             </h4>
           </div>
           <div className="col-lg-7"></div>
