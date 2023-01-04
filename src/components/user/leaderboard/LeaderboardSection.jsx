@@ -25,7 +25,6 @@ const LeaderboardSection = () => {
 
   return (
     <div className="mt-4 pt-5">
-
       <div className="leaderboard-wrapper mt-5">
         <h3 className="fw-bold">TOP 10 HIGHEST SCORE</h3>
           <div className="table-responsive">
@@ -39,14 +38,16 @@ const LeaderboardSection = () => {
                 </tr>
               </thead>
               <tbody className="table-group-divider">
-                {leaderboards.map((leaderboard, index) => (
-                  <tr key={index}>
-                    <th scope="row">{index+1}</th>
-                    <td>{leaderboard.fullName}</td>
-                    <td>{leaderboard.score}</td>
-                    <td>{getTimeSpent(index)}</td>
-                  </tr>
-                ))}
+                {
+                  leaderboards.map((leaderboard, index) => (
+                    <tr key={index}>
+                      <th scope="row">{index+1}</th>
+                      <td>{leaderboard.fullName}</td>
+                      <td>{leaderboard.score}</td>
+                      <td>{getTimeSpent(index)}</td>
+                    </tr>
+                  ))
+                }
               </tbody>
             </table>
           </div>
@@ -54,4 +55,5 @@ const LeaderboardSection = () => {
     </div>
   )
 }
+
 export default LeaderboardSection
