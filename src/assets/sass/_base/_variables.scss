@@ -12,6 +12,8 @@ $space_gray: #fefefe;
 $dark_violet: #2D2A43;
 
 :root {
+  --small: clamp(0.80rem, calc(0rem + 1.69vw), 1.5rem);
+  --step--0: clamp(0.94rem, calc(0rem + 1.69vw), 1.5rem);
   --step--1: clamp(0.94rem, calc(0rem + 4.69vw), 1.5rem);
   --head-2: clamp(1.13rem, calc(0.95rem + 2.89vw), 3.38rem);
   --head-3: clamp(1.13rem, calc(1.50rem + 1.89vw), 2.38rem);
@@ -58,6 +60,14 @@ h3 {
 }
 h4 {
   font-size: var(--step--1);
+  font-weight: 300;
+}
+.fs-detail {
+  font-size: var(--step--0);
+  font-weight: 300;
+}
+.fs-small {
+  font-size: var(--small);
   font-weight: 300;
 }
 a,
@@ -123,6 +133,7 @@ nav {
   &.fp-right {
     right: 0;
     left: 17px;
+    z-index: -1;
     ul {
       li {
         width: 20px;
@@ -145,13 +156,21 @@ nav {
           }
         }
         .fp-tooltip.fp-right {
-          right: -80px;
+          right: -100px;
+          left: 30px;
           text-transform: uppercase;
           top: 4px;
         }
       }
     }
+    @media (max-width: 990px) {
+      left: 7px;
+    }
   }
+}
+.fp-watermark,
+.fp-watermark a {
+  display: none;
 }
 #stars {
   > i {

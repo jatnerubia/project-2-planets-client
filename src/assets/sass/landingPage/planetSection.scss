@@ -14,9 +14,9 @@
     }
     img {
       position: absolute;
-      height: 400px;
+      height: 250px;
       right: 15%;
-      top: 45%;
+      top: 25%;
       animation: moveFloat .5s linear forwards, floating ease 4s infinite;
     }
     .hero-content {
@@ -28,6 +28,68 @@
         letter-spacing: 0.24em;
         @media (max-width: 1024px) {
           letter-spacing: 0;
+        }
+      }
+    }
+  }
+  .planet-details__wrapper {
+    min-height: 100vh;
+    padding: 8rem 5rem;
+    .image-wrapper {
+      .planet__atmosphere {
+        height: 350px;
+        width: 350px;
+        border-radius: 100%;
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(circle at 30% 50%, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 65%);
+        transition: 0.5s;
+        .planet__surface {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          background-size: cover;
+          transform: rotate(0deg) scale(1.15);
+          transition: 0.5s;
+          animation: planetRotate calc(300 *.1s) linear infinite;
+        }
+      }
+    }
+    .content-wrapper {
+      h2 {
+        text-transform: uppercase;
+      }
+      h4 {
+        line-height: 33px;
+        text-align: justify;
+        letter-spacing: .05em;
+        font-weight: 300;
+      }
+    }
+    @media (max-width: 990px) {
+      padding: 1rem 3rem;
+      .image-wrapper {
+        .planet__atmosphere {
+          height: 200px;
+          width: 200px;
+        }
+      }
+      .content-wrapper {
+        h2 {
+          margin-top: 2rem;
+          text-align: center;
+        }
+        h4 {
+          line-height: 25px;
+        }
+      }
+    }
+    @media (max-width: 575px) {
+      .image-wrapper {
+        .planet__atmosphere {
+          height: 150px;
+          width: 150px;
         }
       }
     }
@@ -58,5 +120,14 @@
   }
   100% {
     transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+ //Planet rotation animation
+ @keyframes planetRotate {
+  0%{
+    background-position: 0% center;
+  }
+  100%{
+    background-position: -200% center;
   }
 }
