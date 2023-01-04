@@ -2,8 +2,6 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-
-
 const FooterSection = () => {
   return (
     <footer>
@@ -36,20 +34,36 @@ const FooterSection = () => {
                 <div className="col-md-4">
                   <h5>About</h5>
                   <ul className="navbar-nav flex-column">
-                    <li className="nav-item"><a className="nav-link" href="#">Contact Us</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">FAQs</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">Mission</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">Vision</a></li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Contact Us</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">FAQs</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Mission</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Vision</NavLink>
+                    </li>
                   </ul>
                 </div>
                 {/* Company */}
                 <div className="col-md-4">
                   <h5>Company</h5>
                   <ul className="navbar-nav flex-column">
-                    <li className="nav-item"><a className="nav-link" href="#">Careers</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">Press</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">Terms</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#">Policy</a></li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Careers</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Press</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Terms</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link">Policy</NavLink>
+                    </li>
                   </ul>
                 </div>
                 {/* Social */}
