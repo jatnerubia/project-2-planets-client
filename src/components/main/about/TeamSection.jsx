@@ -12,7 +12,6 @@ const TeamSection = () => {
                 <Teamcard firstName="Jomar" lastName="Clado" />
             </div>
         </div>
-
     )
 }
 export default TeamSection
