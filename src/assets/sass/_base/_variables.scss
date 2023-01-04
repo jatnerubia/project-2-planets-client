@@ -118,6 +118,41 @@ ul li {
 nav {
   z-index: 2;
 }
+//nav button fullPage
+#fp-nav {
+  &.fp-right {
+    right: 0;
+    left: 17px;
+    ul {
+      li {
+        width: 20px;
+        height: 20px;
+        a {
+          span {
+            height: 15px;
+            width: 15px;
+            background: transparent;
+            border: 1px solid $white;
+            margin: -7px 0 0 -7px;
+          }
+          &.active {
+            span {
+              height: 15px !important;
+              width: 15px !important;
+              margin: -7px 0 0 -7px !important;
+              background: $white !important;
+            }
+          }
+        }
+        .fp-tooltip.fp-right {
+          right: -80px;
+          text-transform: uppercase;
+          top: 4px;
+        }
+      }
+    }
+  }
+}
 #stars {
   > i {
     position: fixed;
