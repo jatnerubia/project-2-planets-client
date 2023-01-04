@@ -81,11 +81,20 @@
           text-align: center;
         }
         h4 {
-          line-height: 25px;
+          line-height: 20px;
         }
       }
     }
     @media (max-width: 575px) {
+      .image-wrapper {
+        .planet__atmosphere {
+          height: 150px;
+          width: 150px;
+        }
+      }
+    }
+    @media (max-width: 425px) {
+      padding: 1rem .8rem;
       .image-wrapper {
         .planet__atmosphere {
           height: 150px;

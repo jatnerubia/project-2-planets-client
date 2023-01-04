@@ -166,6 +166,9 @@ nav {
     @media (max-width: 990px) {
       left: 7px;
     }
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }
 .fp-watermark,
