@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as RestApi from "../../../utils/rest_api_util"
 
 const QuizLeaderboardSection = () => {
+
   const [leaderboards, setLeaderboard] = useState([]);
 
   useEffect(() => {
@@ -37,12 +38,12 @@ const QuizLeaderboardSection = () => {
                   <div className="user-info">
                     {
                       leaderboards.length < 3
-                      ? (
-                        <h5>N/A</h5>
-                      )
-                      : (
-                        <h5>{leaderboards[2].fullName}</h5>
-                      )
+                        ? (
+                          <h5>N/A</h5>
+                        )
+                        : (
+                          <h5>{leaderboards[2].fullName}</h5>
+                        )
                     }
                   </div>
                 </div>
@@ -52,12 +53,12 @@ const QuizLeaderboardSection = () => {
                   <div className="user-info">
                   {
                       leaderboards.length < 1
-                      ? (
-                        <h5>N/A</h5>
-                      )
-                      : (
-                        <h5>{leaderboards[0].fullName}</h5>
-                      )
+                        ? (
+                          <h5>N/A</h5>
+                        )
+                        : (
+                          <h5>{leaderboards[0].fullName}</h5>
+                        )
                     }
                   </div>
                 </div>
@@ -66,12 +67,12 @@ const QuizLeaderboardSection = () => {
                   <div className="user-info">
                   {
                       leaderboards.length < 2
-                      ? (
-                        <h5>N/A</h5>
-                      )
-                      : (
-                        <h5>{leaderboards[1].fullName}</h5>
-                      )
+                        ? (
+                          <h5>N/A</h5>
+                        )
+                        : (
+                          <h5>{leaderboards[1].fullName}</h5>
+                        )
                     }
                   </div>
                 </div>
@@ -90,14 +91,16 @@ const QuizLeaderboardSection = () => {
                   </tr>
                 </thead>
                 <tbody className="table-group-divider">
-                  {leaderboards.map((leaderboard, index) => (
-                    <tr key={index}>
-                      <th scope="row">{index+1}</th>
-                      <td>{leaderboard.fullName}</td>
-                      <td>{leaderboard.score}</td>
-                      <td>{getTimeSpent(index)}</td>
-                    </tr>
-                  ))}
+                  {
+                    leaderboards.map((leaderboard, index) => (
+                      <tr key={index}>
+                        <th scope="row">{index+1}</th>
+                        <td>{leaderboard.fullName}</td>
+                        <td>{leaderboard.score}</td>
+                        <td>{getTimeSpent(index)}</td>
+                      </tr>
+                    ))
+                  }
                 </tbody>
               </table>
             </div>
