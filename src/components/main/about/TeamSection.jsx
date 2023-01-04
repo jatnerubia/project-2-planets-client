@@ -3,7 +3,7 @@ import Teamcard from "./TeamCard"
 
 const TeamSection = () => {
     return (
-        <div className="container">
+        <div className="container py-5">
             <SectionHeading name="MEET THE TEAM" />
             <div className="row gy-5 pt-5">
                 <Teamcard firstName="Alan" lastName="Demol" />
