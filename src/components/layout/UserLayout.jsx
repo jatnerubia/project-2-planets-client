@@ -10,6 +10,7 @@ const UserLayout = () => {
   const navigate = useNavigate()
 
   const [toggle, setToggle] = useState(false)
+
   const [userData, setUserData] = useState({
     avatar: '',
     firstName: '',
@@ -17,30 +18,31 @@ const UserLayout = () => {
   })
 
   let activeCheck = toggle ? 'active' : '';
+
   const handleClick = () => {
     setToggle(!toggle);
   }
 
   useEffect(() => {
-      const token = localStorage.getItem('token')
-      if (!token) {
-          navigate('/quiz')
-          return
-      }
-      const decodedToken = decode(token)
-      if (decodedToken.exp * 1000 < new Date().getTime()) {
-        localStorage.clear()
-        navigate('/quiz')
-        return
-      }
-      setUserData({
-        ...userData,
-        avatar: localStorage.getItem('avatar') !== null ? localStorage.getItem('avatar') : '',
-        firstName: localStorage.getItem('firstName') !== null ? localStorage.getItem('firstName') : '',
-        lastName: localStorage.getItem('lastName') !== null ? localStorage.getItem('lastName') : '',
-        email: localStorage.getItem('email') !== null ? localStorage.getItem('email') : '',
-      })
-      // eslint-disable-next-line
+    const token = localStorage.getItem('token')
+    if (!token) {
+      navigate('/quiz')
+      return
+    }
+    const decodedToken = decode(token)
+    if (decodedToken.exp * 1000 < new Date().getTime()) {
+      localStorage.clear()
+      navigate('/quiz')
+      return
+    }
+    setUserData({
+      ...userData,
+      avatar: localStorage.getItem('avatar') !== null ? localStorage.getItem('avatar') : '',
+      firstName: localStorage.getItem('firstName') !== null ? localStorage.getItem('firstName') : '',
+      lastName: localStorage.getItem('lastName') !== null ? localStorage.getItem('lastName') : '',
+      email: localStorage.getItem('email') !== null ? localStorage.getItem('email') : '',
+    })
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -57,4 +59,5 @@ const UserLayout = () => {
     </div>
   )
 }
+
 export default UserLayout

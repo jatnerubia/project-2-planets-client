@@ -4,6 +4,7 @@ import NewsCard from "./NewsCard";
 import * as RestApi from "../../../utils/rest_api_util"
 
 const NewsSection = () => {
+
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -19,12 +20,12 @@ const NewsSection = () => {
   };
 
   return (
-    <div className="container news_article__section py-5 my-5">
+    <div className="container news_article__section py-5">
       <SectionHeading classname="news" name="NEWS" />
       <div className="row py-5">
-        {news.map((news, index) => (
-          <NewsCard key={index} news={news} />
-        ))}
+        {
+          news.map((news, index) => <NewsCard key={index} news={news} />)
+        }
       </div>
     </div>
   )

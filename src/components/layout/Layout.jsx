@@ -5,9 +5,8 @@ import Navbar from "../main/Navbar";
 import { useLocation} from "react-router-dom"
 import { useEffect } from 'react';
 
-
-
 const Layout = () => {
+
   const location = useLocation()
 
   useEffect(() => {
@@ -15,16 +14,15 @@ const Layout = () => {
       return document.body.classList.remove('fp-scrollable')
     }
   }, [location])
+  
   return (
     <>
-      {/* TODO: Add navbar component here */}
       <AnimatedStar />
       <main>
         <Navbar />
         <Outlet />
-        <FooterSection />
       </main>
-
+      <FooterSection />
     </>
   );
 };

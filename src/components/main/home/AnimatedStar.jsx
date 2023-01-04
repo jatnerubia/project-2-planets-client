@@ -1,12 +1,17 @@
 import { useEffect } from "react";
+
 const AnimatedStar = () => {
+
   useEffect(() => {
     animatedStars();
+    // eslint-disable-next-line
   },[]);
+
   const generateRandomColor = () => {
     var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
     return randomColor;
   };
+
   const animatedStars = () => {
     let count = 200,
       windowWidth,
@@ -30,7 +35,8 @@ const AnimatedStar = () => {
       i++;
     }
   };
-  //   stars();
-  return <section id="stars"></section>;
+
+  return <section id="stars" />
 };
+
 export default AnimatedStar;

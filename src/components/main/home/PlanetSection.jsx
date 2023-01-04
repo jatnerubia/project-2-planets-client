@@ -5,6 +5,7 @@ import SectionHeading from "../SectionHeading";
 import * as RestApi from "../../../utils/rest_api_util"
 
 const PlanetSection = () => {
+
   const [planets, setPlanets] = useState([]);
 
   useEffect(() => {
@@ -24,9 +25,9 @@ const PlanetSection = () => {
     <div className="planet__section container py-5">
       <SectionHeading classname="planets" name="THE PLANETS" />
       <div className="row pt-5">
-        {planets.map((planet, index) => (
-          <PlanetCard key={index} planet={planet} />
-        ))}
+        {
+          planets.map((planet, index) => <PlanetCard key={index} planet={planet} />)
+        }
       </div>
       <div className="text-center">
         <RedirectButton name="Explore More" to="/planets" />

@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom"
 import * as RestApi from "../../utils/rest_api_util"
 import { NavLink } from "react-router-dom"
 
-
 const VerifyForm = () => {
 
     const location = useLocation()
