@@ -42,7 +42,7 @@ const FeedbackSection = () => {
   }
 
   return (
-    <div className="feedback_section py-5 my-5">
+    <div className="feedback_section py-5">
       <div>
         <div className="container">
           <SectionHeading classname="suggestion" name="SUGGESTION" />

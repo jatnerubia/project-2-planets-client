@@ -20,7 +20,7 @@ const NewsSection = () => {
   };
 
   return (
-    <div className="container news_article__section py-5 my-5">
+    <div className="container news_article__section py-5">
       <SectionHeading classname="news" name="NEWS" />
       <div className="row py-5">
         {
