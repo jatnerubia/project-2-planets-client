@@ -4,6 +4,7 @@ import { useLocation} from "react-router-dom"
 import { useEffect, useState } from 'react';
 
 const Topbar = ({ handleClick }) => {
+
   const location = useLocation()
   const [currentLocation, setCurrentLocation] = useState()
 
@@ -24,6 +25,7 @@ const Topbar = ({ handleClick }) => {
       setCurrentLocation('PROFILE')
     }
   }, [location])
+  
   return (
     <>
       <div className='top-bar w-100 d-flex align-items-center border-bottom shadow bg-body rounded p-3 pt-4 pb-2'>
