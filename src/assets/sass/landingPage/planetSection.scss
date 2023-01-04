@@ -101,6 +101,12 @@
           width: 150px;
         }
       }
+      .content-wrapper {
+        hr {
+          margin-top: .5rem !important;
+          margin-bottom: .6rem !important;
+        }
+      }
     }
   }
 }
