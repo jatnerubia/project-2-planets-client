@@ -12,8 +12,8 @@ $space_gray: #fefefe;
 $dark_violet: #2D2A43;
 
 :root {
-  --small: clamp(0.80rem, calc(0rem + 1.69vw), 1.5rem);
-  --step--0: clamp(0.94rem, calc(0rem + 1.69vw), 1.5rem);
+  --small: clamp(10px, 3vw, 16px);
+  --step--0: clamp(12px, 4vw, 16px);
   --step--1: clamp(0.94rem, calc(0rem + 4.69vw), 1.5rem);
   --head-2: clamp(1.13rem, calc(0.95rem + 2.89vw), 3.38rem);
   --head-3: clamp(1.13rem, calc(1.50rem + 1.89vw), 2.38rem);

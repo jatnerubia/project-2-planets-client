@@ -34,7 +34,7 @@
   }
   .planet-details__wrapper {
     min-height: 100vh;
-    padding: 8rem 5rem;
+    padding: 0 5vw;
     .image-wrapper {
       .planet__atmosphere {
         height: 350px;
@@ -61,14 +61,13 @@
         text-transform: uppercase;
       }
       h4 {
-        line-height: 33px;
+        line-height: 25px;
         text-align: justify;
         letter-spacing: .05em;
         font-weight: 300;
       }
     }
     @media (max-width: 990px) {
-      padding: 1rem 3rem;
       .image-wrapper {
         .planet__atmosphere {
           height: 200px;
@@ -94,7 +93,6 @@
       }
     }
     @media (max-width: 425px) {
-      padding: 1rem .8rem;
       .image-wrapper {
         .planet__atmosphere {
           height: 150px;
