@@ -6,33 +6,33 @@ const FooterSection = () => {
   return (
     <footer>
       <nav className="navbar-dark">
-        <div className="container py-5">
+        <div className="container pt-4 pb-2">
           <div className="row gy-3">
             {/* Left */}
-            <div className="col-md-4">
+            <div className="col-sm-4 footer-logo">
               {/* Logo */}
               <div className="pb-2">
                 <NavLink className="navbar-brand" to="/">
                   <img src={require('../../assets/img/logo1.png')}
-                    width="50"
-                    height="50"
+                    width="150"
+                    height="150"
                     className="d-inline-block align-text-top"
                     alt="Logo"
                   />
                 </NavLink>
               </div>
               {/* Copyright */}
-              <p className="pb-2 text-muted">
+              <p className="text-muted fs-small">
                 Copyright © 2022<br/>
                 All Rights Reserved
               </p>
             </div>
             {/* Right */}
-            <div className="col-md-8">
+            <div className="col-sm-8">
               <div className="row gy-3">
                 {/* About */}
-                <div className="col-md-4">
-                  <h5>About</h5>
+                <div className="col-md-4 col-4">
+                  <h6>About</h6>
                   <ul className="navbar-nav flex-column">
                     <li className="nav-item">
                       <NavLink className="nav-link">Contact Us</NavLink>
@@ -49,8 +49,8 @@ const FooterSection = () => {
                   </ul>
                 </div>
                 {/* Company */}
-                <div className="col-md-4">
-                  <h5>Company</h5>
+                <div className="col-md-4 col-4">
+                  <h6>Company</h6>
                   <ul className="navbar-nav flex-column">
                     <li className="nav-item">
                       <NavLink className="nav-link">Careers</NavLink>
@@ -67,17 +67,22 @@ const FooterSection = () => {
                   </ul>
                 </div>
                 {/* Social */}
-                <div className="col-md-4">
-                  <h5>Social</h5>
+                <div className="col-md-4 col-4">
+                  <h6>Social</h6>
                   <div>
-                    <FontAwesomeIcon className="m-1" icon={brands('facebook')} />
-                    <FontAwesomeIcon className="m-1" icon={brands('linkedin')} />
-                    <FontAwesomeIcon className="m-1" icon={brands('twitter')} />
+                    <FontAwesomeIcon className="m-1 fs-4" icon={brands('facebook')} />
+                    <FontAwesomeIcon className="m-1 fs-4" icon={brands('linkedin')} />
+                    <FontAwesomeIcon className="m-1 fs-4" icon={brands('twitter')} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="rights bg-light">
+          <p className="px-1 py-2 text-center text-muted">
+            Copyright © 2022 | All Rights Reserved
+          </p>
         </div>
       </nav>
     </footer>

@@ -1,0 +1,27 @@
+footer {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 63%, rgba(119,119,119,1) 94%, rgba(159,159,159,1) 100%);
+  .rights {
+    display: none;
+  }
+  @media (max-width: 575px) {
+    .footer-logo {
+      div {
+        text-align: center;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      p {
+        display: none;
+      }
+    }
+    .rights {
+      display: block;
+    }
+  }
+  ul li,
+  .rights {
+    font-size: 12px;
+  }
+}
