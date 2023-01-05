@@ -18,12 +18,19 @@
       right: 15%;
       top: 25%;
       animation: moveFloat .5s linear forwards, floating ease 4s infinite;
+      @media (max-width: 425px) {
+          height: 150px;
+      }
     }
     .hero-content {
       left: 50%;
       top: 35%;
       position: absolute;
       transform: translate(-50%, -50%);
+      h1,
+      h5 {
+        text-align: left;
+      }
       h5 {
         letter-spacing: 0.24em;
         @media (max-width: 1024px) {

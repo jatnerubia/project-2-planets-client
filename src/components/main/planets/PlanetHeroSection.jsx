@@ -3,12 +3,12 @@ const PlanetHeroSection = () => {
   return (
     <header className="planet-Section__header vh-100">
       <span className="overlay_bg w-100 h-100"></span>
-      <img src={require('../../../assets/img/astronaut.png')} className="d-none d-lg-block" alt="Floating Astronaut" />
+      <img src={require('../../../assets/img/astronaut.png')} alt="Floating Astronaut" />
       <div className="hero-content container text-center">
         <div className="row">
-          <div className="col-12 text-start">
-            <h1 className="ff-merriweather">PLANETS</h1>
-            <h5 className="fs-1 lh-base"> of the Solar System </h5>
+          <div className="col-12">
+            <h1 className="page-title ff-merriweather">PLANETS</h1>
+            <h5 className="title-subheading lh-base"> of the Solar System </h5>
           </div>
         </div>
       </div>

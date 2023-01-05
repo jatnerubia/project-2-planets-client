@@ -18,6 +18,8 @@ $dark_violet: #2D2A43;
   --head-2: clamp(1.13rem, calc(0.95rem + 2.89vw), 3.38rem);
   --head-3: clamp(1.13rem, calc(1.50rem + 1.89vw), 2.38rem);
   --step-3: clamp(1.94rem, calc(1.25rem + 7vw), 8rem);
+  --title--head: clamp(40px, 6vw, 90px);
+  --title--subheading: clamp(18px, 5vw, 30px);
 }
 *,
 *:before,
@@ -69,6 +71,13 @@ h4 {
 .fs-small {
   font-size: var(--small);
   font-weight: 300;
+}
+.page-title {
+  font-size: var(--title--head);
+  font-weight: 300;
+}
+.title-subheading {
+  font-size: var(--title--subheading);
 }
 a,
 a:hover {
@@ -133,6 +142,7 @@ nav {
   &.fp-right {
     right: 0;
     left: 17px;
+    width: 35px;
     z-index: 0;
     ul {
       li {
@@ -166,7 +176,7 @@ nav {
     @media (max-width: 990px) {
       left: 7px;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 700px) {
       display: none;
     }
   }
