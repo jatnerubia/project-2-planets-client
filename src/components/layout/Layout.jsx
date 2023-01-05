@@ -21,8 +21,8 @@ const Layout = () => {
       <main>
         <Navbar />
         <Outlet />
+        <FooterSection />
       </main>
-      <FooterSection />
     </>
   );
 };
