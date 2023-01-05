@@ -1,11 +1,20 @@
 
 import { Outlet } from "react-router-dom"
-import { useLocation} from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useEffect } from 'react';
 
 const QuizLayout = () => {
 
+  const navigate = useNavigate()
   const location = useLocation()
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      navigate('/user/dashboard')
+    }
+    // eslint-disable-next-line
+  }, [])
 
   useEffect(() => {
     if (location.pathname !== '/planets') {

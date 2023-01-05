@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import * as RestApi from "../../../utils/rest_api_util"
-import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import decode from 'jwt-decode'
 
@@ -20,14 +19,6 @@ const LoginForm = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState()
     const [passwordShow, setPasswordShow] = useState(false)
-
-    useEffect(() => {
-        const token = localStorage.getItem('token')
-        if (token) {
-            navigate('/user/dashboard')
-        }
-        // eslint-disable-next-line
-    }, [])
 
     const showHidePassword = () => {
       setPasswordShow(!passwordShow)

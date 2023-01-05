@@ -41,18 +41,18 @@ const router = createBrowserRouter([
     {
         element: <Layout />,
         children: [
-        {
-            path: "",
-            element: <HomePage />,
-        },
-        {
-            path: "planets",
-            element: <PlanetsPage />,
-        },
-        {
-            path: "about",
-            element: <AboutPage />,
-        },
+            {
+                path: "",
+                element: <HomePage />,
+            },
+            {
+                path: "planets",
+                element: <PlanetsPage />,
+            },
+            {
+                path: "about",
+                element: <AboutPage />,
+            },
         ]
     },
     /* Verify */
@@ -65,26 +65,26 @@ const router = createBrowserRouter([
         path: "quiz",
         element: <QuizLayout />,
         children: [
-        {
-            path: "",
-            element: <QuizPage />
-        },
-        {
-            path: "register",
-            element: <RegisterPage />
-        },
-        {
-            path: "login",
-            element: <LoginPage />
-        },
-        {
-            path: "forgot-password",
-            element: <ForgotPasswordPage />
-        },
-        {
-            path: "reset-password",
-            element: <ResetPasswordPage />
-        }
+            {
+                path: "",
+                element: <QuizPage />
+            },
+            {
+                path: "register",
+                element: <RegisterPage />
+            },
+            {
+                path: "login",
+                element: <LoginPage />
+            },
+            {
+                path: "forgot-password",
+                element: <ForgotPasswordPage />
+            },
+            {
+                path: "reset-password",
+                element: <ResetPasswordPage />
+            }
         ]
     },
     /* User */
@@ -92,26 +92,26 @@ const router = createBrowserRouter([
         path: "user",
         element: <UserLayout />,
         children: [
-        {
-            path: "dashboard",
-            element: <DashboardPage />
-        },
-        {
-            path: "leaderboard",
-            element: <LeaderboardPage />
-        },
-        {
-            path: "quiz",
-            element: <UserQuizPage />
-        },
-        {
-            path: "settings",
-            element: <SettingsPage />
-        },
-        {
-            path: "profile",
-            element: <ProfilePage />
-        }
+            {
+                path: "dashboard",
+                element: <DashboardPage />
+            },
+            {
+                path: "leaderboard",
+                element: <LeaderboardPage />
+            },
+            {
+                path: "quiz",
+                element: <UserQuizPage />
+            },
+            {
+                path: "settings",
+                element: <SettingsPage />
+            },
+            {
+                path: "profile",
+                element: <ProfilePage />
+            }
         ]
     },
     /* Not found */
