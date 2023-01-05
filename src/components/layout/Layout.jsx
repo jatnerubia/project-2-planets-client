@@ -14,7 +14,7 @@ const Layout = () => {
       return document.body.classList.remove('fp-scrollable')
     }
   }, [location])
-  
+
   return (
     <>
       <AnimatedStar />
