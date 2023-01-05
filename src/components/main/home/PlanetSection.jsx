@@ -22,7 +22,7 @@ const PlanetSection = () => {
   };
 
   return (
-    <div className="planet__section container py-5">
+    <div id="planets" className="planet__section container py-5">
       <SectionHeading classname="planets" name="THE PLANETS" />
       <div className="row pt-5">
         {
