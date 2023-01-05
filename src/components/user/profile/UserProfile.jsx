@@ -151,14 +151,13 @@ const UserProfile = () => {
 
                     {
                         isEditing && (
-                            <div className="text-center">
-                                <div>
-                                    {
-                                        loading
-                                            ? <button className="btn btn-lg btn-quiz px-5" disabled>Loading...</button>
-                                            : <button className="btn btn-lg btn-quiz px-5" onClick={saveProfile}>SAVE</button>
-                                    }
-                                </div>
+                            <div className="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                {
+                                    loading
+                                        ? <button className="btn btn-lg btn-quiz px-5" disabled>Loading...</button>
+                                        : <button className="btn btn-lg btn-quiz px-5" onClick={saveProfile}>SAVE</button>
+                                }
+                                <button className="btn btn-lg btn-outline-dark px-5" onClick={() => setIsEditing(false)}>CANCEL</button>
                             </div>
                         )
                     }
