@@ -18,8 +18,9 @@ $dark_violet: #2D2A43;
   --head-2: clamp(1.13rem, calc(0.95rem + 2.89vw), 3.38rem);
   --head-3: clamp(1.13rem, calc(1.50rem + 1.89vw), 2.38rem);
   --step-3: clamp(1.94rem, calc(1.25rem + 7vw), 8rem);
-  --title--head: clamp(40px, 6vw, 90px);
+  --title--head: clamp(50px, 6vw, 90px);
   --title--subheading: clamp(18px, 5vw, 30px);
+  --title--subheading-1: clamp(16px, 5vw, 20px);
 }
 *,
 *:before,
@@ -42,7 +43,7 @@ html body {
   font-family: $font-poppins;
   font-weight: 400;
   font-size: 16px;
-  color: $white;
+  color: $space_gray;
   background-color: $black;
 }
 .ff-merriweather {
@@ -72,12 +73,15 @@ h4 {
   font-size: var(--small);
   font-weight: 300;
 }
-.page-title {
+.hero-title {
   font-size: var(--title--head);
   font-weight: 300;
 }
-.title-subheading {
+.hero-subheading {
   font-size: var(--title--subheading);
+}
+.hero-subheading-1 {
+  font-size: var(--title--subheading-1);
 }
 a,
 a:hover {

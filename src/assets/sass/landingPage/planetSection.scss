@@ -20,6 +20,7 @@
       animation: moveFloat .5s linear forwards, floating ease 4s infinite;
       @media (max-width: 425px) {
           height: 150px;
+          top: 35%;
       }
     }
     .hero-content {
