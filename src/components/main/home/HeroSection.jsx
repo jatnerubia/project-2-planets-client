@@ -19,9 +19,9 @@ const HeroSection = () => {
           <div className="col-lg-7"></div>
         </div>
       </div>
-      <button className='btn rounded-pill bg-transparent border border-2 border-white bottom-0 position-absolute mb-3 pt-4'>
+      <a href="#planets" className='btn rounded-pill bg-transparent border border-2 border-white bottom-0 position-absolute mb-3 pt-4'>
         <FontAwesomeIcon className='text-white icon' icon={solid('angles-down')} />
-      </button>
+      </a>
     </header>
   );
 };
