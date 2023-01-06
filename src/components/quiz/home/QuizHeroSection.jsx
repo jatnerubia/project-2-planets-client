@@ -1,16 +1,17 @@
+import { NavLink } from "react-router-dom"
+
 const QuizHeroSection = () => {
   return (
     <div>
       <header className="heroSection__header vh-100">
-        <div className="heroSection__wrapper"></div>
+        <span class="overlay_bg w-100 h-100"></span>
         <div className="hero-content container text-center">
-          <div className="row">
-            <div className="col-lg-5 text-start">
-              <h1 className="ff-merriweather">Do you Fully Know The Universe?</h1>
-              <button>Take The Quiz</button>
-            </div>
-            <div className="col-lg-7"></div>
-          </div>
+          <h2 className="hero-title ff-merriweather mb-5">Do you fully know <br /> the universe?</h2>
+          <NavLink to="/quiz/login">
+            <button className="btn btn-lg btn-transparent text-white rounded-4 border border-white">
+              Take The Quiz
+            </button>
+          </NavLink>
         </div>
       </header>
     </div>

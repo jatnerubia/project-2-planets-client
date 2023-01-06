@@ -5,9 +5,9 @@
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size: cover;
-  box-shadow: inset 0px 400px 100px rgb(9 33 45 / 65%), inset 0px -980px 390px rgb(9 33 45 / 65%);
   .navbar {
-    background: rgb(0 0 0 / 55%);
+    background: rgb(0 0 0 / 60%);
+    position: fixed;
     button:not(.btn-quiz) {
       background: $white;
     }

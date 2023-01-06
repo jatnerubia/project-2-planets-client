@@ -1,4 +1,10 @@
 .heroSection__header {
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .heroSection__wrapper {
     background-image: url("../../img/heroSectionSideImg.png");
     background-position: center;
