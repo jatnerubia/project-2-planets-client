@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { regular, solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
 import { useOutletContext } from 'react-router-dom'
@@ -63,36 +63,36 @@ const UserProfile = () => {
     }
 
     return (
-        <div className="container pt-5">
+        <div className="user-profile__wrapper container pt-5">
             <div className="card card-block ">
                 <div className="card-body">
 
                     <div className="d-flex justify-content-end">
                         {
                             isEditing === false && (
-                                <FontAwesomeIcon type="button" className="m-1" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)} />
+                                <FontAwesomeIcon type="button" className="m-1 fs-4" icon={regular('pen-to-square')} onClick={() => setIsEditing(true)} />
                             )
                         }
                     </div>
 
-                    <div className="text-center mb-3">
+                    <div className="text-center mb-3 position-relative image-upload">
                         <img src={formData.avatar} className="rounded-circle" alt="User Avatar" width={150} height={150} />
+                        {
+                            isEditing && (
+                                <div className="text-center upload-button">
+                                    <FileBase
+                                        type="file"
+                                        multiple={false}
+                                        onDone={({ base64 }) => setFormData({ ...formData, avatar: base64 })}
+                                    />
+                                    <FontAwesomeIcon type="button" className='icon' icon={solid('camera-retro')}/>
+                                </div>
+                            )
+                        }
                     </div>
 
-                    {
-                        isEditing && (
-                            <div className="text-center">
-                                <FileBase
-                                    type="file"
-                                    multiple={false}
-                                    onDone={({ base64 }) => setFormData({ ...formData, avatar: base64 })}
-                                />
-                            </div>
-                        )
-                    }
-
                     {/* First and Last name */}
-                    <div className="row">
+                    <div className="row mt-5">
                         <div className="mb-4 col-md-6">
                             <label htmlFor="firstName" className="form-label fw-bold">First Name</label>
                             <input
@@ -163,10 +163,10 @@ const UserProfile = () => {
                                         )
                                         : (
                                             <div className="d-flex flex-column flex-md-row justify-content-center gap-2">
-                                                <button className="btn btn-lg btn-quiz px-5" onClick={saveProfile}>
+                                                <button className="btn btn-lg btn-quiz px-4" onClick={saveProfile}>
                                                     SAVE
                                                 </button>
-                                                <button className="btn btn-lg btn-outline-dark px-5" onClick={() => setIsEditing(false)}>
+                                                <button className="btn btn-lg btn-outline-dark px-4" onClick={() => setIsEditing(false)}>
                                                     CANCEL
                                                 </button>
                                             </div>

@@ -1,0 +1,46 @@
+.user-profile__wrapper {
+  .card {
+    .image-upload {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      .upload-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: $white;
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid $dark_violet;
+        text-align: center;
+        .icon {
+          position: absolute;
+          top: 25%;
+          left: 25%;
+          color: $dark_violet;
+        }
+        &:hover {
+          background: $dark_violet;
+          border: none;
+          .icon {
+            color: $white
+          }
+        }
+        input[type='file'] {
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          left: 0;
+          opacity: 0;
+          z-index: 2;
+          &::-webkit-file-upload-button {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
