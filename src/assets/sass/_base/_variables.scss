@@ -145,6 +145,9 @@ ul li {
 }
 nav {
   z-index: 2;
+  @media (max-width: 990px) {
+    backdrop-filter: blur(40px);
+  }
 }
 //nav button fullPage
 #fp-nav {
