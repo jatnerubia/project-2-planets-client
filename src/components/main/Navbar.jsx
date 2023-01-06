@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav className="position-absolute w-100 px-4 navbar navbar-expand-lg navbar-dark">
+        <nav className="position-absolute w-100 navbar navbar-expand-lg navbar-dark">
             <div className="container">
               {/* Logo */}
               <NavLink className="navbar-brand" to="/">

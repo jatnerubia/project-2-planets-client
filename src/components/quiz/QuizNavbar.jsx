@@ -12,7 +12,7 @@ const QuizNavbar = () => {
   let activeCheck = toggle ? 'active' : '';
 
   return (
-    <nav className="px-4 container-fluid navbar w-100 navbar-expand-md d-flex justify-content-between align-items-center">
+    <nav className="navbar w-100 navbar-expand-md d-flex justify-content-between align-items-center">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img src={require('../../assets/img/logo1.png')} width="50" height="50" className="d-inline-block align-text-top" alt="Logo" />
