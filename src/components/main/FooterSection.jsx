@@ -6,7 +6,7 @@ const FooterSection = () => {
   return (
     <footer>
       <nav className="navbar-dark">
-        <div className="container pt-4 pb-2">
+        <div className="container py-4">
           <div className="row gy-3">
             {/* Left */}
             <div className="col-sm-4 footer-logo">
@@ -31,7 +31,7 @@ const FooterSection = () => {
             <div className="col-sm-8">
               <div className="row gy-3">
                 {/* About */}
-                <div className="col-md-4 col-4">
+                <div className="col-md-4 col-6">
                   <h6>About</h6>
                   <ul className="navbar-nav flex-column">
                     <li className="nav-item">
@@ -49,7 +49,7 @@ const FooterSection = () => {
                   </ul>
                 </div>
                 {/* Company */}
-                <div className="col-md-4 col-4">
+                <div className="col-md-4 col-6">
                   <h6>Company</h6>
                   <ul className="navbar-nav flex-column">
                     <li className="nav-item">
@@ -67,7 +67,7 @@ const FooterSection = () => {
                   </ul>
                 </div>
                 {/* Social */}
-                <div className="col-md-4 col-4">
+                <div className="col-md-4 col-12">
                   <h6>Social</h6>
                   <div>
                     <FontAwesomeIcon className="m-1 fs-4" icon={brands('facebook')} />
@@ -80,7 +80,7 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="rights bg-light">
-          <p className="px-1 py-2 text-center text-muted">
+          <p className="px-1 py-3 text-center text-muted">
             Copyright © 2022 | All Rights Reserved
           </p>
         </div>
