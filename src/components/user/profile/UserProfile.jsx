@@ -3,7 +3,6 @@ import { regular, solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useEffect, useState } from 'react'
 import * as RestApi from '../../../utils/rest_api_util'
 import { useOutletContext } from 'react-router-dom'
-import FileBase from 'react-file-base64';
 
 const UserProfile = () => {
 
@@ -62,6 +61,15 @@ const UserProfile = () => {
         setLoading(false)
     }
 
+    const getBase64 = async (e) => {
+        const file = e.target.files[0]
+        const fileReader = new FileReader()
+        fileReader.readAsDataURL(file)
+        fileReader.onload = () => {
+            setFormData({ ...formData, avatar: fileReader.result })
+        }
+    }
+
     return (
         <div className="user-profile__wrapper container pt-5">
             <div className="card card-block ">
@@ -80,10 +88,10 @@ const UserProfile = () => {
                         {
                             isEditing && (
                                 <div className="text-center upload-button">
-                                    <FileBase
+                                    <input
                                         type="file"
-                                        multiple={false}
-                                        onDone={({ base64 }) => setFormData({ ...formData, avatar: base64 })}
+                                        accept="image/*"
+                                        onChange={getBase64}
                                     />
                                     <FontAwesomeIcon type="button" className='icon' icon={solid('camera-retro')}/>
                                 </div>
