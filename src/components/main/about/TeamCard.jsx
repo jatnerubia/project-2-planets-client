@@ -3,7 +3,7 @@ import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const TeamCard = ({ firstName, lastName, image }) => {
     return (
-        <div className="col-md-6 pb-5">
+        <div data-aos="zoom-out" data-aos-duration="1500" className="col-md-6 pb-5">
             <div className="card position-relative">
                 <img src={image} className="shadow bg-white position-absolute img-fluid top-0 start-50 translate-middle mb-5  d-block" alt="person"/>
                 <div className="card-body mt-5 pt-5   text-center ">
