@@ -20,8 +20,21 @@ footer {
       display: block;
     }
   }
-  ul li,
-  .rights {
-    font-size: 12px;
+  nav {
+    .navbar-nav {
+      .nav-item {
+        a {
+          padding: .5rem;
+          &.active::after {
+            content: none;
+          }
+        }
+      }
+    }
+    ul li,
+    .rights {
+      font-size: 12px;
+    }
+
   }
 }
