@@ -31,5 +31,50 @@ nav {
       }
     }
   }
+  .toggle {
+    width: 50px;
+    height: 40px;
+    background: $white;
+    position: relative;
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      position: absolute;
+      background: $black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.5s;
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) translateY(-10px);
+        transition: 0.2s;
+      }
+      &:nth-child(4) {
+        transform: translate(-50%, -50%) translateY(10px);
+        transition: 0.2s;
+      }
+    }
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) translateY(-20px);
+          opacity: 0;
+        }
+        &:nth-child(4) {
+          transform: translate(-50%, -50%) translateY(20px);
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) rotate(45deg);
+          transition-delay: .2s;
+        }
+        &:nth-child(3) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+          transition-delay: .2s;
+        }
+      }
+    }
+  }
 }
 

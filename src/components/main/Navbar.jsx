@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom"
+import {  useState } from "react"
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
+  let activeCheck = toggle ? 'active' : '';
     return (
         <nav className="position-absolute p-0 w-100 navbar navbar-expand-lg navbar-dark">
             <div className="container">
@@ -12,12 +20,16 @@ const Navbar = () => {
                     className="d-inline-block align-text-top"
                     alt="Logo" />
               </NavLink>
-              <button className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar">
-                <span className="navbar-toggler-icon"></span>
-              </button>
+              <div className={`navbar-toggler toggle ${activeCheck}`}
+                  onClick={handleClick}
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <div className="col-4 collapse navbar-collapse justify-content-between px-md-4" id="navbar">
                 <ul className="navbar-nav m-auto">
                       <li className="nav-item px-2 my-2">
