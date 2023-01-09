@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav className="position-absolute w-100 navbar navbar-expand-lg navbar-dark">
+        <nav className="position-absolute p-0 w-100 navbar navbar-expand-lg navbar-dark">
             <div className="container">
               {/* Logo */}
               <NavLink className="navbar-brand" to="/">
                 <img src={require('../../assets/img/logo1.png')}
-                    width="50"
-                    height="50"
+                    width="70"
+                    height="70"
                     className="d-inline-block align-text-top"
                     alt="Logo" />
               </NavLink>
@@ -20,18 +20,18 @@ const Navbar = () => {
               </button>
               <div className="col-4 collapse navbar-collapse justify-content-between px-md-4" id="navbar">
                 <ul className="navbar-nav m-auto">
-                      <li className="nav-item px-2">
-                          <NavLink to="" className="nav-link text-white">
+                      <li className="nav-item px-2 my-2">
+                          <NavLink to="" className="nav-link">
                               Home
                           </NavLink>
                       </li>
-                      <li className="nav-item px-2">
-                          <NavLink to="/planets" className="nav-link text-white">
+                      <li className="nav-item px-2 my-2">
+                          <NavLink to="/planets" className="nav-link">
                               Planets
                           </NavLink>
                       </li>
-                      <li className="nav-item px-2">
-                          <NavLink to="/about" className="nav-link text-white">
+                      <li className="nav-item px-2 my-2">
+                          <NavLink to="/about" className="nav-link">
                               About
                           </NavLink>
                       </li>

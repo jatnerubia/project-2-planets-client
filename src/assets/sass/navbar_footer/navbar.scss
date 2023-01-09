@@ -1,0 +1,35 @@
+nav {
+  .navbar-nav {
+    .nav-item {
+      a {
+        position: relative;
+        padding: 15px;
+        transition: all .5s;
+        color: #aaa;
+        &::after {
+          content: '';
+          width: 0%;
+          position: absolute;
+          height: 2px;
+          background: $white;
+          bottom: 0;
+          left: 0;
+          right: 0%;
+          margin: auto;
+          transition: all .5s;
+        }
+        &.active::after {
+          width: 100%;
+        }
+        &:hover {
+          color: $white;
+          &::after {
+            width: 100%;
+            transition: all .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
