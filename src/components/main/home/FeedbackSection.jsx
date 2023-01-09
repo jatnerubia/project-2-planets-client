@@ -162,7 +162,7 @@ const FeedbackSection = () => {
                       loading
                         ? <button className="btn btn-transparent text-white rounded-4 border border-2 border-white px-4 d-block m-auto"
                           disabled>Loading...</button>
-                        : <button className="btn btn-transparent text-white rounded-4 border border-2 border-white px-4 d-block m-auto"
+                        : <button className="btn btn-main px-4 d-block m-auto"
                           onClick={sendFeedback}>SEND TO MOON🚀</button>
                     }
                   </div>

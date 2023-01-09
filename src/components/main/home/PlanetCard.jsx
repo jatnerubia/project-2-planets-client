@@ -32,7 +32,7 @@ const PlanetCard = ({ planet }) => {
           <div className="card-body text-center text-white position-absolute w-100">
             <div className="planet_details">
               <h3 className="pt-2 pb-4 mb-0">{planet.name}</h3>
-              <div className="d-flex flex-column justify-content-between">
+              <div className="d-flex flex-column justify-content-between mb-4">
                 <div className="d-flex align-items-end mb-2">
                   <label>Tilt</label>
                   <span className="dashed-line"></span>

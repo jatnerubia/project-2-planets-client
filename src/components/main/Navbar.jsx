@@ -10,7 +10,7 @@ const Navbar = () => {
 
   let activeCheck = toggle ? 'active' : '';
     return (
-        <nav className="position-absolute p-0 w-100 navbar navbar-expand-lg navbar-dark">
+        <nav className="position-absolute w-100 navbar navbar-expand-lg navbar-dark">
             <div className="container">
               {/* Logo */}
               <NavLink className="navbar-brand" to="/">
@@ -49,7 +49,7 @@ const Navbar = () => {
                       </li>
                   </ul>
                   <div>
-                    <NavLink to="/quiz" className="btn btn-light py-2 px-4 custom-button">Quiz Game</NavLink>
+                    <NavLink to="/quiz" className="btn btn-light py-2 rounded-5 px-4 custom-button">Quiz Game</NavLink>
                   </div>
               </div>
             </div>
