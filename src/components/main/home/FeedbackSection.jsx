@@ -53,7 +53,7 @@ const FeedbackSection = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="feedback_form">
-                  <h4 className="fs-4 pb-5">
+                  <h4 data-aos="zoom-in-down" className="fs-4 pb-5">
                     Have any questions or suggestions about the website?<br/><br/>
                     Feel free to contact us!
                   </h4>
@@ -168,7 +168,7 @@ const FeedbackSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 d-flex justify-content-center align-items-center">
+              <div data-aos="fade-left" data-aos-duration="1500" className="col-lg-6 d-flex justify-content-center align-items-center">
                 <img className="d-lg-block d-none img-fluid" src={require('../../../assets/img/astronaut.png')} alt="" />
               </div>
             </div>

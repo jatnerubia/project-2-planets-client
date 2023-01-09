@@ -3,10 +3,14 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import { useEffect} from "react";
+
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js'
 import './assets/sass/index.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /* Home */
 import Layout from './components/layout/Layout';
@@ -122,6 +126,10 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
     return <RouterProvider router={router} />
 }
 
