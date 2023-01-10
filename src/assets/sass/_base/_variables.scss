@@ -45,6 +45,8 @@ html body {
   font-size: 16px;
   color: $space_gray;
   background-color: $black;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .ff-merriweather {
   font-family: $font-merriweather;
