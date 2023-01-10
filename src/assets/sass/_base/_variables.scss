@@ -249,6 +249,17 @@ nav {
     z-index: -1;
   }
 }
+.scrollToTop_wrapper {
+  transition: .5s ease;
+  .scrollToTop_content {
+    bottom: 30px;
+    right: 20px;
+    transform: rotate(270deg);
+    width: 70px;
+    height: 70px;
+    transition: .5s ease;
+  }
+}
 @keyframes animate {
   0% {
     opacity: 0;

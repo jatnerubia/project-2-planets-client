@@ -4,6 +4,7 @@ import AnimatedStar from "../main/home/AnimatedStar";
 import Navbar from "../main/Navbar";
 import { useLocation} from "react-router-dom"
 import { useEffect } from 'react';
+import ScrollToTop from "../main/home/ScrollToTop";
 
 const Layout = () => {
 
@@ -23,6 +24,7 @@ const Layout = () => {
         <Outlet />
         <FooterSection />
       </main>
+      <ScrollToTop />
     </>
   );
 };
