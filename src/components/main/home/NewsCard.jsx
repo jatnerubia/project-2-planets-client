@@ -3,8 +3,8 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const NewsCard = ({ news }) => {
   return (
-    <>
-      <div data-aos="flip-down" data-aos-duration="1500" className="col-lg-4 col-md-12">
+    <div className='news_wrapper overflow-hidden col-lg-4 col-md-12'>
+      <div data-aos="flip-down" data-aos-duration="1500">
         <a href={news.url} target="_blank" rel="noreferrer">
           <div className="card border-0 position-relative mb-5">
             <div className="img-wrapper">
@@ -27,7 +27,7 @@ const NewsCard = ({ news }) => {
           </div>
         </a>
       </div>
-    </>
+    </div>
   );
 };
 

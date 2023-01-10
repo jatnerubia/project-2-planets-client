@@ -168,8 +168,8 @@ const FeedbackSection = () => {
                   </div>
                 </div>
               </div>
-              <div data-aos="fade-left" data-aos-duration="1500" className="col-lg-6 d-flex justify-content-center align-items-center">
-                <img className="d-lg-block d-none img-fluid" src={require('../../../assets/img/astronaut.png')} alt="" />
+              <div className="overflow-hidden col-lg-6 d-flex justify-content-center align-items-center">
+                <img data-aos="fade-left" data-aos-duration="1500" className="d-lg-block d-none img-fluid" src={require('../../../assets/img/astronaut.png')} alt="" />
               </div>
             </div>
           </div>
