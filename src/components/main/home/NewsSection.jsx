@@ -5,6 +5,7 @@ import * as RestApi from "../../../utils/rest_api_util"
 
 const NewsSection = () => {
 
+  const [loading, setLoading] = useState(false)
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -12,21 +13,33 @@ const NewsSection = () => {
   }, []);
 
   const getNews = async () => {
+    setLoading(true)
     try {
       const result = await RestApi.getNews()
       let response = await result.json();
       setNews(response);
     } catch (error) {}
+    setLoading(false)
   };
 
   return (
     <div className="container news_article__section py-5">
       <SectionHeading classname="news" name="NEWS" />
-      <div className="row py-5">
-        {
-          news.map((news, index) => <NewsCard key={index} news={news} />)
-        }
-      </div>
+      {
+        loading
+          ? (
+            <div className='text-center'>
+              Loading. Please wait.
+            </div>
+          )
+          : (
+            <div className="row py-5">
+              {
+                news.map((news, index) => <NewsCard key={index} news={news} />)
+              }
+            </div>
+          )
+      }
     </div>
   )
 }
