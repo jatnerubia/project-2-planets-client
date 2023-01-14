@@ -1,5 +1,5 @@
 # Planets (Project 2) ([Live Demo](https://space-verse.vercel.app/))
-> Some description
+> Some description. Backend: https://github.com/jasonlerit/project-2-planets-server
 
 ## 💻 Tech Stack
 > - React
