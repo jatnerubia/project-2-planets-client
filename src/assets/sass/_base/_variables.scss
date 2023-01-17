@@ -278,3 +278,89 @@ nav {
     opacity: 0;
   }
 }
+
+//404
+.page404 {
+  .objects {
+    .rocket {
+      transform: translateX(-50px);
+      top: 75%;
+      left: 10%;
+      pointer-events: none;
+      animation: rocket-movement 200s linear infinite both running;
+    }
+    .earth {
+      top: 20%;
+      left: 15%;
+      animation: spin-earth 100s linear infinite both alternate;
+    }
+    .moon {
+      top: 15%;
+      left: 20%;
+    }
+    .astronaut_wrapper {
+      top: 60%;
+      right: 20%;
+      will-change: transform;
+      animation: move-astronaut 50s infinite linear both alternate;
+      .astronaut {
+        animation: rotate-astronaut 200s infinite linear both alternate;
+      }
+    }
+  }
+}
+
+@-moz-keyframes rocket-movement {
+  100% {
+    -moz-transform: translate(1200px,-600px);
+  }
+}
+@-webkit-keyframes rocket-movement {
+  100% {
+    -webkit-transform: translate(1200px,-600px);
+  }
+}
+@keyframes rocket-movement {
+  100% {
+    transform: translate(1200px,-600px);
+  }
+}
+
+@-moz-keyframes spin-earth {
+  100% {
+    -moz-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@-webkit-keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+@keyframes spin-earth{
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform:rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+
+@-moz-keyframes move-astronaut {
+    100% { -moz-transform: translate(-160px, -160px);}
+}
+@-webkit-keyframes move-astronaut {
+    100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+    100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+    100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+}
