@@ -28,8 +28,9 @@ const NewsSection = () => {
       {
         loading
           ? (
-            <div className='text-center'>
-              Loading. Please wait.
+            <div className='loader text-center'>
+              <div className="ring"></div>
+              <span>LOADING...</span>
             </div>
           )
           : (

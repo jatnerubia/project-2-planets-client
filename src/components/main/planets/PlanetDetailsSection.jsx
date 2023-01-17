@@ -30,8 +30,9 @@ const PlanetDetailsSection = () => {
       {
         loading
           ? (
-            <div className='text-center'>
-              Loading. Please wait.
+            <div className='loader text-center'>
+              <div className="ring"></div>
+              <span>LOADING...</span>
             </div>
           )
           : planets.length !== 0 && (
