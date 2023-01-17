@@ -12,17 +12,26 @@
       left: 0;
       background-color: rgba(0, 0, 0, 0.5);
     }
-    img {
-      position: absolute;
-      height: 250px;
-      right: 15%;
-      top: 25%;
-      animation: moveFloat .5s linear forwards, floating ease 4s infinite;
-      @media (max-width: 425px) {
-          height: 150px;
-          top: 35%;
+    .astronaut_wrapper {
+      top: 40%;
+      right: 20%;
+      will-change: transform;
+      animation: move-astronaut 50s infinite linear both alternate;
+      .astronaut {
+        animation: rotate-astronaut 200s infinite linear both alternate;
       }
     }
+    // img {
+    //   position: absolute;
+    //   height: 250px;
+    //   right: 15%;
+    //   top: 25%;
+    //   animation: moveFloat .5s linear forwards, floating ease 4s infinite;
+    //   @media (max-width: 425px) {
+    //       height: 150px;
+    //       top: 35%;
+    //   }
+    // }
     .hero-content {
       left: 50%;
       top: 35%;
@@ -116,32 +125,23 @@
     }
   }
 }
-@keyframes moveFloat {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@-moz-keyframes move-astronaut {
+  100% { -moz-transform: translate(-160px, -160px);}
 }
-@keyframes floating {
-  0% {
-    transform: translate(0%, 0%) rotate(360deg);
-  }
-  25% {
-    transform: translate(5%, 15%) rotate(360deg);
-  }
-  50% {
-    transform: translate(10%, 5%) rotate(360deg);
-  }
-  75% {
-    transform: translate(0%, 15%) rotate(360deg);
-  }
-  100% {
-    transform: translate(0%, 0%) rotate(360deg);
-  }
+@-webkit-keyframes move-astronaut {
+  100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+  100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+  100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+  100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+  100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
 }
  //Planet rotation animation
  @keyframes planetRotate {
