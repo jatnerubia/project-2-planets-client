@@ -35,10 +35,10 @@ import DashboardPage from './pages/user/dashboard';
 import LeaderboardPage from './pages/user/leaderboard';
 import UserQuizPage from './pages/user/quiz'
 import SettingsPage from './pages/user/settings'
+import ProfilePage from './pages/user/profile';
 
 /* Not found */
 import PageNotFound from './pages/404';
-import ProfilePage from './pages/user/profile';
 
 const router = createBrowserRouter([
     /* Main */
