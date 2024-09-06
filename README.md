@@ -12,7 +12,7 @@
 ## 👨‍💻 Authors
 > - **[Alan Demol](https://github.com/alandemol2022)**
 > - **[Angela Morales](https://github.com/Gelai05)**
-> - **[wt404](https://github.com/wt404)**
+> - **[Jason Lerit](https://github.com/jasonlerit)**
 > - **[Jomar Clado](https://github.com/jomar567)**
 
 ---
